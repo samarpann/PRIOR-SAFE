@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Plus, Edit, Trash2, Package, Upload, X, LogOut } from 'lucide-react';
 import '../admin.css';
 
-const API_URL = 'http://localhost:5000/api/products';
+const API_URL = 'https://prior-safe.onrender.com/api/products';
 
 function AdminDashboard({ onLogout }) {
   const [products, setProducts] = useState([]);
