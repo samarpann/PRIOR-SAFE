@@ -1,0 +1,130 @@
+.admin-body {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.admin-btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.admin-btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.admin-btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f1f5f9;
+}
+
+.admin-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  margin-bottom: 1rem;
+}
+
+.admin-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.admin-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.admin-form-group input, .admin-form-group textarea, .admin-form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.admin-modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.admin-login-card {
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    text-align: center;
+}

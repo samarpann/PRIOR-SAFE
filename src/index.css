@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-50: #f8fafc;
+  --color-industrial-100: #f1f5f9;
+  --color-industrial-200: #e2e8f0;
+  --color-industrial-300: #cbd5e1;
+  --color-industrial-400: #94a3b8;
+  --color-industrial-500: #64748b;
+  --color-industrial-600: #475569;
+  --color-industrial-700: #334155;
+  --color-industrial-800: #1e293b;
+  --color-industrial-900: #0f172a;
+  
+  --color-accent: #ffcc00;
+  --color-accent-dark: #e6b800;
+
+  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
+
+  --radius-2xl: 1.25rem;
+}
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-industrial-900;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.premium-transition {
+  @apply transition-all duration-300 ease-in-out;
+}

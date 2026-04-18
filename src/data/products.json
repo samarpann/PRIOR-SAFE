@@ -1,0 +1,128 @@
+{
+  "page_info": {
+    "title": "Head Protection",
+    "description": "PPE is crucial on construction sites, and protecting your head is a priority. Discover all our head protection models on Delta Plus.",
+    "breadcrumbs": ["Home", "Products", "Head Protection"]
+  },
+  "filters": {
+    "Product category": [
+      { "name": "Skull protection", "options": ["Bump cap", "Safety helmets", "Helmets accessories"] },
+      { "name": "Hearing protection", "options": ["Disposable earplugs", "Ear Muffs"] },
+      { "name": "Protective eyewear", "options": ["Safety glasses", "Safety goggles", "Safety visors", "Welding"] },
+      { "name": "Respiratory protection", "options": ["Disposable respiratory", "Reusable respiratory"] }
+    ],
+    "Sectors": [
+      "Agriculture / Forestry / Fishing",
+      "Construction",
+      "Public works",
+      "Utilities - Energy",
+      "Industry",
+      "Automotive",
+      "Chemical Industry",
+      "Pharmaceutical industry / Laboratories",
+      "Food Industry",
+      "Transportation / Storage",
+      "Facilities Services"
+    ],
+    "Risks": [
+      "Heat",
+      "Shock",
+      "UV / IR",
+      "Biological",
+      "Chemical",
+      "Particules"
+    ]
+  },
+  "products": [
+    {
+      "name": "AIR COLTAN",
+      "reference": "AIRCOLTAN",
+      "image_url": "https://media.deltaplus.eu/m/62565fb0e107730e/Liferay_Product_Card-AIR-COLTAN-GR-vis-7cm-eps.png",
+      "subtitle": "High-performance bump cap for impact protection."
+    },
+    {
+      "name": "BARRIER PLATE 2",
+      "reference": "BARRI2PP",
+      "image_url": "https://media.deltaplus.eu/m/5f92053c2d2b451f/Liferay_Product_Card-BARRIER2-PLATE-eps.png",
+      "subtitle": "Replacement plate for welding shields."
+    },
+    {
+      "name": "BRAVA2 CLEAR",
+      "reference": "BRAV2IN",
+      "image_url": "https://media.deltaplus.eu/m/528162f21d10d812/Liferay_Product_Card-BRAVA2-CLEAR-eps.png",
+      "subtitle": "Clear safety glasses with wrap-around design."
+    },
+    {
+      "name": "BRAVA2 CLEAR AB",
+      "reference": "BRAV2INAB",
+      "image_url": "https://media.deltaplus.eu/m/528162f21d10d812/Liferay_Product_Card-BRAVA2-CLEAR-eps.png",
+      "subtitle": "Anti-fog clear safety glasses."
+    },
+    {
+      "name": "BRAVA2 SMOKE",
+      "reference": "BRAV2FU",
+      "image_url": "https://media.deltaplus.eu/m/1833a90e09679f09/Liferay_Product_Card-BRAVA2-SMOKE-eps.png",
+      "subtitle": "Smoke-tinted glasses for outdoor protection."
+    },
+    {
+      "name": "CASOUD 3",
+      "reference": "CASOUD3_",
+      "image_url": "https://media.deltaplus.eu/m/2e987389b94592fe/Liferay_Product_Card-CASOUD3-eps.png",
+      "subtitle": "Flip-up welding helmet."
+    },
+    {
+      "name": "CASOUD2HE",
+      "reference": "CASOUD2HE",
+      "image_url": "https://media.deltaplus.eu/m/638b8bfcb8ede586/Liferay_Product_Card-CASOUD2HE-with-helmet-eps.png",
+      "subtitle": "Helmet-mounted welding protector."
+    },
+    {
+      "name": "CONIC DISPLAY",
+      "reference": "CONICDISPLAY",
+      "image_url": "https://media.deltaplus.eu/m/c5fb88cc29e9126/Liferay_Product_Card-CONIC-DISPLAY-eps.png",
+      "subtitle": "Dispenser Box for earplugs."
+    },
+    {
+      "name": "CONIC2 500",
+      "reference": "CONIC2V500",
+      "image_url": "https://media.deltaplus.eu/m/316bf71ba703c626/Liferay_Product_Card-CONIC010-CONIC200-CONIC500-eps.png",
+      "subtitle": "Disposable polyurethane earplugs."
+    },
+    {
+      "name": "DIAMOND V",
+      "reference": "DIAMOND5",
+      "image_url": "https://media.deltaplus.eu/m/74277b2f1c3bf3a9/Liferay_Product_Card-BASEBALL-DIAMOND-GR-eps.png",
+      "subtitle": "Baseball cap style safety helmet."
+    },
+    {
+      "name": "DYNAMIC JUGBETA",
+      "reference": "JUGBEDYN_",
+      "image_url": "https://media.deltaplus.eu/m/3fc3f3c101004cfa/Liferay_Product_Card-DYNAMIC-JUGBETA-eps.png",
+      "subtitle": "Adjustable chin strap for helmets."
+    },
+    {
+      "name": "FILTER 11",
+      "reference": "FILTER11_",
+      "image_url": "https://media.deltaplus.eu/m/22bea2a57c93e7a9/Liferay_Product_Card-FILTERIN-eps.png",
+      "subtitle": "Shade 11 welding filter."
+    },
+    {
+      "name": "FILTER-IN",
+      "reference": "FILTERIN_",
+      "image_url": "https://media.deltaplus.eu/m/22bea2a57c93e7a9/Liferay_Product_Card-FILTERIN-eps.png",
+      "subtitle": "Protective internal filter."
+    },
+    {
+      "name": "FUEGO",
+      "reference": "FUEGO",
+      "image_url": "https://media.deltaplus.eu/m/523679bb724f7c08/Liferay_Product_Card-FUEGO-adjustable-arm-eps.png",
+      "subtitle": "Compact safety glasses with adjustable arms."
+    },
+    {
+      "name": "FUJI2 CLEAR",
+      "reference": "FUJI2NOIN",
+      "image_url": "https://media.deltaplus.eu/m/3f335e7872a0f2f2/Liferay_Product_Card-FUJI2-CLEAR-eps.png",
+      "subtitle": "Ultra-light safety glasses."
+    }
+  ]
+}
