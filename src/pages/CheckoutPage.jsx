@@ -1,16 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ShieldCheck, Lock, CreditCard, Smartphone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
 import qrCode from '../assets/qr-code.png';
 
 const CheckoutPage = () => {
+  const { user } = useAuth();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  
+  const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+  const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * (item.quantity || 1)), 0);
 
   // Scroll to top on load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handlePlaceOrder = async () => {
+    setLoading(true);
+    try {
+      const orderData = {
+        items: cartItems.map(item => ({
+          product: item._id,
+          quantity: item.quantity || 1,
+          price: item.price
+        })),
+        totalPrice,
+        shippingAddress: 'Pending'
+      };
+
+      await axios.post('https://prior-safe.onrender.com/api/orders', orderData);
+      localStorage.removeItem('cart');
+    } catch (err) {
+      console.error('Failed to place order', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-industrial-50 selection:bg-accent selection:text-industrial-900 flex flex-col items-center justify-center p-4">

@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import { Lock, User, ShieldCheck } from 'lucide-react';
+import { Lock, Mail, ShieldCheck } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate, Link } from 'react-router-dom';
 import '../admin.css';
 
-function LoginPage({ onLogin }) {
-  const [userId, setUserId] = useState('');
+function LoginPage() {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Hardcoded credentials for simplicity as requested "ask for id and password"
-    if (userId === 'admin' && password === 'admin123') {
-      onLogin();
-    } else {
-      setError('Invalid ID or Password');
+    try {
+      const user = await login(email, password);
+      if (user.role === 'ADMIN') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || 'Invalid Credentials');
     }
   };
 
@@ -34,21 +42,21 @@ function LoginPage({ onLogin }) {
           }}>
             <ShieldCheck size={32} />
           </div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 0 0.5rem' }}>Admin Access</h2>
-          <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Please enter your credentials</p>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: '800', margin: '0 0 0.5rem' }}>Access Portal</h2>
+          <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Log in to your account</p>
         </div>
 
         <form onSubmit={handleSubmit} style={{ textAlign: 'left' }}>
           <div className="admin-form-group">
-            <label>Admin ID</label>
+            <label>Email Address</label>
             <div style={{ position: 'relative' }}>
-              <User size={18} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} />
+              <Mail size={18} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} />
               <input 
                 style={{ paddingLeft: '40px' }}
-                type="text" 
-                value={userId} 
-                onChange={(e) => setUserId(e.target.value)} 
-                placeholder="Enter ID"
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="Enter email"
                 required 
               />
             </div>
@@ -73,6 +81,10 @@ function LoginPage({ onLogin }) {
           <button className="admin-btn admin-btn-primary" style={{ width: '100%', padding: '1rem', justifyContent: 'center', fontSize: '1rem' }}>
             Sign In
           </button>
+
+          <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: '#64748b', textAlign: 'center' }}>
+            Don't have an account? <Link to="/signup" style={{ color: '#2563eb', fontWeight: '600' }}>Sign Up</Link>
+          </p>
         </form>
       </div>
     </div>

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product');
 const { upload } = require('../config/cloudinary');
+const { protect, restrictTo } = require('../middleware/authMiddleware');
 
 // Get all products
 router.get('/', async (req, res) => {
@@ -13,8 +14,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Create product
-router.post('/', upload.single('image'), async (req, res) => {
+// Create product (Admin only)
+router.post('/', protect, restrictTo('ADMIN'), upload.single('image'), async (req, res) => {
     const product = new Product({
         name: req.body.name,
         reference: req.body.reference,
@@ -33,8 +34,8 @@ router.post('/', upload.single('image'), async (req, res) => {
     }
 });
 
-// Update product
-router.put('/:id', upload.single('image'), async (req, res) => {
+// Update product (Admin only)
+router.put('/:id', protect, restrictTo('ADMIN'), upload.single('image'), async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         if (!product) return res.status(404).json({ message: 'Product not found' });
@@ -59,8 +60,8 @@ router.put('/:id', upload.single('image'), async (req, res) => {
     }
 });
 
-// Delete product
-router.delete('/:id', async (req, res) => {
+// Delete product (Admin only)
+router.delete('/:id', protect, restrictTo('ADMIN'), async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         if (!product) return res.status(404).json({ message: 'Product not found' });
