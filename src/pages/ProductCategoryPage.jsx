@@ -8,7 +8,7 @@ import ProductModal from '../components/ProductModal';
 import productsData from '../data/products.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ShoppingBag, Search, Filter, ChevronRight, Star, Shield, Truck, Clock, User, LogOut, ShieldCheck } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Sidebar from '../components/Sidebar';
 

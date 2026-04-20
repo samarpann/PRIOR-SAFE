@@ -121,17 +121,25 @@ const CheckoutPage = () => {
 
         {/* Action Button */}
         <div className="p-8 bg-industrial-900 text-white text-center">
-          <p className="text-sm font-bold opacity-80 mb-4 uppercase tracking-widest">Awaiting Payment Confirmation...</p>
-          <div className="flex justify-center gap-3">
-            {[0, 1, 2].map(i => (
-              <motion.div 
-                key={i}
-                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
-                transition={{ repeat: Infinity, duration: 1, delay: i * 0.2 }}
-                className="w-2 h-2 bg-accent rounded-full"
-              />
-            ))}
-          </div>
+          {loading ? (
+            <div className="flex justify-center gap-3">
+              {[0, 1, 2].map(i => (
+                <motion.div 
+                  key={i}
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
+                  transition={{ repeat: Infinity, duration: 1, delay: i * 0.2 }}
+                  className="w-2 h-2 bg-accent rounded-full"
+                />
+              ))}
+            </div>
+          ) : (
+            <button 
+              onClick={handlePlaceOrder}
+              className="w-full bg-accent hover:bg-accent-dark text-industrial-900 font-black py-4 rounded-xl uppercase tracking-widest transition-all"
+            >
+              Confirm Order & Pay
+            </button>
+          )}
         </div>
       </motion.div>
       
