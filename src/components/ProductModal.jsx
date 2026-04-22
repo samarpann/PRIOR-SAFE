@@ -3,6 +3,8 @@ import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, Star, Zap } from 'lucide
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
+  const [quantity, setQuantity] = React.useState(1);
+
   if (!isOpen || !product) return null;
 
   return (
@@ -22,7 +24,7 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 30 }}
-          className="relative w-full max-w-5xl bg-white rounded-[2.5rem] overflow-hidden shadow-premium flex flex-col md:flex-row max-h-[95vh]"
+          className="relative w-full max-w-5xl bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-premium flex flex-col md:flex-row max-h-[95vh] sm:max-h-[85vh] md:max-h-[90vh]"
         >
           {/* Close button */}
           <button
@@ -77,14 +79,14 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
               </p>
 
               <div className="flex items-baseline gap-4 mb-10">
-                <span className="text-5xl font-black text-industrial-900 tabular-nums">$124.99</span>
-                <span className="text-xl text-industrial-300 font-bold line-through tabular-nums">$159.00</span>
+                <span className="text-5xl font-black text-industrial-900 tabular-nums">₹{product.price || '49.99'}</span>
+                <span className="text-xl text-industrial-300 font-bold line-through tabular-nums">₹{(parseFloat(product.price || 49.99) * 1.25).toFixed(2)}</span>
                 <span className="bg-red-50 text-red-600 font-black text-xs px-2.5 py-1 rounded-lg">-22%</span>
               </div>
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 border-y border-industrial-100 py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 border-y border-industrial-100 py-8">
               <div className="flex flex-col items-center text-center gap-2">
                 <div className="w-10 h-10 bg-industrial-50 rounded-xl flex items-center justify-center text-industrial-900">
                   <ShieldCheck size={22} />
@@ -105,11 +107,26 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
               </div>
             </div>
 
-            {/* Actions */}
+            {/* Quantity and Actions */}
             <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-4 mb-2">
+                <span className="text-sm font-bold text-industrial-900 uppercase tracking-wider">Quantity:</span>
+                <div className="flex items-center bg-industrial-50 rounded-xl border border-industrial-200">
+                  <button 
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="w-10 h-10 flex items-center justify-center text-industrial-600 hover:text-industrial-900"
+                  >-</button>
+                  <span className="w-12 text-center font-bold text-industrial-900 tabular-nums">{quantity}</span>
+                  <button 
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="w-10 h-10 flex items-center justify-center text-industrial-600 hover:text-industrial-900"
+                  >+</button>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  onClick={() => onAddToCart(product)}
+                  onClick={() => onAddToCart(product, quantity)}
                   className="flex-grow flex items-center justify-center gap-3 bg-accent text-industrial-900 font-black py-5 px-8 rounded-2xl hover:bg-industrial-900 hover:text-white premium-transition shadow-soft active:scale-[0.98]"
                 >
                   <ShoppingBag size={20} />
@@ -123,7 +140,7 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
               </div>
               
               <button 
-                onClick={() => onBuyNow(product)}
+                onClick={() => onBuyNow(product, quantity)}
                 className="w-full flex items-center justify-center gap-3 bg-industrial-900 text-white font-black py-5 px-8 rounded-2xl hover:bg-accent hover:text-industrial-900 premium-transition shadow-premium active:scale-[0.98]"
               >
                 <Zap size={20} fill="currentColor" />

@@ -1,283 +1,261 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Breadcrumb from '../components/Breadcrumb';
-import SidebarFilter from '../components/SidebarFilter';
-import ProductGrid from '../components/ProductGrid';
-import Footer from '../components/Footer';
+import React, { useState, useEffect } from 'react';
+import AppLayout from '../components/AppLayout';
 import ProductModal from '../components/ProductModal';
-import productsData from '../data/products.json';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, ShoppingBag, Search, Filter, ChevronRight, Star, Shield, Truck, Clock, User, LogOut, ShieldCheck } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { CheckCircle, ShoppingBag, Search, Shield, Package } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import Sidebar from '../components/Sidebar';
+import API_BASE from '../config/api';
+
+const CATEGORIES = [
+  'All Products',
+  'Skull protection',
+  'Respiratory protection',
+  'Hearing protection',
+  'Protective eyewear',
+];
 
 const ProductCategoryPage = () => {
-  const { page_info, filters } = productsData;
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [cartCount, setCartCount] = useState(2);
   const [toast, setToast] = useState(null);
-  const [activeFilters, setActiveFilters] = useState({
-    'Product category': [],
-    'Sectors': [],
-    'Risks': []
-  });
+  const [searchQuery, setSearchQuery] = useState('');
+  const [category, setCategory] = useState('All Products');
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true);
       try {
-        const response = await fetch('https://prior-safe.onrender.com/api/products');
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("Error fetching products:", error);
+        const params = new URLSearchParams({
+          page,
+          limit: 8,
+          search: searchQuery,
+          category: category === 'All Products' ? '' : category,
+        });
+        const res = await fetch(`${API_BASE}/api/products?${params}`);
+        const data = await res.json();
+        setProducts(data.products || []);
+        setTotalPages(data.totalPages || 1);
+      } catch (err) {
+        console.error('Failed to fetch products', err);
       } finally {
         setLoading(false);
       }
     };
-    fetchProducts();
-  }, []);
+    const t = setTimeout(fetchProducts, 300);
+    return () => clearTimeout(t);
+  }, [page, searchQuery, category]);
 
-  const handleAddToCart = (product) => {
-    setCartCount(prev => prev + 1);
-    showToast(`${product.name} added to your cart!`);
+  const handleAddToCart = (product, qty = 1) => {
+    showToast(`${qty}x ${product.name} added to cart!`);
+    setSelectedProduct(null);
   };
 
   const handleBuyNow = (product) => {
-    showToast(`Finalizing your order for ${product.name}...`);
-    setTimeout(() => {
-      navigate('/checkout');
-    }, 1200);
+    showToast(`Preparing order for ${product.name}...`);
+    setTimeout(() => navigate('/checkout'), 1200);
   };
 
-  const showToast = (message) => {
-    setToast(message);
+  const showToast = (msg) => {
+    setToast(msg);
     setTimeout(() => setToast(null), 3000);
   };
 
-  // Handle filter changes
-  const handleFilterToggle = (category, option) => {
-    setActiveFilters(prev => {
-      const current = prev[category] || [];
-      const updated = current.includes(option)
-        ? current.filter(item => item !== option)
-        : [...current, option];
-      return { ...prev, [category]: updated };
-    });
-  };
-
-  const handleClearFilters = () => {
-     setActiveFilters({
-      'Product category': [],
-      'Sectors': [],
-      'Risks': []
-    });
-  };
-
-  const filteredProducts = useMemo(() => {
-    const isAnySelected = Object.values(activeFilters).some(arr => arr.length > 0);
-    if (!isAnySelected) return products;
-
-    return products.filter((product) => {
-      const categoriesSelected = activeFilters['Product category'];
-      if (categoriesSelected.length > 0) {
-        // Improved filtering based on actual category field from DB
-        return categoriesSelected.includes(product.category);
-      }
-      return true;
-    });
-  }, [products, activeFilters]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-industrial-50">
-        <div className="text-2xl font-black text-industrial-900 animate-pulse">LOADING PRODUCTS...</div>
-      </div>
-    );
-  }
-
   return (
-    <div style={{ display: 'flex', background: '#f8fafc' }}>
-      <Sidebar isAdmin={false} />
-      
-      <main style={{ flex: 1, marginLeft: '280px', minHeight: '100vh', padding: '2rem' }}>
-        {/* Modern Header */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
-          marginBottom: '2rem',
-          background: 'white',
-          padding: '1.5rem 2rem',
-          borderRadius: '1.25rem',
-          boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
-        }}>
-          <div>
-            <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: '800', color: '#1e293b' }}>
-              Safety Solutions
-            </h1>
-            <p style={{ margin: '0.25rem 0 0', color: '#64748b', fontSize: '0.9rem' }}>
-              Premium personal protective equipment
-            </p>
-          </div>
-          
-          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <div style={{ position: 'relative' }}>
-              <Search size={18} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }} />
-              <input 
-                type="text" 
-                placeholder="Search products..." 
-                style={{ 
-                  padding: '0.65rem 1rem 0.65rem 2.5rem', 
-                  borderRadius: '0.75rem', 
-                  border: '1px solid #e2e8f0',
-                  width: '240px',
-                  fontSize: '0.9rem',
-                  outline: 'none'
-                }}
-              />
-            </div>
-            {user ? (
-               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: '#f1f5f9', padding: '0.5rem 1rem', borderRadius: '0.75rem' }}>
-                  <div style={{ width: '32px', height: '32px', background: '#2563eb', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', fontSize: '0.8rem' }}>
-                    {user.name.charAt(0)}
-                  </div>
-                  <span style={{ fontWeight: '600', fontSize: '0.9rem' }}>{user.name}</span>
-               </div>
-            ) : (
-               <Link to="/login" className="admin-btn admin-btn-primary" style={{ padding: '0.65rem 1.25rem', fontSize: '0.9rem' }}>
-                  Sign In
-               </Link>
-            )}
+    <AppLayout>
+      {/* Search Bar */}
+      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100 px-4 md:px-8 py-3">
+        <div className="flex items-center gap-3 max-w-3xl mx-auto lg:mx-0">
+          <div className="relative flex-1">
+            <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={e => { setSearchQuery(e.target.value); setPage(1); }}
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-100 rounded-xl text-sm font-medium text-slate-900 outline-none focus:ring-2 transition-all"
+              style={{ '--tw-ring-color': 'rgba(178,58,134,0.2)' }}
+            />
           </div>
         </div>
+      </div>
 
-        {/* Featured Banner */}
-        <div style={{ 
-          background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)', 
-          borderRadius: '1.5rem', 
-          padding: '3rem', 
-          color: 'white',
-          marginBottom: '2.5rem',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
-          <div style={{ position: 'relative', zIndex: 1, maxWidth: '500px' }}>
-            <div style={{ background: '#2563eb', display: 'inline-block', padding: '0.35rem 0.75rem', borderRadius: '0.5rem', fontSize: '0.75rem', fontWeight: '700', marginBottom: '1.5rem' }}>
-              NEW ARRIVALS 2024
-            </div>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', lineHeight: 1.1, marginBottom: '1rem' }}>
-              Ultimate Skull Protection
-            </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.1rem', marginBottom: '2rem' }}>
-              Experience uncompromised safety with our latest range of industrial strength helmets.
+      <div className="p-4 md:p-8">
+        {/* Hero Banner */}
+        <div
+          className="relative rounded-3xl overflow-hidden mb-8 p-8 md:p-14"
+          style={{ background: 'linear-gradient(135deg, #6e2553 0%, #b23a86 100%)' }}
+        >
+          <div className="relative z-10 max-w-lg">
+            <span className="inline-block text-[10px] font-black uppercase tracking-[0.25em] text-white/70 bg-white/10 px-4 py-1.5 rounded-full mb-4">
+              Premium Partner 2025
+            </span>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-[1.1] mb-5">
+              Industrial Excellence Simplified
+            </h1>
+            <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8 max-w-md">
+              Ecom Experts — the most comprehensive platform for industrial sales and safety procurement.
             </p>
-            <button className="admin-btn admin-btn-primary" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>
-              Explore Collection
+            <button
+              onClick={() => navigate('/products')}
+              className="inline-flex items-center gap-2 bg-white font-black px-7 py-3.5 rounded-2xl text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-xl"
+              style={{ color: '#b23a86' }}
+            >
+              Explore Products
             </button>
           </div>
-          <Shield size={240} style={{ position: 'absolute', right: '-40px', bottom: '-40px', opacity: 0.05, color: 'white' }} />
+          <Shield size={260} className="absolute -right-8 -bottom-8 text-white/5 pointer-events-none" />
         </div>
 
-        {/* Categories / Filters */}
-        <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-          {['All Products', 'Skull protection', 'Respiratory', 'Hearing', 'Eye protection'].map(cat => (
-            <button key={cat} style={{ 
-              padding: '0.65rem 1.25rem', 
-              borderRadius: '2rem', 
-              border: cat === 'All Products' ? 'none' : '1px solid #e2e8f0',
-              background: cat === 'All Products' ? '#2563eb' : 'white',
-              color: cat === 'All Products' ? 'white' : '#64748b',
-              fontWeight: '600',
-              fontSize: '0.9rem',
-              cursor: 'pointer'
-            }}>
+        {/* Category Filter Pills */}
+        <div className="flex gap-2 mb-8 overflow-x-auto pb-2" style={{ scrollbarWidth: 'none' }}>
+          {CATEGORIES.map(cat => (
+            <button
+              key={cat}
+              onClick={() => { setCategory(cat); setPage(1); }}
+              className="whitespace-nowrap flex-shrink-0 px-5 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider transition-all border-2"
+              style={
+                category === cat
+                  ? { background: '#b23a86', borderColor: '#b23a86', color: 'white' }
+                  : { background: 'white', borderColor: '#e2e8f0', color: '#94a3b8' }
+              }
+            >
               {cat}
             </button>
           ))}
         </div>
 
         {/* Products Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem' }}>
-          {loading ? (
-            <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '5rem' }}>
-              <div className="admin-loading-spinner" />
-              <p>Loading premium safety gear...</p>
-            </div>
-          ) : products.map(product => (
-            <div 
-              key={product._id} 
-              className="admin-card" 
-              style={{ padding: '0', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.2s' }}
-              onClick={() => setSelectedProduct(product)}
-            >
-              <div style={{ height: '280px', overflow: 'hidden', position: 'relative' }}>
-                <img 
-                  src={product.image_url} 
-                  alt={product.name} 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                />
-                <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(255,255,255,0.9)', padding: '0.35rem 0.75rem', borderRadius: '0.5rem', fontWeight: '800', fontSize: '0.9rem', color: '#1e293b' }}>
-                  ${(product.price || 49.99).toFixed(2)}
+        {loading ? (
+          <div className="flex flex-col items-center justify-center py-32 gap-4">
+            <div
+              className="w-12 h-12 border-4 border-t-transparent rounded-full animate-spin"
+              style={{ borderColor: '#b23a86', borderTopColor: 'transparent' }}
+            />
+            <p className="text-xs font-black uppercase tracking-widest text-slate-400">Syncing inventory...</p>
+          </div>
+        ) : products.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-32 gap-4">
+            <Package size={48} className="text-slate-300" />
+            <p className="font-black text-slate-400 uppercase tracking-widest text-xs">No products found</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5">
+            {products.map((product, i) => (
+              <motion.div
+                key={product._id}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                onClick={() => setSelectedProduct(product)}
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 cursor-pointer"
+                style={{ transition: 'box-shadow 0.2s, transform 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 20px 40px -12px rgba(178,58,134,0.15)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
+              >
+                {/* Image */}
+                <div className="relative h-56 bg-slate-50 overflow-hidden">
+                  <img
+                    src={product.image_url}
+                    alt={product.name}
+                    className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg font-black text-sm text-slate-900 shadow-sm">
+                    ₹{(product.price || 49.99).toFixed(2)}
+                  </div>
                 </div>
-              </div>
-              <div style={{ padding: '1.5rem' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#2563eb', textTransform: 'uppercase' }}>
-                  {product.category}
-                </span>
-                <h3 style={{ marginTop: '0.25rem', marginBottom: '0.5rem', fontWeight: '800' }}>{product.name}</h3>
-                <p style={{ color: '#64748b', fontSize: '0.85rem', marginBottom: '1.5rem', lineClamp: 2, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                  {product.description || product.subtitle}
-                </p>
-                <button 
-                   className="admin-btn admin-btn-primary" 
-                   style={{ width: '100%', justifyContent: 'center' }}
-                   onClick={(e) => {
-                     e.stopPropagation();
-                     if (!user) navigate('/login');
-                     else setSelectedProduct(product);
-                   }}
-                >
-                  <ShoppingBag size={18} /> Buy Now
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {selectedProduct && (
-          <ProductModal 
-            product={selectedProduct} 
-            isOpen={!!selectedProduct}
-            onClose={() => setSelectedProduct(null)} 
-            onAddToCart={handleAddToCart}
-            onBuyNow={handleBuyNow}
-          />
+                {/* Info */}
+                <div className="p-5">
+                  <span
+                    className="text-[9px] font-black uppercase tracking-[0.3em] block mb-1"
+                    style={{ color: '#b23a86' }}
+                  >
+                    {product.category}
+                  </span>
+                  <h3 className="font-black text-slate-900 text-base mb-2 line-clamp-1">
+                    {product.name}
+                  </h3>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-5 line-clamp-2">
+                    {product.description || product.subtitle}
+                  </p>
+                  <button
+                    onClick={e => {
+                      e.stopPropagation();
+                      if (!user) navigate('/login');
+                      else setSelectedProduct(product);
+                    }}
+                    className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all bg-slate-50 text-slate-700 hover:text-white"
+                    onMouseEnter={e => { e.currentTarget.style.background = '#b23a86'; e.currentTarget.style.color = 'white'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = ''; }}
+                  >
+                    <ShoppingBag size={16} /> Buy Now
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         )}
-      </main>
 
+        {/* Pagination */}
+        {!loading && totalPages > 1 && (
+          <div className="flex items-center justify-center gap-3 mt-12">
+            <button
+              disabled={page === 1}
+              onClick={() => setPage(p => Math.max(1, p - 1))}
+              className="px-6 py-3 rounded-xl font-black text-sm border-2 border-slate-100 bg-white text-slate-600 disabled:opacity-40 transition-all"
+            >
+              ← Prev
+            </button>
+            <span className="px-5 py-3 rounded-xl bg-white border-2 border-slate-100 font-black text-sm text-slate-600">
+              {page} / {totalPages}
+            </span>
+            <button
+              disabled={page === totalPages}
+              onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+              className="px-6 py-3 rounded-xl font-black text-sm border-2 border-slate-100 bg-white text-slate-600 disabled:opacity-40 transition-all"
+            >
+              Next →
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          isOpen={!!selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          onAddToCart={handleAddToCart}
+          onBuyNow={handleBuyNow}
+        />
+      )}
+
+      {/* Toast */}
       <AnimatePresence>
         {toast && (
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[200] bg-industrial-900 text-white px-6 py-4 rounded-2xl shadow-premium flex items-center gap-4 border border-industrial-700 pointer-events-none"
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[999] flex items-center gap-3 text-white px-6 py-4 rounded-2xl shadow-2xl pointer-events-none"
+            style={{ background: '#1e293b' }}
           >
-            <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-industrial-900">
-              <CheckCircle size={20} />
+            <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: '#b23a86' }}>
+              <CheckCircle size={18} />
             </div>
-            <span className="font-bold text-sm uppercase tracking-wider">{toast}</span>
+            <span className="font-bold text-sm whitespace-nowrap">{toast}</span>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </AppLayout>
   );
 };
-
 
 export default ProductCategoryPage;

@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-industrial-50: #f8fafc;
-  --color-industrial-100: #f1f5f9;
-  --color-industrial-200: #e2e8f0;
-  --color-industrial-300: #cbd5e1;
-  --color-industrial-400: #94a3b8;
-  --color-industrial-500: #64748b;
-  --color-industrial-600: #475569;
-  --color-industrial-700: #334155;
-  --color-industrial-800: #1e293b;
-  --color-industrial-900: #0f172a;
+  --color-industrial-50: #fdf4f9; /* Light purple tint */
+  --color-industrial-100: #fbeaf4;
+  --color-industrial-200: #f7d5e9;
+  --color-industrial-300: #f0b4d6;
+  --color-industrial-400: #e487ba;
+  --color-industrial-500: #d55f9a;
+  --color-industrial-600: #b23a86; /* Primary Branding Purple */
+  --color-industrial-700: #9e2f75;
+  --color-industrial-800: #832a62;
+  --color-industrial-900: #6e2553;
   
-  --color-accent: #ffcc00;
-  --color-accent-dark: #e6b800;
+  --color-accent: #b23a86;
+  --color-accent-dark: #832a62;
 
-  --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  --shadow-premium: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 10px 25px -5px rgba(178, 58, 134, 0.05), 0 8px 10px -6px rgba(178, 58, 134, 0.05);
+  --shadow-premium: 0 20px 50px -12px rgba(178, 58, 134, 0.08);
 
   --radius-2xl: 1.25rem;
 }
@@ -25,8 +25,8 @@
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #1e293b;
-  background-color: #f8fafc;
+  color: #6e2553;
+  background-color: #fdf4f9;
 }
 
 body {

@@ -1,11 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 import ProductCategoryPage from './pages/ProductCategoryPage'
 import CheckoutPage from './pages/CheckoutPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import AdminDashboard from './pages/AdminDashboard'
 import { AuthProvider, useAuth } from './context/AuthContext'
+
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const AdminRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -21,10 +26,15 @@ const PrivateRoute = ({ children }) => {
 
 function App() {
   return (
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID || "dummy-client-id"}>
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<ProductCategoryPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductCategoryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          
           <Route path="/checkout" element={<PrivateRoute><CheckoutPage /></PrivateRoute>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
@@ -43,7 +53,9 @@ function App() {
         </Routes>
       </Router>
     </AuthProvider>
+    </GoogleOAuthProvider>
   )
 }
 
 export default App
+

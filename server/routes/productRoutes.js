@@ -4,18 +4,56 @@ const Product = require('../models/Product');
 const { upload } = require('../config/cloudinary');
 const { protect, restrictTo } = require('../middleware/authMiddleware');
 
-// Get all products
+// Get all products (with pagination, search, filter)
 router.get('/', async (req, res) => {
     try {
-        const products = await Product.find();
-        res.json(products);
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const search = req.query.search || '';
+        const category = req.query.category || '';
+
+        // Build query
+        let query = {};
+        if (search) {
+            query.$or = [
+                { name: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+                { reference: { $regex: search, $options: 'i' } }
+            ];
+        }
+        if (category && category !== 'All Products') {
+            query.category = category;
+        }
+
+        const skip = (page - 1) * limit;
+
+        const total = await Product.countDocuments(query);
+        const products = await Product.find(query).skip(skip).limit(limit);
+
+        res.json({
+            products,
+            currentPage: page,
+            totalPages: Math.ceil(total / limit),
+            totalProducts: total
+        });
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
 });
 
+// Custom upload handler to catch errors
+const handleUpload = (req, res, next) => {
+    upload.single('image')(req, res, function (err) {
+        if (err) {
+            console.error('MULTER/CLOUDINARY ERROR:', err);
+            return res.status(500).json({ message: 'Error uploading image', error: err.message });
+        }
+        next();
+    });
+};
+
 // Create product (Admin only)
-router.post('/', protect, restrictTo('ADMIN'), upload.single('image'), async (req, res) => {
+router.post('/', protect, restrictTo('ADMIN'), handleUpload, async (req, res) => {
     const product = new Product({
         name: req.body.name,
         reference: req.body.reference,
@@ -30,12 +68,13 @@ router.post('/', protect, restrictTo('ADMIN'), upload.single('image'), async (re
         const newProduct = await product.save();
         res.status(201).json(newProduct);
     } catch (err) {
+        console.error('SERVER ERROR (CREATE PRODUCT):', err);
         res.status(400).json({ message: err.message });
     }
 });
 
 // Update product (Admin only)
-router.put('/:id', protect, restrictTo('ADMIN'), upload.single('image'), async (req, res) => {
+router.put('/:id', protect, restrictTo('ADMIN'), handleUpload, async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         if (!product) return res.status(404).json({ message: 'Product not found' });

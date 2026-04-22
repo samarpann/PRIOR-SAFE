@@ -14,7 +14,6 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: [true, 'Please enter your password'],
         minlength: 6,
         select: false
     },
@@ -23,6 +22,9 @@ const userSchema = new mongoose.Schema({
         enum: ['USER', 'ADMIN'],
         default: 'USER'
     },
+    googleId: String,
+    otp: String,
+    otpExpires: Date,
     createdAt: {
         type: Date,
         default: Date.now

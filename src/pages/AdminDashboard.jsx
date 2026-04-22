@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Plus, Edit, Trash2, Package, Upload, X, LogOut, ShoppingBag, Users as UsersIcon } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import Sidebar from '../components/Sidebar';
+import AppLayout from '../components/AppLayout';
+import API_BASE from '../config/api';
 import '../admin.css';
 
-const API_URL = 'https://prior-safe.onrender.com/api/products';
+const API_URL = `${API_BASE}/api/products`;
 
 function AdminDashboard() {
   const { logout } = useAuth();
@@ -32,8 +33,9 @@ function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(API_URL);
-      setProducts(res.data);
+      // In admin dashboard, we might want all products or a high limit
+      const res = await axios.get(`${API_URL}?limit=1000`);
+      setProducts(res.data.products || res.data);
     } catch (err) {
       console.error("Error fetching products", err);
     }
@@ -41,7 +43,7 @@ function AdminDashboard() {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get('https://prior-safe.onrender.com/api/orders/all');
+      const res = await axios.get(`${API_BASE}/api/orders/all`);
       setOrders(res.data);
     } catch (err) {
       console.error("Error fetching orders", err);
@@ -117,11 +119,8 @@ function AdminDashboard() {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
-      <Sidebar isAdmin={true} />
-      
-      <div style={{ flex: 1, marginLeft: '280px' }}>
-        <div className="admin-body">
+    <AppLayout isAdmin={true}>
+      <div className="admin-body">
           <div className="admin-container">
             <header className="admin-header">
               <div>
@@ -232,14 +231,14 @@ function AdminDashboard() {
                       {order.items.map(item => (
                         <div key={item._id} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid #f1f5f9' }}>
                           <span>{item.product?.name || 'Unknown Product'} x {item.quantity}</span>
-                          <span style={{ fontWeight: '600' }}>${(item.price * item.quantity).toFixed(2)}</span>
+                          <span style={{ fontWeight: '600' }}>₹{(item.price * item.quantity).toFixed(2)}</span>
                         </div>
                       ))}
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '2px dashed #f1f5f9' }}>
                       <span style={{ fontWeight: '800' }}>Total Amount</span>
-                      <span style={{ fontWeight: '800', color: '#2563eb', fontSize: '1.25rem' }}>${order.totalPrice.toFixed(2)}</span>
+                      <span style={{ fontWeight: '800', color: '#2563eb', fontSize: '1.25rem' }}>₹{order.totalPrice.toFixed(2)}</span>
                     </div>
                   </div>
                 ))}
@@ -247,7 +246,6 @@ function AdminDashboard() {
             )}
           </div>
         </div>
-      </div>
 
       {isModalOpen && (
         <div className="admin-modal-overlay">
@@ -314,7 +312,7 @@ function AdminDashboard() {
           </div>
         </div>
       )}
-    </div>
+    </AppLayout>
   );
 }
 
