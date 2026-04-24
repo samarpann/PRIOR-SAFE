@@ -14,17 +14,29 @@ import {
   Phone
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
 import '../sidebar.css';
 
 function Sidebar({ isAdmin, isOpen }) {
   const { user, logout } = useAuth();
+  const { cartCount } = useCart();
 
   const userLinks = [
     { to: '/', icon: <Home size={20} />, label: 'Home' },
     { to: '/about', icon: <Info size={20} />, label: 'About Us' },
     { to: '/products', icon: <Package size={20} />, label: 'Products' },
+    { to: '/cart', icon: (
+      <div className="relative">
+        <ShoppingCart size={20} />
+        {cartCount > 0 && (
+          <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] font-black w-4 h-4 flex items-center justify-center rounded-full">
+            {cartCount}
+          </span>
+        )}
+      </div>
+    ), label: 'My Cart' },
     { to: '/contact', icon: <Phone size={20} />, label: 'Contact Us' },
-    ...(user ? [{ to: '/orders', icon: <ShoppingCart size={20} />, label: 'My Orders' }] : [])
+    ...(user ? [{ to: '/orders', icon: <ShieldCheck size={20} />, label: 'My Orders' }] : [])
   ];
 
   const adminLinks = [
@@ -47,7 +59,7 @@ function Sidebar({ isAdmin, isOpen }) {
           </svg>
         </div>
         <div className="brand-text">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: '900', color: 'var(--color-industrial-900)' }}>Ecom Experts</h2>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: '900', color: 'var(--color-industrial-900)' }}>Prior Safe</h2>
           <span style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>{isAdmin ? 'ADMIN PORTAL' : 'ONLINE SALES'}</span>
         </div>
       </div>

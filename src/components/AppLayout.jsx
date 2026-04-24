@@ -1,13 +1,14 @@
-import React from 'react';
+git add .import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeSidebar, openSidebar } from '../store/uiSlice';
 import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Home, Package, Phone, ShoppingCart, Info,
   LogOut, Settings, LayoutDashboard, Users,
-  X, Menu, Shield,
+  X, Menu, Shield, ShieldCheck, Truck, Lock
 } from 'lucide-react';
 
 /* ── Brand Logo ── */
@@ -22,14 +23,25 @@ const Logo = ({ size = 26, color = 'currentColor' }) => (
 /* ── Sidebar content ── */
 const SidebarContent = ({ isAdmin, onLinkClick }) => {
   const { user, logout } = useAuth();
+  const { cartCount } = useCart();
   const navigate = useNavigate();
 
   const userLinks = [
     { to: '/', icon: <Home size={20} />, label: 'Home' },
     { to: '/about', icon: <Info size={20} />, label: 'About Us' },
     { to: '/products', icon: <Package size={20} />, label: 'Products' },
+    { to: '/cart', icon: (
+      <div className="relative">
+        <ShoppingCart size={20} />
+        {cartCount > 0 && (
+          <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full">
+            {cartCount}
+          </span>
+        )}
+      </div>
+    ), label: 'My Cart' },
     { to: '/contact', icon: <Phone size={20} />, label: 'Contact Us' },
-    ...(user ? [{ to: '/orders', icon: <ShoppingCart size={20} />, label: 'My Orders' }] : []),
+    ...(user ? [{ to: '/orders', icon: <ShieldCheck size={20} />, label: 'My Orders' }] : []),
   ];
 
   const adminLinks = [
@@ -52,13 +64,12 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
       {/* Brand */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-slate-100">
         <div
-          className="w-11 h-11 rounded-2xl flex items-center justify-center shadow-md"
-          style={{ background: '#b23a86' }}
+          className="w-11 h-11 rounded-2xl flex items-center justify-center shadow-md bg-blue-600"
         >
           <Logo size={22} color="white" />
         </div>
         <div>
-          <p className="font-black text-slate-900 text-[1rem] leading-tight">Ecom Experts</p>
+          <p className="font-black text-slate-900 text-[1rem] leading-tight tracking-tight">Prior Safe</p>
           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">
             {isAdmin ? 'Admin Portal' : 'Online Sales'}
           </p>
@@ -79,7 +90,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition-all duration-150 ${
                 isActive
-                  ? 'bg-[#fdf4f9] text-[#b23a86]'
+                  ? 'bg-blue-50 text-blue-600'
                   : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
               }`
             }
@@ -110,8 +121,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
       <div className="px-3 py-4 border-t border-slate-100 space-y-1">
         <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-slate-50">
           <div
-            className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0"
-            style={{ background: '#b23a86' }}
+            className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0 bg-blue-600"
           >
             {user?.name?.charAt(0)?.toUpperCase() || 'G'}
           </div>
@@ -209,8 +219,8 @@ const AppLayout = ({ children, isAdmin = false }) => {
             <Menu size={20} />
           </button>
           <div className="flex items-center gap-2">
-            <Logo size={20} color="#b23a86" />
-            <span className="font-black text-slate-900 text-base">Ecom Experts</span>
+            <Logo size={20} color="#2563eb" />
+            <span className="font-black text-slate-900 text-base">Prior Safe</span>
           </div>
         </header>
 
@@ -218,6 +228,74 @@ const AppLayout = ({ children, isAdmin = false }) => {
         <main className="flex-1 min-w-0">
           {children}
         </main>
+
+        {/* Trust Bar (Karam Inspired) */}
+        <section className="bg-white border-t border-slate-100 py-12 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+                {[
+                    { icon: <ShieldCheck className="text-blue-600" size={32} />, title: "Quality Assured", desc: "ISO 9001:2015 Certified" },
+                    { icon: <Truck className="text-blue-600" size={32} />, title: "Free Shipping", desc: "On orders above ₹5000" },
+                    { icon: <Lock className="text-blue-600" size={32} />, title: "Secure Payment", desc: "Cashfree Secure Gateway" },
+                    { icon: <Users className="text-blue-600" size={32} />, title: "Expert Support", desc: "Professional safety advice" }
+                ].map((item, i) => (
+                    <div key={i} className="flex flex-col items-center text-center group">
+                        <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            {item.icon}
+                        </div>
+                        <h4 className="font-black text-slate-900 text-sm uppercase tracking-widest mb-1">{item.title}</h4>
+                        <p className="text-slate-400 text-xs font-medium">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Global Footer (Karam Style) */}
+        <footer className="bg-slate-950 py-16 px-4 md:px-8 text-white">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="col-span-1 md:col-span-1">
+                    <div className="flex items-center gap-3 mb-6">
+                        <Logo size={28} color="#2563eb" />
+                        <span className="font-black text-2xl tracking-tighter text-white">Prior Safe</span>
+                    </div>
+                    <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                        Leading provider of professional industrial safety equipment and engineering solutions. Setting the standard for workplace protection.
+                    </p>
+                </div>
+                <div>
+                    <h5 className="font-black text-[10px] uppercase tracking-[0.3em] text-blue-500 mb-6">Quick Links</h5>
+                    <ul className="space-y-4 text-sm font-bold text-slate-400">
+                        <li><a href="/products" className="hover:text-white transition-colors">Safety Catalogue</a></li>
+                        <li><a href="/about" className="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="/contact" className="hover:text-white transition-colors">Contact Expert</a></li>
+                        <li><a href="/orders" className="hover:text-white transition-colors">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 className="font-black text-[10px] uppercase tracking-[0.3em] text-blue-500 mb-6">Support</h5>
+                    <ul className="space-y-4 text-sm font-bold text-slate-400">
+                        <li><a href="#" className="hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Refund & Returns</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Safety Standards</a></li>
+                        <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 className="font-black text-[10px] uppercase tracking-[0.3em] text-blue-500 mb-6">Newsletter</h5>
+                    <p className="text-slate-500 text-xs mb-4">Get the latest safety insights and exclusive offers.</p>
+                    <div className="flex gap-2">
+                        <input type="email" placeholder="Email Address" className="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-xs w-full focus:border-blue-600 outline-none" />
+                        <button className="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs font-black">JOIN</button>
+                    </div>
+                </div>
+            </div>
+            <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">© 2025 Prior Safe. All Rights Reserved.</p>
+                <div className="flex gap-6 grayscale opacity-30">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-4" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6" />
+                </div>
+            </div>
+        </footer>
       </div>
     </div>
   );

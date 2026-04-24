@@ -1,18 +1,11 @@
 import React from 'react';
 import AppLayout from '../components/AppLayout';
+import HeroCarousel from '../components/HeroCarousel';
 import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, Award, Zap, Users, Globe, HardHat, Eye, Activity } from 'lucide-react';
+import { Shield, ArrowRight, Award, Zap, Users, Globe, HardHat, Eye, Activity, CheckCircle2, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function HomePage() {
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
-  };
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -20,68 +13,24 @@ function HomePage() {
 
   return (
     <AppLayout>
-      <div>
-        {/* Immersive Hero Section */}
-        <div style={{ 
-          position: 'relative',
-          height: '80vh',
-          minHeight: '600px',
-          display: 'flex',
-          alignItems: 'center',
-          overflow: 'hidden',
-          padding: '4rem',
-          margin: '1.5rem',
-          borderRadius: '2rem',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
-        }}>
-          {/* Background Image & Overlay */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: 'url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            zIndex: 0
-          }} />
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(15, 23, 42, 0.2) 100%)',
-            zIndex: 1
-          }} />
+      <div className="bg-slate-50 min-h-screen px-4 md:px-8 pb-12">
+        
+        {/* Dynamic Hero Carousel */}
+        <HeroCarousel />
 
-          {/* Hero Content */}
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            animate="show"
-            style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}
-          >
-            <motion.div variants={fadeInUp} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(37, 99, 235, 0.2)', color: '#60a5fa', padding: '0.5rem 1rem', borderRadius: '2rem', fontSize: '0.85rem', fontWeight: '800', marginBottom: '1.5rem', border: '1px solid rgba(59, 130, 246, 0.3)', backdropFilter: 'blur(10px)' }}>
-              <Shield size={16} /> NEXT-GENERATION INDUSTRIAL SAFETY
-            </motion.div>
-            
-            <motion.h1 variants={fadeInUp} style={{ fontSize: '4.5rem', fontWeight: '900', color: 'white', lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-              Defend Your <span style={{ color: '#3b82f6' }}>Workforce.</span>
-            </motion.h1>
-            
-            <motion.p variants={fadeInUp} style={{ color: '#cbd5e1', fontSize: '1.2rem', marginBottom: '3rem', lineHeight: 1.6, maxWidth: '600px' }}>
-              Equip your team with state-of-the-art Personal Protective Equipment. From advanced polycarbonate helmets to ultra-clear respiratory masks, we provide gear that doesn't compromise on safety or comfort.
-            </motion.p>
-            
-            <motion.div variants={fadeInUp} style={{ display: 'flex', gap: '1rem' }}>
-              <Link to="/products" style={{ background: '#2563eb', color: 'white', padding: '1.25rem 2.5rem', borderRadius: '1rem', fontSize: '1.1rem', fontWeight: '800', display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', transition: 'all 0.2s', boxShadow: '0 10px 25px -5px rgba(37, 99, 235, 0.4)' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-2px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
-                Explore Catalogue <ArrowRight size={20} />
-              </Link>
-              <Link to="/about" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)', padding: '1.25rem 2.5rem', borderRadius: '1rem', fontSize: '1.1rem', fontWeight: '800', display: 'flex', alignItems: 'center', textDecoration: 'none', backdropFilter: 'blur(10px)', transition: 'all 0.2s' }} onMouseOver={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'} onMouseOut={e => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}>
-                Our Mission
-              </Link>
-            </motion.div>
-          </motion.div>
+        {/* Client Logos / Trust Bar */}
+        <div className="max-w-7xl mx-auto py-12 border-b border-slate-200 mb-12">
+          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 mb-8">Trusted by Global Leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Using text logos for simplicity, but could be SVGs */}
+            {['VOLTAS', 'TATA STEEL', 'L&T', 'RELIANCE', 'JINDAL'].map(logo => (
+              <span key={logo} className="text-2xl font-black text-slate-900 tracking-tighter">{logo}</span>
+            ))}
+          </div>
         </div>
 
         {/* Key Metrics Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', padding: '0 3.5rem', marginTop: '-4rem', position: 'relative', zIndex: 10 }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto mb-24">
           {[
             { value: '15+', label: 'Years Experience' },
             { value: '500+', label: 'Enterprise Clients' },
@@ -94,24 +43,29 @@ function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              style={{ background: 'white', padding: '2rem', borderRadius: '1.5rem', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)', textAlign: 'center', border: '1px solid #f1f5f9' }}
+              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow"
             >
-              <h3 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#2563eb', marginBottom: '0.25rem' }}>{metric.value}</h3>
-              <p style={{ color: '#64748b', fontWeight: '600', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.05em' }}>{metric.label}</p>
+              <h3 className="text-4xl font-black text-blue-600 mb-1">{metric.value}</h3>
+              <p className="text-slate-400 font-bold uppercase text-[10px] tracking-widest">{metric.label}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Categories Showcase */}
-        <div style={{ padding: '6rem 3.5rem' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '900', color: '#1e293b', marginBottom: '1rem' }}>Premium Safety Divisions</h2>
-            <p style={{ color: '#64748b', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>Browse our specialized categories designed for specific industrial risks and compliance requirements.</p>
+        {/* Featured Divisions */}
+        <section className="max-w-7xl mx-auto mb-32">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-xl">
+              <span className="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Core Competencies</span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Specialized Safety Solutions for Every Industry.</h2>
+            </div>
+            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-blue-600 transition-colors">
+              View All Categories <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'Skull Protection', icon: <HardHat size={32} />, img: 'https://images.unsplash.com/photo-1541888081682-965a396ba259?auto=format&fit=crop&q=80', desc: 'High-impact resistant helmets for construction and heavy industry.' },
+              { title: 'Head Protection', icon: <HardHat size={32} />, img: 'https://images.unsplash.com/photo-1541888081682-965a396ba259?auto=format&fit=crop&q=80', desc: 'High-impact resistant helmets for construction and heavy industry.' },
               { title: 'Eye Protection', icon: <Eye size={32} />, img: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80', desc: 'Anti-fog, UV-resistant safety goggles and premium visors.' },
               { title: 'Respiratory Gear', icon: <Activity size={32} />, img: 'https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&q=80', desc: 'Advanced filtration masks protecting against fumes and particulates.' }
             ].map((cat, idx) => (
@@ -120,92 +74,94 @@ function HomePage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                style={{ background: 'white', borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', cursor: 'pointer', transition: 'all 0.3s' }}
+                className="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer"
               >
-                <div style={{ height: '240px', position: 'relative', overflow: 'hidden' }}>
-                  <img src={cat.img} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s' }} className="hover:scale-110" />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15,23,42,0.8), transparent)' }} />
-                  <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', color: 'white' }}>
-                    <div style={{ background: '#2563eb', width: '48px', height: '48px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
+                <div className="h-64 relative overflow-hidden">
+                  <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-6 left-6 flex items-center gap-4 text-white">
+                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
                       {cat.icon}
                     </div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: '800' }}>{cat.title}</h3>
+                    <h3 className="text-xl font-black uppercase tracking-tight">{cat.title}</h3>
                   </div>
                 </div>
-                <div style={{ padding: '1.5rem' }}>
-                  <p style={{ color: '#64748b', lineHeight: 1.5, marginBottom: '1.5rem' }}>{cat.desc}</p>
-                  <span style={{ color: '#2563eb', fontWeight: '700', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Explore Category <ArrowRight size={16} /></span>
+                <div className="p-8">
+                  <p className="text-slate-500 font-medium leading-relaxed mb-6">{cat.desc}</p>
+                  <div className="flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
+                    Explore Series <ArrowRight size={16} />
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Why Choose Us Section */}
-        <div style={{ background: '#1e293b', padding: '6rem 3.5rem', color: 'white' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div style={{ background: 'rgba(37, 99, 235, 0.2)', color: '#60a5fa', display: 'inline-block', padding: '0.5rem 1rem', borderRadius: '2rem', fontSize: '0.85rem', fontWeight: '800', marginBottom: '1.5rem' }}>
-                THE PRIOR SAFE ADVANTAGE
-              </div>
-              <h2 style={{ fontSize: '3rem', fontWeight: '900', lineHeight: 1.1, marginBottom: '2rem' }}>
-                Engineered for the Extreme.
-              </h2>
-              <p style={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-                We don't just sell equipment; we deliver peace of mind. Every product in our catalogue undergoes rigorous stress testing to ensure it surpasses global safety benchmarks.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        {/* Feature Split Section */}
+        <section className="max-w-7xl mx-auto mb-32 bg-slate-900 rounded-[3rem] overflow-hidden shadow-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="p-12 md:p-20 flex flex-col justify-center">
+              <span className="text-blue-500 font-black text-xs uppercase tracking-widest mb-6">Engineered for Extremes</span>
+              <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.1] mb-8">Safety Without Compromise.</h2>
+              
+              <div className="space-y-8">
                 {[
-                  { icon: <Award />, title: 'International Certifications', desc: 'CE, ANSI, and ISO compliance across all product lines.' },
-                  { icon: <Zap />, title: 'Innovative Ergonomics', desc: 'Designed for 12-hour shifts without compromising comfort.' },
-                  { icon: <Globe />, title: 'Global Supply Chain', desc: 'Rapid delivery networks ensuring you never face downtime.' }
-                ].map((item, idx) => (
-                  <div key={idx} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <div style={{ background: '#2563eb', padding: '0.75rem', borderRadius: '1rem', color: 'white' }}>
-                      {item.icon}
-                    </div>
+                  { title: 'Global Compliance', desc: 'Our products meet or exceed CE, ANSI, and ISO safety standards globally.' },
+                  { title: 'Impact Resistance', desc: 'Advanced materials designed to absorb 98% of kinetic impact energy.' },
+                  { title: '12-Hour Comfort', desc: 'Ergonomically weighted gear built for the longest shifts.' }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <CheckCircle2 className="text-blue-500 shrink-0" size={24} />
                     <div>
-                      <h4 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.25rem' }}>{item.title}</h4>
-                      <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>{item.desc}</p>
+                      <h4 className="text-white font-bold text-lg mb-1">{item.title}</h4>
+                      <p className="text-slate-400 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              style={{ position: 'relative' }}
-            >
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80" alt="Industrial Safety" style={{ width: '100%', borderRadius: '2rem', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }} />
-              <div style={{ position: 'absolute', bottom: '-2rem', left: '-2rem', background: 'white', padding: '2rem', borderRadius: '1.5rem', color: '#1e293b', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                  <Shield size={32} color="#2563eb" />
-                  <h4 style={{ fontSize: '1.5rem', fontWeight: '900' }}>100% Secure</h4>
-                </div>
-                <p style={{ color: '#64748b', margin: 0, fontWeight: '600' }}>Zero compromise policy.</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
 
-        {/* CTA Section */}
-        <div style={{ padding: '6rem 3.5rem', textAlign: 'center' }}>
-          <div style={{ background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)', borderRadius: '2rem', padding: '5rem 2rem', color: 'white', boxShadow: '0 20px 25px -5px rgba(37, 99, 235, 0.3)' }}>
-            <h2 style={{ fontSize: '3rem', fontWeight: '900', marginBottom: '1.5rem' }}>Ready to Upgrade Your Safety Standard?</h2>
-            <p style={{ fontSize: '1.2rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 3rem' }}>Join thousands of enterprises trusting Prior Safe for their critical PPE requirements.</p>
-            <Link to="/products" style={{ background: 'white', color: '#1d4ed8', padding: '1.25rem 3rem', borderRadius: '1rem', fontSize: '1.1rem', fontWeight: '900', textDecoration: 'none', display: 'inline-block', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}>
-              Shop Now
-            </Link>
+              <div className="mt-12">
+                <Link to="/about" className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all">
+                  Our Technical Standards <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-[400px] md:h-auto overflow-hidden">
+               <img 
+                 src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80" 
+                 alt="Industrial Engineering" 
+                 className="w-full h-full object-cover"
+               />
+               <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay" />
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Interactive CTA */}
+        <section className="max-w-7xl mx-auto mb-12">
+          <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
+            {/* Abstract Background Shapes */}
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl" />
+            
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-7xl font-black text-white leading-none mb-8 tracking-tighter">
+                Ready to Upgrade Your <br className="hidden md:block" /> Safety Standard?
+              </h2>
+              <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium opacity-80">
+                Join 500+ enterprises who trust Prior Safe for their critical PPE requirements and zero-incident workplace goals.
+              </p>
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                <Link to="/products" className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform active:scale-95">
+                  Shop the Catalogue
+                </Link>
+                <Link to="/contact" className="bg-blue-500/20 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all">
+                  Request a Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </AppLayout>

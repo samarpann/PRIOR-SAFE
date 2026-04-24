@@ -5,6 +5,8 @@ const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 const path = require('path');
 
@@ -35,6 +37,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/api/products', productRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/payment', paymentRoutes);
+app.use('/api/cart', cartRoutes);
 
 // Database connection
 mongoose.connect(process.env.MONGODB_URI)

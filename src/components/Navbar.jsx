@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Menu, X, ShoppingCart, User, ChevronDown } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const Logo = () => (
   <div className="flex flex-col items-center">
@@ -22,58 +24,61 @@ const Logo = () => (
   </div>
 );
 
-const Navbar = ({ cartCount = 0 }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { cartCount } = useCart();
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-lg border-b border-industrial-100 shadow-sm">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-lg border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo & Brand */}
-          <div className="flex-shrink-0 flex items-center">
+          <Link to="/" className="flex-shrink-0 flex items-center">
             <div className="flex items-center gap-4">
-              <div className="text-industrial-600">
+              <div className="text-slate-900">
                 <Logo />
               </div>
               <div className="flex flex-col">
-                <span className="text-industrial-600 font-black text-2xl leading-none tracking-tight">
-                  Ecom Experts
+                <span className="text-slate-900 font-black text-2xl leading-none tracking-tight">
+                  Prior Safe
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
-            <a href="#" className="text-industrial-700 hover:text-industrial-600 font-bold premium-transition flex items-center gap-1 uppercase tracking-widest text-sm">
+            <Link to="/products" className="text-slate-600 hover:text-blue-600 font-bold transition-colors flex items-center gap-1 uppercase tracking-widest text-[10px]">
               Products <ChevronDown size={14} />
-            </a>
-            <a href="#" className="text-industrial-700 hover:text-industrial-600 font-bold premium-transition uppercase tracking-widest text-sm">Solutions</a>
-            <a href="#" className="text-industrial-700 hover:text-industrial-600 font-bold premium-transition uppercase tracking-widest text-sm">Services</a>
-            <a href="#" className="text-industrial-700 hover:text-industrial-600 font-bold premium-transition uppercase tracking-widest text-sm">About</a>
+            </Link>
+            <Link to="/solutions" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">Solutions</Link>
+            <Link to="/services" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">Services</Link>
+            <Link to="/about" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">About</Link>
           </div>
 
           {/* Right Icons */}
           <div className="hidden md:flex items-center space-x-6">
             <div className="relative group">
-              <Search className="text-industrial-400 group-hover:text-industrial-600 premium-transition cursor-pointer" size={20} />
+              <Search className="text-slate-400 group-hover:text-slate-900 transition-colors cursor-pointer" size={20} />
             </div>
-            <User className="text-industrial-400 hover:text-industrial-600 premium-transition cursor-pointer" size={20} />
-            <div className="relative cursor-pointer group">
+            <Link to="/login">
+              <User className="text-slate-400 hover:text-slate-900 transition-colors cursor-pointer" size={20} />
+            </Link>
+            <Link to="/cart" className="relative cursor-pointer group">
               <div className="p-2 transition-colors">
-                <ShoppingCart className="text-industrial-400 group-hover:text-industrial-600 premium-transition" size={20} />
+                <ShoppingCart className="text-slate-400 group-hover:text-slate-900 transition-colors" size={20} />
               </div>
-              <span className="absolute top-0 right-0 bg-accent text-white text-[10px] font-black px-1.5 py-0.5 rounded-full ring-2 ring-white">
+              <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-[8px] font-black w-5 h-5 flex items-center justify-center rounded-full ring-4 ring-white">
                 {cartCount}
               </span>
-            </div>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-industrial-700 hover:text-industrial-600 focus:outline-none"
+              className="text-slate-900 hover:text-blue-600 focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -83,21 +88,21 @@ const Navbar = ({ cartCount = 0 }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-industrial-100 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-white border-t border-slate-100">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            <a href="#" className="block px-3 py-4 text-base font-black text-industrial-900 border-b border-industrial-50 uppercase tracking-widest">Products</a>
-            <a href="#" className="block px-3 py-4 text-base font-black text-industrial-900 border-b border-industrial-50 uppercase tracking-widest">Solutions</a>
-            <a href="#" className="block px-3 py-4 text-base font-black text-industrial-900 border-b border-industrial-50 uppercase tracking-widest">Services</a>
-            <a href="#" className="block px-3 py-4 text-base font-black text-industrial-900 uppercase tracking-widest">About</a>
-            <div className="pt-6 flex items-center justify-between border-t border-industrial-100 mt-4">
+            <Link to="/products" className="block px-3 py-4 text-base font-black text-slate-900 border-b border-slate-50 uppercase tracking-widest">Products</Link>
+            <Link to="/solutions" className="block px-3 py-4 text-base font-black text-slate-900 border-b border-slate-50 uppercase tracking-widest">Solutions</Link>
+            <Link to="/services" className="block px-3 py-4 text-base font-black text-slate-900 border-b border-slate-50 uppercase tracking-widest">Services</Link>
+            <Link to="/about" className="block px-3 py-4 text-base font-black text-slate-900 uppercase tracking-widest">About</Link>
+            <div className="pt-6 flex items-center justify-between border-t border-slate-100 mt-4">
               <div className="flex space-x-6">
-                <Search size={22} className="text-industrial-600" />
-                <User size={22} className="text-industrial-600" />
+                <Search size={22} className="text-slate-900" />
+                <Link to="/login"><User size={22} className="text-slate-900" /></Link>
               </div>
-              <div className="flex items-center gap-2 bg-industrial-100 px-5 py-2.5 rounded-full">
-                <ShoppingCart size={20} className="text-industrial-600" />
-                <span className="font-black text-industrial-900 text-sm">({cartCount})</span>
-              </div>
+              <Link to="/cart" className="flex items-center gap-2 bg-slate-100 px-5 py-2.5 rounded-full">
+                <ShoppingCart size={20} className="text-slate-900" />
+                <span className="font-black text-slate-900 text-sm">({cartCount})</span>
+              </Link>
             </div>
           </div>
         </div>

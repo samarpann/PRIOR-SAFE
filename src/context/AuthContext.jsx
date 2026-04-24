@@ -14,7 +14,12 @@ export const AuthProvider = ({ children }) => {
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             const storedUser = localStorage.getItem('user');
             if (storedUser) {
-                setUser(JSON.parse(storedUser));
+                try {
+                    setUser(JSON.parse(storedUser));
+                } catch (e) {
+                    console.error("Error parsing stored user", e);
+                    logout();
+                }
             }
         } else {
             delete axios.defaults.headers.common['Authorization'];
@@ -22,43 +27,8 @@ export const AuthProvider = ({ children }) => {
         setLoading(false);
     }, [token]);
 
-    const login = async (email, password) => {
-        const response = await axios.post(`${API_BASE}/api/auth/login`, { email, password });
-        const { data } = response.data;
-        setToken(response.data.token);
-        setUser(data.user);
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        return data.user;
-    };
-
-    const signup = async (userData) => {
-        const response = await axios.post(`${API_BASE}/api/auth/signup`, userData);
-        const { data } = response.data;
-        setToken(response.data.token);
-        setUser(data.user);
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        return data.user;
-    };
-
     const googleLogin = async (googleToken) => {
         const response = await axios.post(`${API_BASE}/api/auth/google`, { token: googleToken });
-        const { data } = response.data;
-        setToken(response.data.token);
-        setUser(data.user);
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('user', JSON.stringify(data.user));
-        return data.user;
-    };
-
-    const sendOtp = async (email) => {
-        const response = await axios.post(`${API_BASE}/api/auth/send-otp`, { email });
-        return response.data;
-    };
-
-    const verifyOtp = async (email, otp) => {
-        const response = await axios.post(`${API_BASE}/api/auth/verify-otp`, { email, otp });
         const { data } = response.data;
         setToken(response.data.token);
         setUser(data.user);
@@ -76,7 +46,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, token, login, signup, logout, loading, googleLogin, sendOtp, verifyOtp }}>
+        <AuthContext.Provider value={{ user, token, logout, loading, googleLogin }}>
             {children}
         </AuthContext.Provider>
     );

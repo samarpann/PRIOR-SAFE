@@ -4,7 +4,7 @@ import { ArrowLeft, ShieldCheck, Lock, CreditCard, Smartphone } from 'lucide-rea
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
-import qrCode from '../assets/qr-code.png';
+import API_BASE from '../config/api';
 
 const CheckoutPage = () => {
   const { user } = useAuth();
@@ -16,118 +16,140 @@ const CheckoutPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Load Cashfree script
+    const script = document.createElement('script');
+    script.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
-  const handlePlaceOrder = async () => {
+  const handlePayment = async () => {
+    if (!user) {
+        alert("Please login to complete payment");
+        navigate('/login');
+        return;
+    }
+
     setLoading(true);
     try {
-      const orderData = {
-        items: cartItems.map(item => ({
-          product: item._id,
-          quantity: item.quantity || 1,
-          price: item.price
-        })),
-        totalPrice,
-        shippingAddress: 'Pending'
+      // 1. Create order on server to get payment_session_id
+      const { data: cfOrder } = await axios.post(`${API_BASE}/api/payment/create-order`, {
+        amount: totalPrice,
+        customer_details: {
+            phone: "9999999999" // You should ideally get this from a form
+        }
+      });
+
+      if (!cfOrder.payment_session_id) {
+          throw new Error("No payment session ID received");
+      }
+
+      // 2. Initialize Cashfree
+      const cashfree = window.Cashfree({
+          mode: "sandbox" // Change to "production" for live
+      });
+
+      // 3. Open Checkout
+      const checkoutOptions = {
+          paymentSessionId: cfOrder.payment_session_id,
+          redirectTarget: "_self", // Or "_modal"
       };
 
-      await axios.post('http://localhost:5000/api/orders', orderData);
-      localStorage.removeItem('cart');
-      alert('Order placed successfully!');
-      navigate('/');
+      // Since we want to handle verification, we can use a return_url or poll
+      // For this implementation, we'll let it redirect or we can use the modal approach
+      cashfree.checkout(checkoutOptions).then((result) => {
+          if (result.error) {
+              alert(result.error.message);
+          }
+          if (result.redirect) {
+              console.log("Redirecting to payment page...");
+          }
+      });
+
     } catch (err) {
-      console.error('Failed to place order', err);
+      console.error('Failed to initiate payment', err);
+      alert('Could not initiate payment. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-industrial-50 selection:bg-accent selection:text-white flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-2xl bg-white rounded-[2.5rem] shadow-premium overflow-hidden border border-industrial-100"
+        className="w-full max-w-2xl bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100"
       >
         {/* Header */}
-        <div className="p-8 border-b border-industrial-100 flex items-center justify-between bg-white relative z-10">
+        <div className="p-8 border-b border-slate-100 flex items-center justify-between">
           <button 
             onClick={() => navigate(-1)}
-            className="p-3 hover:bg-industrial-50 rounded-full premium-transition text-industrial-400 hover:text-industrial-600 flex items-center gap-2 font-black text-xs uppercase tracking-widest"
+            className="p-3 hover:bg-slate-50 rounded-full transition-colors text-slate-400 hover:text-slate-600 flex items-center gap-2 font-bold text-xs uppercase tracking-widest"
           >
             <ArrowLeft size={18} />
             Back
           </button>
           <div className="flex items-center gap-3">
-            <svg width="24" height="24" viewBox="0 0 100 100">
-              <path d="M20 85 L80 85 L65 15 L35 15 Z" stroke="#b23a86" fill="none" strokeWidth="8" strokeLinejoin="round"/>
-              <line x1="30" y1="65" x2="70" y2="65" stroke="#b23a86" strokeWidth="8" />
-              <line x1="38" y1="40" x2="62" y2="40" stroke="#b23a86" strokeWidth="8" />
-            </svg>
-            <span className="font-black text-industrial-600 text-lg tracking-tight uppercase">Checkout</span>
+             <ShieldCheck className="text-emerald-600" size={24} />
+            <span className="font-bold text-slate-900 text-lg uppercase tracking-tight">Checkout</span>
           </div>
           <div className="w-10"></div>
         </div>
 
         <div className="p-10 md:p-16 flex flex-col items-center text-center">
           <div className="mb-10">
-            <div className="w-20 h-20 bg-industrial-50 rounded-full flex items-center justify-center text-industrial-600 mb-6 mx-auto">
-              <ShieldCheck size={40} />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-black text-industrial-900 mb-4 tracking-tight">Secure Payment</h1>
-            <p className="text-industrial-500 font-medium max-w-md mx-auto leading-relaxed">
-              Scan the QR code below using your mobile banking app or UPI wallet to complete your transaction with Ecom Experts.
+            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Complete Payment</h1>
+            <p className="text-slate-500 font-medium max-w-md mx-auto leading-relaxed">
+              Securely complete your purchase using Cashfree Payments. Supports UPI, Cards, and Net Banking.
             </p>
           </div>
 
-          {/* QR Code Container */}
-          <motion.div 
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, type: 'spring' }}
-            className="p-8 bg-white border-4 border-industrial-600 rounded-[2.5rem] shadow-soft mb-12 relative group"
-          >
-            <div className="aspect-square w-64 md:w-80 overflow-hidden rounded-2xl bg-white flex items-center justify-center">
-              <img 
-                src={qrCode} 
-                alt="Payment QR Code" 
-                className="w-full h-full object-contain group-hover:scale-105 premium-transition"
-              />
-            </div>
-            
-            <div className="absolute top-1/2 left-0 w-full h-1 bg-industrial-400/20 -translate-y-1/2 animate-bounce blur-sm pointer-events-none"></div>
-          </motion.div>
-
-          {/* Total Price Display */}
-          <div className="mb-10 p-6 bg-industrial-100 rounded-3xl w-full max-w-sm">
-            <span className="text-xs font-black uppercase tracking-widest text-industrial-500 block mb-1">Amount to Pay</span>
-            <span className="text-4xl font-black text-industrial-900">${totalPrice.toFixed(2)}</span>
+          {/* Cart Summary */}
+          <div className="w-full mb-10 text-left bg-slate-50 p-6 rounded-2xl">
+             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4">Order Summary</h3>
+             <div className="space-y-3">
+                {cartItems.map((item, idx) => (
+                    <div key={idx} className="flex justify-between items-center text-sm">
+                        <span className="text-slate-600">{item.name} x {item.quantity || 1}</span>
+                        <span className="font-bold text-slate-900">₹{(item.price * (item.quantity || 1)).toFixed(2)}</span>
+                    </div>
+                ))}
+                <div className="h-px bg-slate-200 my-4"></div>
+                <div className="flex justify-between items-center text-lg font-black">
+                    <span className="text-slate-900">Total Amount</span>
+                    <span className="text-emerald-600">₹{totalPrice.toFixed(2)}</span>
+                </div>
+             </div>
           </div>
 
           {/* Payment Info */}
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="p-6 bg-industrial-50 rounded-2xl flex flex-col items-center gap-2">
-              <Smartphone className="text-industrial-600" size={24} />
-              <span className="text-[10px] font-black uppercase tracking-widest text-industrial-400">Mobile Wallet</span>
+            <div className="p-6 bg-slate-50 rounded-2xl flex flex-col items-center gap-2">
+              <Smartphone className="text-slate-600" size={24} />
+              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">UPI / QR</span>
             </div>
-            <div className="p-6 bg-industrial-50 rounded-2xl flex flex-col items-center gap-2">
-              <CreditCard className="text-industrial-600" size={24} />
-              <span className="text-[10px] font-black uppercase tracking-widest text-industrial-400">Bank Transfer</span>
+            <div className="p-6 bg-slate-50 rounded-2xl flex flex-col items-center gap-2">
+              <CreditCard className="text-slate-600" size={24} />
+              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Cards / Net</span>
             </div>
-            <div className="p-6 bg-industrial-50 rounded-2xl flex flex-col items-center gap-2 border-2 border-accent">
-              <Lock className="text-accent" size={24} />
-              <span className="text-[10px] font-black uppercase tracking-widest text-accent">Encrypted</span>
+            <div className="p-6 bg-slate-50 rounded-2xl flex flex-col items-center gap-2 border-2 border-emerald-100">
+              <Lock className="text-emerald-600" size={24} />
+              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600">Secure</span>
             </div>
           </div>
 
-          <div className="text-industrial-400 text-[10px] font-black uppercase tracking-[0.3em]">
-            <p className="mb-2">Transaction ID: #EE-9283-4817</p>
-            <p>Authorized by Ecom Experts Secure Gateway</p>
+          <div className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <p>Authorized by Prior Safe & Cashfree Payments</p>
           </div>
         </div>
 
         {/* Action Button */}
-        <div className="p-10 bg-industrial-900 text-white text-center">
+        <div className="p-10 bg-slate-900 text-white text-center">
           {loading ? (
             <div className="flex justify-center gap-3">
               {[0, 1, 2].map(i => (
@@ -135,24 +157,20 @@ const CheckoutPage = () => {
                   key={i}
                   animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                   transition={{ repeat: Infinity, duration: 1, delay: i * 0.2 }}
-                  className="w-2 h-2 bg-accent rounded-full"
+                  className="w-2 h-2 bg-emerald-500 rounded-full"
                 />
               ))}
             </div>
           ) : (
             <button 
-              onClick={handlePlaceOrder}
-              className="w-full bg-accent hover:bg-accent-dark text-white font-black py-5 rounded-2xl uppercase tracking-[0.2em] transition-all shadow-premium"
+              onClick={handlePayment}
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-5 rounded-2xl uppercase tracking-[0.2em] transition-all shadow-lg active:scale-95"
             >
-              Confirm Payment
+              Pay Now ₹{totalPrice.toFixed(2)}
             </button>
           )}
         </div>
       </motion.div>
-      
-      <p className="mt-8 text-industrial-400 text-[10px] font-black uppercase tracking-[0.4em] opacity-60">
-        Ecom Experts Secure Payment System
-      </p>
     </div>
   );
 };

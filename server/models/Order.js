@@ -27,14 +27,20 @@ const orderSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['PENDING', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED'],
+        enum: ['PENDING', 'PAID', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED'],
         default: 'PENDING'
     },
     shippingAddress: {
         type: String,
         required: true
     },
-    paymentId: String,
+    razorpayOrderId: String, // Keep for backward compatibility or remove
+    razorpayPaymentId: String,
+    razorpaySignature: String,
+    cfOrderId: String,
+    cfPaymentId: String,
+    paymentStatus: String,
+    paymentId: String, // Legacy/Generic field
     createdAt: {
         type: Date,
         default: Date.now

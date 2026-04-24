@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, Star, Zap } from 'lucide-react';
+import { X, ShoppingBag, ShieldCheck, Truck, RefreshCw, Star, Zap, Minus, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
@@ -16,7 +16,7 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="absolute inset-0 bg-industrial-900/70 backdrop-blur-md"
+          className="absolute inset-0 bg-slate-950/70 backdrop-blur-md"
         />
 
         {/* Modal content */}
@@ -24,134 +24,128 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 30 }}
-          className="relative w-full max-w-5xl bg-white rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-premium flex flex-col md:flex-row max-h-[95vh] sm:max-h-[85vh] md:max-h-[90vh]"
+          className="relative w-full max-w-5xl bg-white rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[95vh] sm:max-h-[85vh] md:max-h-[90vh]"
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-8 right-8 z-20 p-2.5 bg-white/80 backdrop-blur rounded-full text-industrial-400 hover:text-industrial-900 shadow-soft border border-industrial-100 premium-transition"
+            className="absolute top-8 right-8 z-20 p-3 bg-white/80 backdrop-blur rounded-full text-slate-400 hover:text-slate-900 shadow-sm border border-slate-100 transition-all active:scale-90"
           >
             <X size={20} />
           </button>
 
           {/* Left: Image Section */}
-          <div className="w-full md:w-1/2 bg-industrial-50 p-12 flex items-center justify-center relative min-h-[400px]">
+          <div className="w-full md:w-1/2 bg-slate-50 p-12 flex items-center justify-center relative min-h-[300px] md:min-h-[500px]">
             <motion.img
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2 }}
               src={product.image_url}
               alt={product.name}
-              className="w-full h-full object-contain max-h-[450px]"
+              className="w-full h-full object-contain max-h-[400px]"
             />
             {/* Image dots */}
-            <div className="absolute bottom-10 flex gap-2.5">
+            <div className="absolute bottom-10 flex gap-2">
               {[0, 1, 2].map(i => (
-                <div key={i} className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-industrial-900 w-6' : 'bg-industrial-200'} transition-all`} />
+                <div key={i} className={`h-1.5 rounded-full transition-all ${i === 0 ? 'bg-blue-600 w-8' : 'bg-slate-200 w-2'}`} />
               ))}
             </div>
           </div>
 
           {/* Right: Details Section */}
-          <div className="w-full md:w-1/2 p-10 md:p-14 overflow-y-auto">
-            <div className="mb-10">
+          <div className="w-full md:w-1/2 p-10 md:p-16 overflow-y-auto">
+            <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="flex text-accent">
-                  {[1, 2, 3, 4, 5].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                <div className="flex text-amber-400">
+                  {[1, 2, 3, 4, 5].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                 </div>
-                <span className="text-xs font-black text-industrial-400 uppercase tracking-widest bg-industrial-50 px-3 py-1 rounded-full">4.9 / 5.0</span>
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">4.9 Rating</span>
               </div>
               
-              <div className="flex items-center gap-4 mb-3">
-                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent-dark">
-                  {product.reference}
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600">
+                  REF: {product.reference || 'PS-001'}
                 </span>
-                <span className="w-1 h-1 bg-industrial-300 rounded-full"></span>
-                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-industrial-400">In Stock</span>
+                <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500">In Stock</span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-black text-industrial-900 mb-6 tracking-tight leading-none">
+              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-[1.1]">
                 {product.name}
               </h2>
               
-              <p className="text-industrial-500 text-lg leading-relaxed mb-8 font-medium italic">
-                {product.subtitle}
+              <p className="text-slate-500 text-base leading-relaxed mb-8 font-medium">
+                {product.subtitle || product.description}
               </p>
 
               <div className="flex items-baseline gap-4 mb-10">
-                <span className="text-5xl font-black text-industrial-900 tabular-nums">₹{product.price || '49.99'}</span>
-                <span className="text-xl text-industrial-300 font-bold line-through tabular-nums">₹{(parseFloat(product.price || 49.99) * 1.25).toFixed(2)}</span>
-                <span className="bg-red-50 text-red-600 font-black text-xs px-2.5 py-1 rounded-lg">-22%</span>
+                <span className="text-4xl font-black text-slate-900">₹{(product.price || 49.99).toFixed(2)}</span>
+                <span className="text-lg text-slate-300 font-bold line-through">₹{(parseFloat(product.price || 49.99) * 1.25).toFixed(2)}</span>
+                <span className="bg-blue-50 text-blue-600 font-black text-xs px-2.5 py-1 rounded-lg">PROMO</span>
               </div>
             </div>
 
-            {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 border-y border-industrial-100 py-8">
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-industrial-50 rounded-xl flex items-center justify-center text-industrial-900">
-                  <ShieldCheck size={22} />
+            {/* Features Row */}
+            <div className="grid grid-cols-3 gap-4 mb-10 pb-10 border-b border-slate-100">
+              <div className="text-center">
+                <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-900 mx-auto mb-2">
+                  <ShieldCheck size={20} />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-industrial-600">Certified</span>
+                <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">Certified</span>
               </div>
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-industrial-50 rounded-xl flex items-center justify-center text-industrial-900">
-                  <Truck size={22} />
+              <div className="text-center">
+                <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-900 mx-auto mb-2">
+                  <Truck size={20} />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-industrial-600">Express</span>
+                <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">Express</span>
               </div>
-              <div className="flex flex-col items-center text-center gap-2">
-                <div className="w-10 h-10 bg-industrial-50 rounded-xl flex items-center justify-center text-industrial-900">
-                  <RefreshCw size={22} />
+              <div className="text-center">
+                <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-900 mx-auto mb-2">
+                  <RefreshCw size={20} />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-industrial-600">30-Day</span>
+                <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">30-Day</span>
               </div>
             </div>
 
             {/* Quantity and Actions */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4 mb-2">
-                <span className="text-sm font-bold text-industrial-900 uppercase tracking-wider">Quantity:</span>
-                <div className="flex items-center bg-industrial-50 rounded-xl border border-industrial-200">
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-black text-slate-900 uppercase tracking-widest">Quantity</span>
+                <div className="flex items-center bg-slate-50 rounded-2xl border border-slate-100 p-1">
                   <button 
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-10 h-10 flex items-center justify-center text-industrial-600 hover:text-industrial-900"
-                  >-</button>
-                  <span className="w-12 text-center font-bold text-industrial-900 tabular-nums">{quantity}</span>
+                    className="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-slate-900 hover:bg-white rounded-xl transition-all"
+                  ><Minus size={18} /></button>
+                  <span className="w-10 text-center font-black text-slate-900">{quantity}</span>
                   <button 
                     onClick={() => setQuantity(quantity + 1)}
-                    className="w-10 h-10 flex items-center justify-center text-industrial-600 hover:text-industrial-900"
-                  >+</button>
+                    className="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-slate-900 hover:bg-white rounded-xl transition-all"
+                  ><Plus size={18} /></button>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex gap-4">
                 <button 
                   onClick={() => onAddToCart(product, quantity)}
-                  className="flex-grow flex items-center justify-center gap-3 bg-accent text-industrial-900 font-black py-5 px-8 rounded-2xl hover:bg-industrial-900 hover:text-white premium-transition shadow-soft active:scale-[0.98]"
+                  className="flex-grow flex items-center justify-center gap-3 bg-blue-600 text-white font-black py-5 px-8 rounded-2xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 active:scale-95"
                 >
                   <ShoppingBag size={20} />
                   ADD TO CART
                 </button>
                 <button 
-                  className="sm:w-20 w-full h-16 sm:h-auto bg-industrial-50 text-industrial-400 hover:text-red-500 rounded-2xl flex items-center justify-center premium-transition border border-industrial-100"
+                  onClick={() => onBuyNow(product, quantity)}
+                  className="w-full sm:w-auto flex items-center justify-center gap-3 bg-slate-900 text-white font-black py-5 px-10 rounded-2xl hover:bg-slate-800 transition-all shadow-xl active:scale-95"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                  <Zap size={20} className="text-amber-400" fill="currentColor" />
+                  BUY NOW
                 </button>
               </div>
-              
-              <button 
-                onClick={() => onBuyNow(product, quantity)}
-                className="w-full flex items-center justify-center gap-3 bg-industrial-900 text-white font-black py-5 px-8 rounded-2xl hover:bg-accent hover:text-industrial-900 premium-transition shadow-premium active:scale-[0.98]"
-              >
-                <Zap size={20} fill="currentColor" />
-                BUY NOW
-              </button>
             </div>
             
-            <div className="mt-10 flex items-center justify-center gap-2 text-industrial-400">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <p className="text-[10px] font-black uppercase tracking-widest">
-                24 people are viewing this right now
+            <div className="mt-8 flex items-center justify-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></div>
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                Authorized Prior Safe Retailer
               </p>
             </div>
           </div>

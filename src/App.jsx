@@ -7,8 +7,10 @@ import ProductCategoryPage from './pages/ProductCategoryPage'
 import CheckoutPage from './pages/CheckoutPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
+import CartPage from './pages/CartPage'
 import AdminDashboard from './pages/AdminDashboard'
 import { AuthProvider, useAuth } from './context/AuthContext'
+import { CartProvider } from './context/CartContext'
 
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
@@ -28,6 +30,7 @@ function App() {
   return (
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID || "dummy-client-id"}>
     <AuthProvider>
+    <CartProvider>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -35,6 +38,7 @@ function App() {
           <Route path="/products" element={<ProductCategoryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           
+          <Route path="/cart" element={<CartPage />} />
           <Route path="/checkout" element={<PrivateRoute><CheckoutPage /></PrivateRoute>} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
@@ -52,6 +56,7 @@ function App() {
           <Route path="/admin/*" element={<Navigate to="/admin" replace />} />
         </Routes>
       </Router>
+    </CartProvider>
     </AuthProvider>
     </GoogleOAuthProvider>
   )
