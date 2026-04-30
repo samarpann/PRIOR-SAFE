@@ -8,8 +8,10 @@ import '../admin.css';
 function LoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   
-  const { googleLogin } = useAuth();
+  const { googleLogin, emailLogin } = useAuth();
   const navigate = useNavigate();
 
   const handleSuccessRedirect = (user) => {
@@ -17,6 +19,20 @@ function LoginPage() {
       navigate('/admin');
     } else {
       navigate('/');
+    }
+  };
+
+  const handleEmailLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    try {
+      const user = await emailLogin(email, password);
+      handleSuccessRedirect(user);
+    } catch (err) {
+      setError(err.response?.data?.message || 'Login failed. Please check your credentials.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -34,7 +50,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="admin-body" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+    <div className="admin-body" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', padding: '2rem 0' }}>
       <div className="admin-login-card" style={{ maxWidth: '400px', width: '90%' }}>
         <div style={{ marginBottom: '2.5rem' }}>
           <div style={{ 
@@ -52,7 +68,7 @@ function LoginPage() {
             <ShieldCheck size={36} />
           </div>
           <h2 style={{ fontSize: '1.75rem', fontWeight: '800', margin: '0 0 0.5rem', color: '#1e293b' }}>Welcome Back</h2>
-          <p style={{ color: '#64748b', fontSize: '0.95rem' }}>Access your Prior Safe account securely</p>
+          <p style={{ color: '#64748b', fontSize: '0.95rem' }}>Access your Ecom Experts account securely</p>
         </div>
 
         {error && (
@@ -62,7 +78,7 @@ function LoginPage() {
             padding: '1rem', 
             borderRadius: '0.75rem', 
             fontSize: '0.85rem', 
-            marginBottom: '2rem', 
+            marginBottom: '1.5rem', 
             textAlign: 'center',
             border: '1px solid #fee2e2'
           }}>
@@ -70,18 +86,60 @@ function LoginPage() {
           </div>
         )}
 
+        <form onSubmit={handleEmailLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+          <div style={{ textAlign: 'left' }}>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: '#475569' }}>Email</label>
+            <input 
+              type="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              style={{ width: '100%', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #cbd5e1', outline: 'none', boxSizing: 'border-box' }}
+              placeholder="admin@priorsafe.com"
+            />
+          </div>
+          <div style={{ textAlign: 'left' }}>
+            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: '600', color: '#475569' }}>Password</label>
+            <input 
+              type="password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              style={{ width: '100%', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #cbd5e1', outline: 'none', boxSizing: 'border-box' }}
+              placeholder="••••••••"
+            />
+          </div>
+          <button 
+            type="submit" 
+            disabled={loading}
+            style={{ 
+              background: '#2563eb', 
+              color: 'white', 
+              padding: '0.85rem', 
+              borderRadius: '0.5rem', 
+              border: 'none', 
+              fontWeight: '600', 
+              cursor: loading ? 'not-allowed' : 'pointer',
+              marginTop: '0.5rem',
+              opacity: loading ? 0.7 : 1,
+              width: '100%'
+            }}>
+            {loading ? 'Signing in...' : 'Sign In'}
+          </button>
+        </form>
+
         <div style={{ 
           background: '#f8fafc', 
-          padding: '2rem', 
+          padding: '1.5rem', 
           borderRadius: '1rem', 
           border: '1px solid #e2e8f0',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1.5rem'
+          gap: '1rem'
         }}>
           <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: '600', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Continue with
+            Or continue with
           </p>
           
           <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>

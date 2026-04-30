@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <div className="text-xs font-black uppercase tracking-widest text-accent">Leadership</div>
-              <div className="text-sm font-bold text-white">Nimlesh Garg <span className="text-industrial-500 font-medium ml-2 text-xs uppercase tracking-tighter">— CEO</span></div>
+              <div className="text-sm font-bold text-white">Nimiesh Garg <span className="text-industrial-500 font-medium ml-2 text-xs uppercase tracking-tighter">— CEO</span></div>
             </div>
           </div>
           

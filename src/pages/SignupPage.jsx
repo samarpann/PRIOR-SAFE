@@ -51,7 +51,7 @@ function SignupPage() {
           }}>
             <User size={36} />
           </div>
-          <h2 style={{ fontSize: '1.75rem', fontWeight: '800', margin: '0 0 0.5rem', color: '#1e293b' }}>Join Prior Safe</h2>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: '800', margin: '0 0 0.5rem', color: '#1e293b' }}>Join Ecom Experts</h2>
           <p style={{ color: '#64748b', fontSize: '0.95rem' }}>Create your account using Google</p>
         </div>
 

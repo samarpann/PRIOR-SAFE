@@ -7,28 +7,28 @@ const slides = [
   {
     id: 1,
     title: "Defend Your Workforce.",
-    subtitle: "NEXT-GENERATION INDUSTRIAL SAFETY",
+    subtitle: "PREMIUM INDUSTRIAL PROTECTION",
     description: "Equip your team with state-of-the-art Personal Protective Equipment. Gear that doesn't compromise on safety or comfort.",
     image: "/images/hero1.png",
-    accent: "#3b82f6",
+    accent: "#fbbf24",
     icon: <Shield size={18} />
   },
   {
     id: 2,
     title: "Precision Engineering.",
-    subtitle: "ADVANCED OPTICAL PROTECTION",
+    subtitle: "ADVANCED OPTICAL GEAR",
     description: "Anti-fog, UV-resistant safety goggles and premium visors designed for high-risk environments.",
     image: "/images/hero2.png",
-    accent: "#60a5fa",
+    accent: "#f59e0b",
     icon: <Zap size={18} />
   },
   {
     id: 3,
     title: "Extreme Durability.",
-    subtitle: "HEAVY-DUTY SITE PROTECTION",
+    subtitle: "HEAVY-DUTY SAFETY GEAR",
     description: "Rigorous stress testing ensures every piece of gear surpasses global safety benchmarks.",
     image: "/images/hero3.png",
-    accent: "#2563eb",
+    accent: "#fbbf24",
     icon: <Award size={18} />
   }
 ];
@@ -72,7 +72,7 @@ const HeroCarousel = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 backdrop-blur-md border border-blue-500/30 rounded-full text-blue-400 text-xs font-black uppercase tracking-widest mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 backdrop-blur-md border border-yellow-500/30 rounded-full text-yellow-500 text-xs font-black uppercase tracking-widest mb-6"
             >
               {slides[current].icon}
               {slides[current].subtitle}
@@ -85,7 +85,7 @@ const HeroCarousel = () => {
               className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-6 tracking-tighter"
             >
               {slides[current].title.split(' ').map((word, i) => (
-                <span key={i} className={i === slides[current].title.split(' ').length - 1 ? "text-blue-500" : ""}>
+                <span key={i} className={i === slides[current].title.split(' ').length - 1 ? "text-yellow-500" : ""}>
                   {word}{' '}
                 </span>
               ))}
@@ -108,7 +108,7 @@ const HeroCarousel = () => {
             >
               <Link 
                 to="/products"
-                className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-blue-600/20 active:scale-95"
+                className="group flex items-center gap-3 bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-yellow-500/20 active:scale-95"
               >
                 Get Started
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -146,7 +146,7 @@ const HeroCarousel = () => {
           <div 
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === current ? "w-12 bg-blue-500" : "w-4 bg-white/20"}`}
+            className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === current ? "w-12 bg-yellow-500" : "w-4 bg-white/20"}`}
           />
         ))}
       </div>

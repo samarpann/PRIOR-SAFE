@@ -27,7 +27,7 @@ const sendEmail = async (options) => {
   }
 
   const mailOptions = {
-    from: '"Prior Safe" <noreply@priorsafe.com>',
+    from: '"Ecom Experts" <noreply@priorsafe.com>',
     to: options.email,
     subject: options.subject,
     text: options.message,

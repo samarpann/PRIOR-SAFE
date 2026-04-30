@@ -56,7 +56,7 @@ function AboutPage() {
               We Engineer <span style={{ color: '#3b82f6' }}>Safety.</span>
             </h1>
             <p style={{ color: '#cbd5e1', fontSize: '1.2rem', lineHeight: 1.6 }}>
-              For over four decades, Prior Safe has been the global standard for industrial protection, safeguarding millions of workers in the most hazardous environments on Earth.
+              For over four decades, Ecom Experts has been the global standard for industrial protection, safeguarding millions of workers in the most hazardous environments on Earth.
             </p>
           </motion.div>
         </div>

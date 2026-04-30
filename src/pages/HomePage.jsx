@@ -149,7 +149,7 @@ function HomePage() {
                 Ready to Upgrade Your <br className="hidden md:block" /> Safety Standard?
               </h2>
               <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium opacity-80">
-                Join 500+ enterprises who trust Prior Safe for their critical PPE requirements and zero-incident workplace goals.
+                Join 500+ enterprises who trust Ecom Experts for their critical PPE requirements and zero-incident workplace goals.
               </p>
               <div className="flex flex-col md:flex-row justify-center gap-4">
                 <Link to="/products" className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform active:scale-95">

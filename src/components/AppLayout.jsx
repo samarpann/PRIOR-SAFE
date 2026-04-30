@@ -69,7 +69,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
           <Logo size={22} color="white" />
         </div>
         <div>
-          <p className="font-black text-slate-900 text-[1rem] leading-tight tracking-tight">Prior Safe</p>
+          <p className="font-black text-slate-900 text-[1rem] leading-tight tracking-tight">Ecom Experts</p>
           <p className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">
             {isAdmin ? 'Admin Portal' : 'Online Sales'}
           </p>
@@ -220,7 +220,7 @@ const AppLayout = ({ children, isAdmin = false }) => {
           </button>
           <div className="flex items-center gap-2">
             <Logo size={20} color="#2563eb" />
-            <span className="font-black text-slate-900 text-base">Prior Safe</span>
+            <span className="font-black text-slate-900 text-base">Ecom Experts</span>
           </div>
         </header>
 
@@ -255,7 +255,7 @@ const AppLayout = ({ children, isAdmin = false }) => {
                 <div className="col-span-1 md:col-span-1">
                     <div className="flex items-center gap-3 mb-6">
                         <Logo size={28} color="#2563eb" />
-                        <span className="font-black text-2xl tracking-tighter text-white">Prior Safe</span>
+                        <span className="font-black text-2xl tracking-tighter text-white">Ecom Experts</span>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed font-medium">
                         Leading provider of professional industrial safety equipment and engineering solutions. Setting the standard for workplace protection.
@@ -289,7 +289,7 @@ const AppLayout = ({ children, isAdmin = false }) => {
                 </div>
             </div>
             <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">© 2025 Prior Safe. All Rights Reserved.</p>
+                <p className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">© 2025 Ecom Experts. All Rights Reserved.</p>
                 <div className="flex gap-6 grayscale opacity-30">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" className="h-4" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="h-6" />

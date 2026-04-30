@@ -59,7 +59,7 @@ function Sidebar({ isAdmin, isOpen }) {
           </svg>
         </div>
         <div className="brand-text">
-          <h2 style={{ fontSize: '1.25rem', fontWeight: '900', color: 'var(--color-industrial-900)' }}>Prior Safe</h2>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: '900', color: 'var(--color-industrial-900)' }}>Ecom Experts</h2>
           <span style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>{isAdmin ? 'ADMIN PORTAL' : 'ONLINE SALES'}</span>
         </div>
       </div>

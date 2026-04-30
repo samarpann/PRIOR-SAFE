@@ -145,7 +145,7 @@ const ProductModal = ({ product, isOpen, onClose, onAddToCart, onBuyNow }) => {
             <div className="mt-8 flex items-center justify-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping"></div>
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                Authorized Prior Safe Retailer
+                Authorized Ecom Experts Retailer
               </p>
             </div>
           </div>

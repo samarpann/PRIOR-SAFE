@@ -144,7 +144,7 @@ const CheckoutPage = () => {
           </div>
 
           <div className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]">
-            <p>Authorized by Prior Safe & Cashfree Payments</p>
+            <p>Authorized by Ecom Experts & Cashfree Payments</p>
           </div>
         </div>
 

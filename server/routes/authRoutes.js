@@ -95,4 +95,31 @@ router.post('/google', async (req, res) => {
     }
 });
 
+// @route   POST /api/auth/login
+// @desc    Email/Password Login
+// @access  Public
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+
+        // 1. Check if email and password exist
+        if (!email || !password) {
+            return res.status(400).json({ status: 'fail', message: 'Please provide email and password' });
+        }
+
+        // 2. Check if user exists && password is correct
+        const user = await User.findOne({ email }).select('+password');
+
+        if (!user || !(await user.comparePassword(password, user.password))) {
+            return res.status(401).json({ status: 'fail', message: 'Incorrect email or password' });
+        }
+
+        // 3. If everything ok, send token to client
+        sendToken(user, 200, res);
+    } catch (err) {
+        console.error('Login Error:', err);
+        res.status(400).json({ status: 'fail', message: err.message });
+    }
+});
+
 module.exports = router;

@@ -40,7 +40,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-slate-900 font-black text-2xl leading-none tracking-tight">
-                  Prior Safe
+                  Ecom Experts
                 </span>
               </div>
             </div>

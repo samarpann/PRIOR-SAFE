@@ -37,6 +37,16 @@ export const AuthProvider = ({ children }) => {
         return data.user;
     };
 
+    const emailLogin = async (email, password) => {
+        const response = await axios.post(`${API_BASE}/api/auth/login`, { email, password });
+        const { data } = response.data;
+        setToken(response.data.token);
+        setUser(data.user);
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        return data.user;
+    };
+
     const logout = () => {
         setToken(null);
         setUser(null);
@@ -46,7 +56,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, token, logout, loading, googleLogin }}>
+        <AuthContext.Provider value={{ user, token, logout, loading, googleLogin, emailLogin }}>
             {children}
         </AuthContext.Provider>
     );
