@@ -12,7 +12,8 @@ function App() {
     name: '',
     reference: '',
     subtitle: '',
-    category: 'Skull protection',
+    category: 'Head',
+    subCategory: 'Skull',
     description: '',
     price: 0
   });
@@ -39,7 +40,8 @@ function App() {
         name: product.name,
         reference: product.reference,
         subtitle: product.subtitle,
-        category: product.category,
+        category: product.category || 'Head',
+        subCategory: product.subCategory || 'Skull',
         description: product.description || '',
         price: product.price || 0
       });
@@ -49,7 +51,8 @@ function App() {
         name: '',
         reference: '',
         subtitle: '',
-        category: 'Skull protection',
+        category: 'Head',
+        subCategory: 'Skull',
         description: '',
         price: 0
       });
@@ -122,7 +125,7 @@ function App() {
                 {product.subtitle}
               </p>
               <div style={{ fontSize: '0.85rem', marginBottom: '1rem' }}>
-                <strong>Ref:</strong> {product.reference} | <strong>Cat:</strong> {product.category}
+                <strong>Ref:</strong> {product.reference} | <strong>Cat:</strong> {product.category} &gt; {product.subCategory}
               </div>
             </div>
             <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
@@ -171,10 +174,24 @@ function App() {
               <div className="form-group">
                 <label>Category</label>
                 <select name="category" value={formData.category} onChange={handleInputChange}>
-                  <option>Skull protection</option>
-                  <option>Hearing protection</option>
-                  <option>Protective eyewear</option>
-                  <option>Respiratory protection</option>
+                  <option value="Head">Head</option>
+                  <option value="Body">Body</option>
+                  <option value="Hands">Hands</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label>Sub Category</label>
+                <select name="subCategory" value={formData.subCategory} onChange={handleInputChange}>
+                  {formData.category === 'Head' ? (
+                    <>
+                      <option value="Skull">Skull</option>
+                      <option value="Eyes">Eyes</option>
+                      <option value="Ear">Ear</option>
+                      <option value="Respiratory">Respiratory</option>
+                    </>
+                  ) : (
+                    <option value="General">General</option>
+                  )}
                 </select>
               </div>
               <div className="form-group">

@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
         const limit = parseInt(req.query.limit) || 10;
         const search = req.query.search || '';
         const category = req.query.category || '';
+        const subCategory = req.query.subCategory || '';
 
         // Build query
         let query = {};
@@ -23,6 +24,9 @@ router.get('/', async (req, res) => {
         }
         if (category && category !== 'All Products') {
             query.category = category;
+        }
+        if (subCategory) {
+            query.subCategory = subCategory;
         }
 
         const skip = (page - 1) * limit;
@@ -59,6 +63,7 @@ router.post('/', protect, restrictTo('ADMIN'), handleUpload, async (req, res) =>
         reference: req.body.reference,
         subtitle: req.body.subtitle,
         category: req.body.category,
+        subCategory: req.body.subCategory,
         image_url: req.file ? req.file.path : req.body.image_url,
         description: req.body.description,
         price: req.body.price
@@ -83,6 +88,7 @@ router.put('/:id', protect, restrictTo('ADMIN'), handleUpload, async (req, res) 
         if (req.body.reference) product.reference = req.body.reference;
         if (req.body.subtitle) product.subtitle = req.body.subtitle;
         if (req.body.category) product.category = req.body.category;
+        if (req.body.subCategory) product.subCategory = req.body.subCategory;
         if (req.body.description) product.description = req.body.description;
         if (req.body.price) product.price = req.body.price;
         

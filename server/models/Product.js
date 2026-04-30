@@ -21,16 +21,11 @@ const productSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        required: [true, 'Please select category for this product'],
-        enum: {
-            values: [
-                'Skull protection',
-                'Hearing protection',
-                'Protective eyewear',
-                'Respiratory protection'
-            ],
-            message: 'Please select correct category'
-        }
+        required: [true, 'Please select category for this product']
+    },
+    subCategory: {
+        type: String,
+        required: [true, 'Please select sub-category for this product']
     },
     description: {
         type: String

@@ -1,11 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppLayout from '../components/AppLayout';
 import HeroCarousel from '../components/HeroCarousel';
-import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, Award, Zap, Users, Globe, HardHat, Eye, Activity, CheckCircle2, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import ProductModal from '../components/ProductModal';
+import { Link, useNavigate } from 'react-router-dom';
+import { Shield, ArrowRight, Award, Zap, Users, Globe, HardHat, Eye, Activity, CheckCircle2, ChevronRight, Package, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
+import API_BASE from '../config/api';
 
 function HomePage() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [toast, setToast] = useState(null);
+  const { user } = useAuth();
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(`${API_BASE}/api/products?limit=8`);
+        const data = await res.json();
+        setProducts(data.products || []);
+      } catch (err) {
+        console.error('Failed to fetch products', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  const handleAddToCart = (product, qty = 1) => {
+    addToCart({ ...product, image: product.image_url }, qty);
+    showToast(`${qty}x ${product.name} added to cart!`);
+    setSelectedProduct(null);
+  };
+
+  const handleBuyNow = (product, qty = 1) => {
+    addToCart({ ...product, image: product.image_url }, qty);
+    navigate('/checkout');
+  };
+
+  const showToast = (msg) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3000);
+  };
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
@@ -50,6 +93,88 @@ function HomePage() {
             </motion.div>
           ))}
         </div>
+
+        {/* Featured Products */}
+        <section className="max-w-7xl mx-auto mb-32">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-xl">
+              <span className="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Latest Additions</span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Featured Products.</h2>
+            </div>
+            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-blue-600 transition-colors">
+              View Entire Catalogue <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-32 gap-6">
+              <div className="w-16 h-16 border-8 border-slate-100 border-t-blue-600 rounded-full animate-spin" />
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400 animate-pulse">Loading Products...</p>
+            </div>
+          ) : products.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-32 gap-4">
+              <Package size={48} className="text-slate-200" />
+              <p className="font-black text-slate-400 uppercase tracking-widest text-xs">No products found</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+              {products.map((product, i) => (
+                <motion.div
+                  key={product._id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  onClick={() => setSelectedProduct(product)}
+                  className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 cursor-pointer hover:shadow-3xl transition-all duration-500"
+                >
+                  <div className="relative h-72 bg-slate-50 overflow-hidden">
+                    <img
+                      src={product.image_url}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-10 group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute top-6 left-6 flex flex-col gap-2">
+                      {i % 3 === 0 && (
+                          <span className="bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-blue-600/30">
+                              New Launch
+                          </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-600 mb-1 block">
+                              {product.category}
+                          </span>
+                          <h3 className="font-black text-slate-900 text-lg leading-tight line-clamp-1 group-hover:text-blue-600 transition-colors">
+                              {product.name}
+                          </h3>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 mb-8">
+                      <div className="flex flex-col">
+                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest line-through">₹{(parseFloat(product.price || 49) * 1.25).toFixed(2)}</span>
+                          <span className="text-2xl font-black text-slate-900">₹{(product.price || 49.99).toFixed(2)}</span>
+                      </div>
+                    </div>
+                    <button
+                      onClick={e => {
+                        e.stopPropagation();
+                        if (!user) navigate('/login');
+                        else setSelectedProduct(product);
+                      }}
+                      className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition-all bg-slate-900 text-white hover:bg-blue-600 group/btn"
+                    >
+                      Quick Specification <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </section>
 
         {/* Featured Divisions */}
         <section className="max-w-7xl mx-auto mb-32">
@@ -164,6 +289,36 @@ function HomePage() {
         </section>
 
       </div>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          isOpen={!!selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          onAddToCart={handleAddToCart}
+          onBuyNow={handleBuyNow}
+        />
+      )}
+
+      {/* Toast */}
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[999] flex items-center gap-4 text-white px-8 py-5 rounded-[2rem] shadow-2xl border border-white/10 backdrop-blur-xl"
+            style={{ background: 'rgba(15, 23, 42, 0.95)' }}
+          >
+            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-600 shadow-lg shadow-blue-600/40">
+              <CheckCircle size={20} />
+            </div>
+            <span className="font-bold text-sm whitespace-nowrap tracking-tight">{toast}</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </AppLayout>
   );
 }

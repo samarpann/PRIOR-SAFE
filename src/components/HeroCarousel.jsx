@@ -47,7 +47,7 @@ const HeroCarousel = () => {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="relative h-[85vh] min-h-[650px] w-full overflow-hidden rounded-[2.5rem] shadow-2xl mb-12">
+    <div className="relative h-[50vh] min-h-[400px] w-full overflow-hidden rounded-[2.5rem] shadow-2xl mb-12">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -82,7 +82,7 @@ const HeroCarousel = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-6 tracking-tighter"
+              className="text-4xl md:text-6xl font-black text-white leading-[0.9] mb-4 tracking-tighter"
             >
               {slides[current].title.split(' ').map((word, i) => (
                 <span key={i} className={i === slides[current].title.split(' ').length - 1 ? "text-yellow-500" : ""}>
@@ -95,7 +95,7 @@ const HeroCarousel = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="text-slate-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-medium"
+              className="text-slate-400 text-base md:text-lg max-w-xl mb-6 leading-relaxed font-medium"
             >
               {slides[current].description}
             </motion.p>

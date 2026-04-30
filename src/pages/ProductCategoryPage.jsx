@@ -8,13 +8,11 @@ import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import API_BASE from '../config/api';
 
-const CATEGORIES = [
-  'All Products',
-  'Skull protection',
-  'Respiratory protection',
-  'Hearing protection',
-  'Protective eyewear',
-];
+const CATEGORY_STRUCTURE = {
+  'Head': ['Skull', 'Eyes', 'Ear', 'Respiratory']
+};
+
+const ALL_CATEGORIES = ['All Products', ...CATEGORY_STRUCTURE['Head']];
 
 const ProductCategoryPage = () => {
   const { user } = useAuth();
@@ -37,7 +35,7 @@ const ProductCategoryPage = () => {
           page,
           limit: 8,
           search: searchQuery,
-          category: category === 'All Products' ? '' : category,
+          ...(category !== 'All Products' && { subCategory: category }),
         });
         const res = await fetch(`${API_BASE}/api/products?${params}`);
         const data = await res.json();
@@ -106,18 +104,33 @@ const ProductCategoryPage = () => {
 
       {/* Secondary Category Bar (Karam Inspired) */}
       <div className="bg-slate-900 px-4 md:px-8 py-3 overflow-x-auto scrollbar-hide">
-        <div className="max-w-7xl mx-auto flex items-center gap-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
             <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] whitespace-nowrap">Shop By Category:</span>
-            {CATEGORIES.map(cat => (
-                <button
-                    key={cat}
-                    onClick={() => { setCategory(cat); setPage(1); }}
-                    className={`text-[10px] font-black uppercase tracking-[0.15em] whitespace-nowrap transition-all hover:text-white ${
-                        category === cat ? 'text-white' : 'text-slate-500'
-                    }`}
-                >
-                    {cat}
-                </button>
+            
+            <button
+                onClick={() => { setCategory('All Products'); setPage(1); }}
+                className={`text-[10px] font-black uppercase tracking-[0.15em] whitespace-nowrap transition-all hover:text-white ${
+                    category === 'All Products' ? 'text-white' : 'text-slate-500'
+                }`}
+            >
+                All Products
+            </button>
+
+            {Object.entries(CATEGORY_STRUCTURE).map(([parent, subs]) => (
+              <div key={parent} className="flex items-center gap-4 border-l border-slate-700 pl-4">
+                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.1em]">{parent}:</span>
+                {subs.map(sub => (
+                  <button
+                      key={sub}
+                      onClick={() => { setCategory(sub); setPage(1); }}
+                      className={`text-[10px] font-black uppercase tracking-[0.15em] whitespace-nowrap transition-all hover:text-white ${
+                          category === sub ? 'text-white' : 'text-slate-500'
+                      }`}
+                  >
+                      {sub}
+                  </button>
+                ))}
+              </div>
             ))}
         </div>
       </div>
