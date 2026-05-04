@@ -18,6 +18,8 @@ const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:5175',
+    'https://www.ecomexperts.co.in',
+    'https://ecomexperts.co.in',
     process.env.FRONTEND_URL, // set this in Render env vars to your Vercel URL
 ].filter(Boolean);
 
