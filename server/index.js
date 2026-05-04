@@ -27,8 +27,20 @@ app.use(cors({
     origin: (origin, callback) => {
         // Allow requests with no origin (mobile apps, curl, etc.)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin)) return callback(null, true);
-        return callback(new Error(`CORS blocked: ${origin}`));
+        
+        const isAllowed = allowedOrigins.some(allowed => {
+            if (!allowed) return false;
+            // Exact match or match with trailing slash
+            return origin === allowed || origin === allowed + '/';
+        });
+
+        if (isAllowed) {
+            return callback(null, true);
+        } else {
+            console.error(`CORS Blocked for origin: ${origin}`);
+            console.error(`Allowed origins: ${JSON.stringify(allowedOrigins)}`);
+            return callback(new Error(`CORS blocked: ${origin}`));
+        }
     },
     credentials: true,
 }));
