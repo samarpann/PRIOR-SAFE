@@ -1,16 +1,17 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
 
 @theme {
-  --color-industrial-50: #fdf4f9; /* Light purple tint */
-  --color-industrial-100: #fbeaf4;
-  --color-industrial-200: #f7d5e9;
-  --color-industrial-300: #f0b4d6;
-  --color-industrial-400: #e487ba;
-  --color-industrial-500: #d55f9a;
-  --color-industrial-600: #b23a86; /* Primary Branding Purple */
-  --color-industrial-700: #9e2f75;
-  --color-industrial-800: #832a62;
-  --color-industrial-900: #6e2553;
+  --color-industrial-50: #fdf2f8; 
+  --color-industrial-100: #fce7f3;
+  --color-industrial-200: #fbcfe8;
+  --color-industrial-300: #f9a8d4;
+  --color-industrial-400: #f472b6;
+  --color-industrial-500: #ec4899;
+  --color-industrial-600: #b23a86; /* Primary Branding Magenta */
+  --color-industrial-700: #be185d;
+  --color-industrial-800: #9d174d;
+  --color-industrial-900: #831843;
   
   --color-accent: #b23a86;
   --color-accent-dark: #832a62;
@@ -19,6 +20,7 @@
   --shadow-premium: 0 20px 50px -12px rgba(178, 58, 134, 0.08);
 
   --radius-2xl: 1.25rem;
+  --font-brand: 'Playfair Display', 'Georgia', serif;
 }
 
 :root {

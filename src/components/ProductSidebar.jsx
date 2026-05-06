@@ -11,7 +11,7 @@ const ProductSidebar = ({ activeCategory, activeSubCategory, activeFilters = {},
       <div className="lg:sticky lg:top-[120px] space-y-6 z-20 max-h-[calc(100vh-140px)] overflow-y-auto pr-2 custom-scrollbar">
         {/* Header */}
         <div className="px-2">
-          <h3 className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em] mb-1">
+          <h3 className="text-[10px] font-black text-industrial-600 uppercase tracking-[0.4em] mb-1">
             Product Navigation
           </h3>
           <p className="text-2xl font-black text-slate-900 tracking-tighter">Collections</p>
@@ -22,11 +22,11 @@ const ProductSidebar = ({ activeCategory, activeSubCategory, activeFilters = {},
           onClick={() => onSelect('All Products', '')}
           className={`w-full flex items-center gap-3 p-4 rounded-2xl transition-all duration-300 ${
             activeCategory === 'All Products' 
-              ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/30' 
+              ? 'bg-industrial-600 text-white shadow-xl shadow-industrial-600/30' 
               : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-100'
           }`}
         >
-          <div className={`p-2 rounded-xl ${activeCategory === 'All Products' ? 'bg-white/20' : 'bg-blue-50 text-blue-600'}`}>
+          <div className={`p-2 rounded-xl ${activeCategory === 'All Products' ? 'bg-white/20' : 'bg-industrial-50 text-industrial-600'}`}>
             <ShieldCheck size={18} />
           </div>
           <span className="text-sm font-black uppercase tracking-widest">All Products</span>
@@ -48,7 +48,7 @@ const ProductSidebar = ({ activeCategory, activeSubCategory, activeFilters = {},
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-xl ${isActive ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
+                    <div className={`p-2 rounded-xl ${isActive ? 'bg-industrial-600 text-white' : 'bg-slate-100 text-slate-400'}`}>
                       <Icon size={18} />
                     </div>
                     <span className={`text-xs font-black uppercase tracking-widest ${isActive ? 'text-slate-900' : 'text-slate-500'}`}>
@@ -76,12 +76,12 @@ const ProductSidebar = ({ activeCategory, activeSubCategory, activeFilters = {},
                             onClick={() => onSelect(name, sub)}
                             className={`w-full text-left px-11 py-2 text-xs font-bold transition-all flex items-center gap-2 group ${
                               activeSubCategory === sub 
-                                ? 'text-blue-600' 
+                                ? 'text-industrial-600' 
                                 : 'text-slate-400 hover:text-slate-900'
                             }`}
                           >
                             <div className={`w-1 h-1 rounded-full transition-all ${
-                              activeSubCategory === sub ? 'bg-blue-600 scale-150' : 'bg-slate-200 group-hover:bg-slate-400'
+                              activeSubCategory === sub ? 'bg-industrial-600 scale-150' : 'bg-slate-200 group-hover:bg-slate-400'
                             }`} />
                             {sub}
                           </button>
@@ -97,7 +97,7 @@ const ProductSidebar = ({ activeCategory, activeSubCategory, activeFilters = {},
 
 
         {/* Support Card */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-[2rem] p-6 text-white shadow-2xl shadow-blue-900/40 relative overflow-hidden group">
+        <div className="bg-gradient-to-br from-industrial-600 to-blue-800 rounded-[2rem] p-6 text-white shadow-2xl shadow-blue-900/40 relative overflow-hidden group">
           <div className="relative z-10">
             <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mb-4">
               <HelpCircle size={20} />

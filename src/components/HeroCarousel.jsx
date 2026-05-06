@@ -10,7 +10,7 @@ const slides = [
     subtitle: "PREMIUM INDUSTRIAL PROTECTION",
     description: "Equip your team with state-of-the-art Personal Protective Equipment. Gear that doesn't compromise on safety or comfort.",
     image: "/images/hero1.png",
-    accent: "#fbbf24",
+    accent: "#b23a86",
     icon: <Shield size={18} />
   },
   {
@@ -19,7 +19,7 @@ const slides = [
     subtitle: "ADVANCED OPTICAL GEAR",
     description: "Anti-fog, UV-resistant safety goggles and premium visors designed for high-risk environments.",
     image: "/images/hero2.png",
-    accent: "#f59e0b",
+    accent: "#b23a86",
     icon: <Zap size={18} />
   },
   {
@@ -28,7 +28,7 @@ const slides = [
     subtitle: "HEAVY-DUTY SAFETY GEAR",
     description: "Rigorous stress testing ensures every piece of gear surpasses global safety benchmarks.",
     image: "/images/hero3.png",
-    accent: "#fbbf24",
+    accent: "#b23a86",
     icon: <Award size={18} />
   }
 ];
@@ -72,7 +72,7 @@ const HeroCarousel = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 backdrop-blur-md border border-yellow-500/30 rounded-full text-yellow-500 text-xs font-black uppercase tracking-widest mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-industrial-600/20 backdrop-blur-md border border-industrial-600/30 rounded-full text-industrial-400 text-xs font-black uppercase tracking-widest mb-6"
             >
               {slides[current].icon}
               {slides[current].subtitle}
@@ -82,10 +82,11 @@ const HeroCarousel = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-4xl md:text-6xl font-black text-white leading-[0.9] mb-4 tracking-tighter"
+              className="text-4xl md:text-7xl font-black text-white leading-[1] mb-6 tracking-tight"
+              style={{ fontFamily: 'var(--font-brand)' }}
             >
               {slides[current].title.split(' ').map((word, i) => (
-                <span key={i} className={i === slides[current].title.split(' ').length - 1 ? "text-yellow-500" : ""}>
+                <span key={i} className={i === slides[current].title.split(' ').length - 1 ? "text-industrial-600" : ""}>
                   {word}{' '}
                 </span>
               ))}
@@ -108,7 +109,7 @@ const HeroCarousel = () => {
             >
               <Link 
                 to="/products"
-                className="group flex items-center gap-3 bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-yellow-500/20 active:scale-95"
+                className="group flex items-center gap-3 bg-industrial-600 hover:bg-industrial-700 text-white px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-xl shadow-industrial-600/30 active:scale-95"
               >
                 Get Started
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -146,7 +147,7 @@ const HeroCarousel = () => {
           <div 
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === current ? "w-12 bg-yellow-500" : "w-4 bg-white/20"}`}
+            className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === current ? "w-12 bg-industrial-600" : "w-4 bg-white/20"}`}
           />
         ))}
       </div>

@@ -124,7 +124,7 @@ const ProductCategoryPage = () => {
               placeholder="Search by product name, category or safety standard..."
               value={searchQuery}
               onChange={e => { setSearchQuery(e.target.value); setPage(1); }}
-              className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-medium text-slate-900 outline-none focus:ring-4 focus:ring-blue-600/5 focus:border-blue-600 transition-all"
+              className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-medium text-slate-900 outline-none focus:ring-4 focus:ring-industrial-600/5 focus:border-industrial-600 transition-all"
             />
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -133,7 +133,7 @@ const ProductCategoryPage = () => {
                 <span className="text-sm font-bold text-slate-900">+91 1800-SAFE-PR</span>
             </div>
             <div className="w-px h-8 bg-slate-100"></div>
-            <button className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors">
+            <button className="flex items-center gap-2 text-slate-600 hover:text-industrial-600 transition-colors">
                 <Shield size={20} />
                 <span className="text-xs font-black uppercase tracking-widest">Verify Certs</span>
             </button>
@@ -166,7 +166,7 @@ const ProductCategoryPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
             <div className="relative z-10 h-full flex flex-col justify-center px-12">
               <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4 tracking-tighter max-w-lg">
-                Setting the Standard in <span className="text-blue-500">Industrial Safety.</span>
+                Setting the Standard in <span className="text-industrial-500">Industrial Safety.</span>
               </h2>
               <p className="text-slate-400 text-sm max-w-md leading-relaxed font-medium">
                 Explore our range of ISO certified safety equipment engineered for the world's most demanding environments.
@@ -191,7 +191,7 @@ const ProductCategoryPage = () => {
         {/* Products Grid */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-32 gap-6">
-            <div className="w-16 h-16 border-8 border-slate-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-16 h-16 border-8 border-slate-100 border-t-industrial-600 rounded-full animate-spin" />
             <p className="text-xs font-black uppercase tracking-widest text-slate-400 animate-pulse">Synchronizing Inventory...</p>
           </div>
         ) : products.length === 0 ? (
@@ -222,7 +222,7 @@ const ProductCategoryPage = () => {
                   {/* Karam Style Badges */}
                   <div className="absolute top-6 left-6 flex flex-col gap-2">
                     {i % 3 === 0 && (
-                        <span className="bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-blue-600/30">
+                        <span className="bg-industrial-600 text-white text-[8px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-industrial-600/30">
                             New Launch
                         </span>
                     )}
@@ -242,10 +242,10 @@ const ProductCategoryPage = () => {
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                        <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-600 mb-1 block">
+                        <span className="text-[9px] font-black uppercase tracking-[0.3em] text-industrial-600 mb-1 block">
                             {product.category}
                         </span>
-                        <h3 className="font-black text-slate-900 text-lg leading-tight line-clamp-1 group-hover:text-blue-600 transition-colors">
+                        <h3 className="font-black text-slate-900 text-lg leading-tight line-clamp-1 group-hover:text-industrial-600 transition-colors">
                             {product.name}
                         </h3>
                     </div>
@@ -256,7 +256,7 @@ const ProductCategoryPage = () => {
                         <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest line-through">₹{(parseFloat(product.price || 49) * 1.25).toFixed(2)}</span>
                         <span className="text-2xl font-black text-slate-900">₹{(product.price || 49.99).toFixed(2)}</span>
                     </div>
-                    <span className="bg-blue-50 text-blue-600 text-[10px] font-black px-2 py-1 rounded-lg">SAVE 25%</span>
+                    <span className="bg-blue-50 text-industrial-600 text-[10px] font-black px-2 py-1 rounded-lg">SAVE 25%</span>
                   </div>
 
                   <button
@@ -265,7 +265,7 @@ const ProductCategoryPage = () => {
                       if (!user) navigate('/login');
                       else setSelectedProduct(product);
                     }}
-                    className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition-all bg-slate-900 text-white hover:bg-blue-600 group/btn"
+                    className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition-all bg-slate-900 text-white hover:bg-industrial-600 group/btn"
                   >
                     Quick Specification <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                   </button>
@@ -321,7 +321,7 @@ const ProductCategoryPage = () => {
             className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[999] flex items-center gap-4 text-white px-8 py-5 rounded-[2rem] shadow-2xl border border-white/10 backdrop-blur-xl"
             style={{ background: 'rgba(15, 23, 42, 0.95)' }}
           >
-            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-600 shadow-lg shadow-blue-600/40">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-industrial-600 shadow-lg shadow-industrial-600/40">
               <CheckCircle size={20} />
             </div>
             <span className="font-bold text-sm whitespace-nowrap tracking-tight">{toast}</span>

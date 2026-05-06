@@ -15,7 +15,7 @@ const CartPage = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
                     <div className="flex items-center gap-4 mb-12">
-                        <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                        <div className="w-12 h-12 bg-industrial-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
                             <ShoppingBag size={24} />
                         </div>
                         <div>
@@ -33,7 +33,7 @@ const CartPage = () => {
                             <p className="text-slate-500 mb-10 max-w-sm mx-auto font-medium">Looks like you haven't added any safety gear to your cart yet.</p>
                             <Link 
                                 to="/products"
-                                className="inline-flex items-center gap-2 bg-blue-600 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl shadow-blue-100"
+                                className="inline-flex items-center gap-2 bg-industrial-600 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-industrial-700 transition-all shadow-xl shadow-blue-100"
                             >
                                 Browse Products <ArrowRight size={18} />
                             </Link>
@@ -87,7 +87,7 @@ const CartPage = () => {
                                         
                                         <div className="text-right pl-6 border-l border-slate-100">
                                             <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">Total</p>
-                                            <p className="text-xl font-black text-blue-600">₹{(item.price * item.quantity).toFixed(2)}</p>
+                                            <p className="text-xl font-black text-industrial-600">₹{(item.price * item.quantity).toFixed(2)}</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -111,14 +111,14 @@ const CartPage = () => {
                                         <div className="flex justify-between items-end">
                                             <div>
                                                 <p className="text-slate-400 text-xs font-black uppercase tracking-[0.2em] mb-1">Total Amount</p>
-                                                <p className="text-4xl font-black text-blue-500">₹{cartTotal.toFixed(2)}</p>
+                                                <p className="text-4xl font-black text-industrial-500">₹{cartTotal.toFixed(2)}</p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <button 
                                         onClick={() => navigate('/checkout')}
-                                        className="w-full bg-blue-600 hover:bg-blue-500 text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] transition-all shadow-xl shadow-blue-900/40 mb-6 flex items-center justify-center gap-3 group"
+                                        className="w-full bg-industrial-600 hover:bg-industrial-500 text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] transition-all shadow-xl shadow-blue-900/40 mb-6 flex items-center justify-center gap-3 group"
                                     >
                                         Checkout Securely <ShieldCheck size={20} className="group-hover:scale-110 transition-transform" />
                                     </button>

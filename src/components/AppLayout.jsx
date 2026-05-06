@@ -34,7 +34,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
       <div className="relative">
         <ShoppingCart size={20} />
         {cartCount > 0 && (
-          <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full">
+          <span className="absolute -top-2 -right-2 bg-industrial-600 text-white text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full">
             {cartCount}
           </span>
         )}
@@ -64,14 +64,14 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
       {/* Brand */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-slate-100">
         <div
-          className="w-11 h-11 rounded-2xl flex items-center justify-center shadow-md bg-blue-600"
+          className="w-11 h-11 rounded-2xl flex items-center justify-center shadow-md bg-industrial-600"
         >
           <Logo size={22} color="white" />
         </div>
         <div>
-          <p className="font-black text-slate-900 text-[1rem] leading-tight tracking-tight">Ecom Experts</p>
-          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.18em]">
-            {isAdmin ? 'Admin Portal' : 'Online Sales'}
+          <p className="font-black text-industrial-600 text-[1.2rem] leading-tight tracking-tight" style={{ fontFamily: 'var(--font-brand)' }}>Ecom Experts</p>
+          <p className="text-[9px] font-bold text-industrial-600/60 uppercase tracking-[0.18em]">
+            {isAdmin ? 'Admin Portal' : 'Online Sales Platform'}
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition-all duration-150 ${
                 isActive
-                  ? 'bg-blue-50 text-blue-600'
+                  ? 'bg-industrial-50 text-industrial-600'
                   : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800'
               }`
             }
@@ -121,7 +121,7 @@ const SidebarContent = ({ isAdmin, onLinkClick }) => {
       <div className="px-3 py-4 border-t border-slate-100 space-y-1">
         <div className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-slate-50">
           <div
-            className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0 bg-blue-600"
+            className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0 bg-industrial-600"
           >
             {user?.name?.charAt(0)?.toUpperCase() || 'G'}
           </div>
@@ -219,7 +219,7 @@ const AppLayout = ({ children, isAdmin = false }) => {
             <Menu size={20} />
           </button>
           <div className="flex items-center gap-2">
-            <Logo size={20} color="#2563eb" />
+            <Logo size={20} color="#b23a86" />
             <span className="font-black text-slate-900 text-base">Ecom Experts</span>
           </div>
         </header>
@@ -233,10 +233,10 @@ const AppLayout = ({ children, isAdmin = false }) => {
         <section className="bg-white border-t border-slate-100 py-12 px-4 md:px-8">
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
                 {[
-                    { icon: <ShieldCheck className="text-blue-600" size={32} />, title: "Quality Assured", desc: "ISO 9001:2015 Certified" },
-                    { icon: <Truck className="text-blue-600" size={32} />, title: "Free Shipping", desc: "On orders above ₹5000" },
-                    { icon: <Lock className="text-blue-600" size={32} />, title: "Secure Payment", desc: "Cashfree Secure Gateway" },
-                    { icon: <Users className="text-blue-600" size={32} />, title: "Expert Support", desc: "Professional safety advice" }
+                    { icon: <ShieldCheck className="text-industrial-600" size={32} />, title: "Quality Assured", desc: "ISO 9001:2015 Certified" },
+                    { icon: <Truck className="text-industrial-600" size={32} />, title: "Free Shipping", desc: "On orders above ₹5000" },
+                    { icon: <Lock className="text-industrial-600" size={32} />, title: "Secure Payment", desc: "Cashfree Secure Gateway" },
+                    { icon: <Users className="text-industrial-600" size={32} />, title: "Expert Support", desc: "Professional safety advice" }
                 ].map((item, i) => (
                     <div key={i} className="flex flex-col items-center text-center group">
                         <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
@@ -258,7 +258,11 @@ const AppLayout = ({ children, isAdmin = false }) => {
                         <span className="font-black text-2xl tracking-tighter text-white">Ecom Experts</span>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed font-medium">
-                        Leading provider of professional industrial safety equipment and engineering solutions. Setting the standard for workplace protection.
+                        Shop No. 2, Ground Floor, MPL No. 242, Gali Phatak Karor, Ajmeri Gate, New Delhi-110006
+                    </p>
+                    <p className="text-slate-500 text-sm mt-2 font-medium">
+                        Mob: +91 9317341500<br />
+                        Email: ecomexperts2025@gmail.com
                     </p>
                 </div>
                 <div>
@@ -283,8 +287,8 @@ const AppLayout = ({ children, isAdmin = false }) => {
                     <h5 className="font-black text-[10px] uppercase tracking-[0.3em] text-blue-500 mb-6">Newsletter</h5>
                     <p className="text-slate-500 text-xs mb-4">Get the latest safety insights and exclusive offers.</p>
                     <div className="flex gap-2">
-                        <input type="email" placeholder="Email Address" className="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-xs w-full focus:border-blue-600 outline-none" />
-                        <button className="bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs font-black">JOIN</button>
+                        <input type="email" placeholder="Email Address" className="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-xs w-full focus:border-industrial-600 outline-none" />
+                        <button className="bg-industrial-600 text-white px-4 py-2.5 rounded-xl text-xs font-black">JOIN</button>
                     </div>
                 </div>
             </div>

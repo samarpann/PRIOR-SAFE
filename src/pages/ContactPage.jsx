@@ -28,32 +28,36 @@ function ContactPage() {
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '48px', height: '48px', background: '#eff6ff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Phone size={24} color="#2563eb" />
+                  <div style={{ width: '48px', height: '48px', background: '#fdf2f8', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Phone size={24} color="#b23a86" />
                   </div>
                   <div>
                     <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: '700', color: '#1e293b' }}>Phone Support</h4>
-                    <p style={{ margin: '0.25rem 0 0', color: '#64748b' }}>+1 (800) 123-SAFE</p>
+                    <p style={{ margin: '0.25rem 0 0', color: '#64748b' }}>+91 9317341500</p>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '48px', height: '48px', background: '#eff6ff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Mail size={24} color="#2563eb" />
+                  <div style={{ width: '48px', height: '48px', background: '#fdf2f8', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Mail size={24} color="#b23a86" />
                   </div>
                   <div>
                     <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: '700', color: '#1e293b' }}>Email Us</h4>
-                    <p style={{ margin: '0.25rem 0 0', color: '#64748b' }}>support@priorsafe.com</p>
+                    <p style={{ margin: '0.25rem 0 0', color: '#64748b' }}>ecomexperts2025@gmail.com</p>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '48px', height: '48px', background: '#eff6ff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <MapPin size={24} color="#2563eb" />
+                  <div style={{ width: '48px', height: '48px', background: '#fdf2f8', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <MapPin size={24} color="#b23a86" />
                   </div>
                   <div>
-                    <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: '700', color: '#1e293b' }}>Headquarters</h4>
-                    <p style={{ margin: '0.25rem 0 0', color: '#64748b' }}>123 Industrial Way, Safety City, 90210</p>
+                    <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: '700', color: '#1e293b' }}>Office Address</h4>
+                    <p style={{ margin: '0.25rem 0 0', color: '#64748b', fontSize: '0.9rem' }}>
+                        Shop No. 2, Ground Floor, MPL No. 242,<br />
+                        Gali Phatak Karor, Ajmeri Gate,<br />
+                        New Delhi-110006
+                    </p>
                   </div>
                 </div>
               </div>

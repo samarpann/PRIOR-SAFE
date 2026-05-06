@@ -88,7 +88,7 @@ function HomePage() {
               transition={{ delay: idx * 0.1 }}
               className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-shadow"
             >
-              <h3 className="text-4xl font-black text-blue-600 mb-1">{metric.value}</h3>
+              <h3 className="text-4xl font-black text-industrial-600 mb-1">{metric.value}</h3>
               <p className="text-slate-400 font-bold uppercase text-[10px] tracking-widest">{metric.label}</p>
             </motion.div>
           ))}
@@ -98,17 +98,17 @@ function HomePage() {
         <section className="max-w-7xl mx-auto mb-32">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-xl">
-              <span className="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Latest Additions</span>
+              <span className="text-industrial-600 font-black text-xs uppercase tracking-widest block mb-4">Latest Additions</span>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Featured Products.</h2>
             </div>
-            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-blue-600 transition-colors">
+            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-industrial-600 transition-colors">
               View Entire Catalogue <ChevronRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           {loading ? (
             <div className="flex flex-col items-center justify-center py-32 gap-6">
-              <div className="w-16 h-16 border-8 border-slate-100 border-t-blue-600 rounded-full animate-spin" />
+              <div className="w-16 h-16 border-8 border-slate-100 border-t-industrial-600 rounded-full animate-spin" />
               <p className="text-xs font-black uppercase tracking-widest text-slate-400 animate-pulse">Loading Products...</p>
             </div>
           ) : products.length === 0 ? (
@@ -136,7 +136,7 @@ function HomePage() {
                     />
                     <div className="absolute top-6 left-6 flex flex-col gap-2">
                       {i % 3 === 0 && (
-                          <span className="bg-blue-600 text-white text-[8px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-blue-600/30">
+                          <span className="bg-industrial-600 text-white text-[8px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg shadow-industrial-600/30">
                               New Launch
                           </span>
                       )}
@@ -145,10 +145,10 @@ function HomePage() {
                   <div className="p-8">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-blue-600 mb-1 block">
+                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-industrial-600 mb-1 block">
                               {product.category}
                           </span>
-                          <h3 className="font-black text-slate-900 text-lg leading-tight line-clamp-1 group-hover:text-blue-600 transition-colors">
+                          <h3 className="font-black text-slate-900 text-lg leading-tight line-clamp-1 group-hover:text-industrial-600 transition-colors">
                               {product.name}
                           </h3>
                       </div>
@@ -165,7 +165,7 @@ function HomePage() {
                         if (!user) navigate('/login');
                         else setSelectedProduct(product);
                       }}
-                      className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition-all bg-slate-900 text-white hover:bg-blue-600 group/btn"
+                      className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition-all bg-slate-900 text-white hover:bg-industrial-600 group/btn"
                     >
                       Quick Specification <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                     </button>
@@ -180,10 +180,10 @@ function HomePage() {
         <section className="max-w-7xl mx-auto mb-32">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-xl">
-              <span className="text-blue-600 font-black text-xs uppercase tracking-widest block mb-4">Core Competencies</span>
+              <span className="text-industrial-600 font-black text-xs uppercase tracking-widest block mb-4">Core Competencies</span>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight">Specialized Safety Solutions for Every Industry.</h2>
             </div>
-            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-blue-600 transition-colors">
+            <Link to="/products" className="group flex items-center gap-2 text-slate-900 font-black text-sm uppercase tracking-widest hover:text-industrial-600 transition-colors">
               View All Categories <ChevronRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -205,7 +205,7 @@ function HomePage() {
                   <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60" />
                   <div className="absolute bottom-6 left-6 flex items-center gap-4 text-white">
-                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-industrial-600 rounded-xl flex items-center justify-center">
                       {cat.icon}
                     </div>
                     <h3 className="text-xl font-black uppercase tracking-tight">{cat.title}</h3>
@@ -213,7 +213,7 @@ function HomePage() {
                 </div>
                 <div className="p-8">
                   <p className="text-slate-500 font-medium leading-relaxed mb-6">{cat.desc}</p>
-                  <div className="flex items-center gap-2 text-blue-600 font-black text-xs uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
+                  <div className="flex items-center gap-2 text-industrial-600 font-black text-xs uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
                     Explore Series <ArrowRight size={16} />
                   </div>
                 </div>
@@ -257,14 +257,14 @@ function HomePage() {
                  alt="Industrial Engineering" 
                  className="w-full h-full object-cover"
                />
-               <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay" />
+               <div className="absolute inset-0 bg-industrial-600/10 mix-blend-overlay" />
             </div>
           </div>
         </section>
 
         {/* Interactive CTA */}
         <section className="max-w-7xl mx-auto mb-12">
-          <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
+          <div className="bg-gradient-to-br from-industrial-600 to-indigo-700 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
             {/* Abstract Background Shapes */}
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl" />
@@ -277,7 +277,7 @@ function HomePage() {
                 Join 500+ enterprises who trust Ecom Experts for their critical PPE requirements and zero-incident workplace goals.
               </p>
               <div className="flex flex-col md:flex-row justify-center gap-4">
-                <Link to="/products" className="bg-white text-blue-600 px-10 py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform active:scale-95">
+                <Link to="/products" className="bg-white text-industrial-600 px-10 py-5 rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-transform active:scale-95">
                   Shop the Catalogue
                 </Link>
                 <Link to="/contact" className="bg-blue-500/20 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/10 transition-all">
@@ -311,7 +311,7 @@ function HomePage() {
             className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[999] flex items-center gap-4 text-white px-8 py-5 rounded-[2rem] shadow-2xl border border-white/10 backdrop-blur-xl"
             style={{ background: 'rgba(15, 23, 42, 0.95)' }}
           >
-            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-blue-600 shadow-lg shadow-blue-600/40">
+            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-industrial-600 shadow-lg shadow-industrial-600/40">
               <CheckCircle size={20} />
             </div>
             <span className="font-bold text-sm whitespace-nowrap tracking-tight">{toast}</span>
