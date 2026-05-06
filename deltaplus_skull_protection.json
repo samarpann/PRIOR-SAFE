@@ -1,0 +1,132 @@
+[
+  {
+    "name": "AIR COLTAN",
+    "subtitle": "Bump cap",
+    "reference": "AIRCOLTAN",
+    "description": "Ventilated protective cap for maximum comfort, available in 3 visor lengths",
+    "imageUrl": "https://media.deltaplus.eu/m/62565fb0e107730e/Liferay_Product_Card-AIR-COLTAN-GR-vis-7cm-eps.png",
+    "technicalDetails": "Cap Material : Textile | Head Measurement : 55-62 | Shell Material : Polyethylene | Shell Liner : EVA | Adjustment : Clamp Bracket | Weight : 176 g",
+    "category": "Skull protection",
+    "subCategory": "Bump caps"
+  },
+  {
+    "name": "DIAMOND V",
+    "subtitle": "Safety helmets",
+    "reference": "DIAMOND5",
+    "description": "Safety helmet featuring a sporty design for upright and inverted wear for maximum versatility",
+    "imageUrl": "https://media.deltaplus.eu/m/74277b2f1c3bf3a9/Liferay_Product_Card-BASEBALL-DIAMOND-GR-eps.png",
+    "technicalDetails": "Shell material : ABS - Non vented | Head Measurement : 53-63 cm | D Rotor Ratchet - Rotor adjustment | Textile : PA (Polyamide) - 8 points | Chin Strap Material : 4 Point Chin Strap | Comfort Headband : EVA Foam - EVA foam | Weight : 404 g",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "DYNAMIC JUGBETA",
+    "subtitle": "Helmets accessories - Marking",
+    "reference": "JUGBEDYN_",
+    "description": "4-point chinstrap for Diamond and Onyx helmets to improve the fit of the helmet",
+    "imageUrl": "https://media.deltaplus.eu/m/3fc3f3c101004cfa/Liferay_Product_Card-DYNAMIC-JUGBETA-eps.png",
+    "technicalDetails": "Chinstrap with chin protector",
+    "category": "Skull protection",
+    "subCategory": "Accessories"
+  },
+  {
+    "name": "GRANITE PEAK",
+    "subtitle": "Safety helmets",
+    "reference": "GRANITEPEAK",
+    "description": "Safety helmet for work at height with electrical insulation, made from ABS, equipped with a 3-point chinstrap",
+    "imageUrl": "https://media.deltaplus.eu/m/2eb241633e0e1f94/Liferay_Product_Card-GRANITE-PEAK-BC-eps.png",
+    "technicalDetails": "Shell material : ABS | 3-point chinstrap | Electrical insulation",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "GRANITE WIND",
+    "subtitle": "Safety helmets",
+    "reference": "GRANITEWIND",
+    "description": "Safety helmet for work at height, ventilated, made from ABS, equipped with a 3-point chinstrap",
+    "imageUrl": "https://media.deltaplus.eu/m/123c3ab1530aaaaa/Liferay_Product_Card-GRANITE-WIND-BC-eps.png",
+    "technicalDetails": "Shell material : ABS | Ventilated | 3-point chinstrap",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "JUGALPHA",
+    "subtitle": "Helmets accessories - Marking",
+    "reference": "JUGALPHA",
+    "description": "2-point chinstrap for a better fit on the head",
+    "imageUrl": "https://media.deltaplus.eu/m/67b919a55a9ae1c3/Liferay_Product_Card-JUGALPHA.png",
+    "technicalDetails": "2-point chinstrap",
+    "category": "Skull protection",
+    "subCategory": "Accessories"
+  },
+  {
+    "name": "MENTALPHA",
+    "subtitle": "Helmets accessories - Marking",
+    "reference": "MENTALPHA",
+    "description": "2-point chinstrap with chin protector for a better fit of the helmet on the head",
+    "imageUrl": "https://media.deltaplus.eu/m/1e1cb809203ffa1e/Liferay_Product_Card-MENTALPHA-eps.png",
+    "technicalDetails": "2-point chinstrap | Chin protector",
+    "category": "Skull protection",
+    "subCategory": "Accessories"
+  },
+  {
+    "name": "ONYX2 BLANC",
+    "subtitle": "Safety helmets",
+    "reference": "ONYX2BJ",
+    "description": "Double-shell safety helmet, equipped with a visor, for protection against electric arcs and molten metal splashes",
+    "imageUrl": "https://media.deltaplus.eu/m/8f0586787d24f54/Liferay_Product_Card-ONYX2-BJ-eps.png",
+    "technicalDetails": "Double shell | Integrated visor | Electric arc protection",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "QUARTZ I",
+    "subtitle": "Safety helmets",
+    "reference": "QUARTZ1",
+    "description": "Ventilated safety helmet with rack and pinion adjustment",
+    "imageUrl": "https://media.deltaplus.eu/m/6e38701d4677ec07/Liferay_Product_Card-QUARTZ-I-BC-eps.png",
+    "technicalDetails": "Ventilated | Rack and pinion adjustment",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "QUARTZ UP III",
+    "subtitle": "Safety helmets",
+    "reference": "QUARTZUP3",
+    "description": "Safety helmet with short visor equipped with rotor system for easy adjustment",
+    "imageUrl": "https://media.deltaplus.eu/m/3b562c134c249b86/Liferay_Product_Card-QUARTZ-UP-III-BC-eps.png",
+    "technicalDetails": "Short visor | Rotor adjustment",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "QUARTZ UP IV",
+    "subtitle": "Safety helmets",
+    "reference": "QUARTZUP4",
+    "description": "Ventilated safety helmet with short visor equipped with rotor system for easy adjustment",
+    "imageUrl": "https://media.deltaplus.eu/m/22e1cbf80d6768c0/Liferay_Product_Card-QUARTZ-UP-IV-BC-eps.png",
+    "technicalDetails": "Ventilated | Short visor | Rotor adjustment",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "SUPER QUARTZ",
+    "subtitle": "Safety helmets",
+    "reference": "SUPERQUARTZ",
+    "description": "Electrically insulated safety helmet for extreme temperatures (+150°C)",
+    "imageUrl": "https://media.deltaplus.eu/m/38960838b9b21de7/Liferay_Product_Card-SUPER-QUARTZ-BC-eps.png",
+    "technicalDetails": "High temperature resistance | Electrical insulation",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  },
+  {
+    "name": "ZIRCON 1",
+    "subtitle": "Safety helmets",
+    "reference": "ZIRCON1",
+    "description": "Electrically insulated safety helmet with adjustable strap",
+    "imageUrl": "https://media.deltaplus.eu/m/2010ebb978d1315a/Liferay_Product_Card-ZIRCON-I-VE-eps.png",
+    "technicalDetails": "Adjustable strap | Electrical insulation",
+    "category": "Skull protection",
+    "subCategory": "Safety helmets"
+  }
+]

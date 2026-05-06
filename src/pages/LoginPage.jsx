@@ -155,6 +155,20 @@ function LoginPage() {
             />
           </div>
         </div>
+        
+        <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', fontWeight: '500' }}>
+            Don't have an account? {' '}
+            <span 
+              onClick={() => navigate('/signup')}
+              style={{ color: '#2563eb', fontWeight: '700', cursor: 'pointer', textDecoration: 'none' }}
+              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+            >
+              Sign Up
+            </span>
+          </p>
+        </div>
 
         <div style={{ marginTop: '2.5rem', fontSize: '0.85rem', color: '#94a3b8' }}>
           <p>By continuing, you agree to our <br/> 

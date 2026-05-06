@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search, Menu, X, ShoppingCart, User, ChevronDown } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import CategoryMegaMenu from './CategoryMegaMenu';
 
 const Logo = () => (
   <div className="flex flex-col items-center">
@@ -24,8 +25,11 @@ const Logo = () => (
   </div>
 );
 
+import CategoryMegaMenu from './CategoryMegaMenu';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const { cartCount } = useCart();
 
   return (
@@ -48,9 +52,19 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
-            <Link to="/products" className="text-slate-600 hover:text-blue-600 font-bold transition-colors flex items-center gap-1 uppercase tracking-widest text-[10px]">
-              Products <ChevronDown size={14} />
-            </Link>
+            <div 
+              className="relative py-8"
+              onMouseEnter={() => setIsMegaMenuOpen(true)}
+            >
+              <Link to="/products" className="text-slate-600 hover:text-blue-600 font-bold transition-colors flex items-center gap-1 uppercase tracking-widest text-[10px]">
+                Products <ChevronDown size={14} className={`transition-transform duration-200 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </Link>
+              
+              <CategoryMegaMenu 
+                isOpen={isMegaMenuOpen} 
+                onClose={() => setIsMegaMenuOpen(false)} 
+              />
+            </div>
             <Link to="/solutions" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">Solutions</Link>
             <Link to="/services" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">Services</Link>
             <Link to="/about" className="text-slate-600 hover:text-blue-600 font-bold transition-colors uppercase tracking-widest text-[10px]">About</Link>

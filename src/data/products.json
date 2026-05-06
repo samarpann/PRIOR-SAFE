@@ -1,128 +1,2194 @@
 {
-  "page_info": {
-    "title": "Head Protection",
-    "description": "PPE is crucial on construction sites, and protecting your head is a priority. Discover all our head protection models on Delta Plus.",
-    "breadcrumbs": ["Home", "Products", "Head Protection"]
-  },
-  "filters": {
-    "Product category": [
-      { "name": "Skull protection", "options": ["Bump cap", "Safety helmets", "Helmets accessories"] },
-      { "name": "Hearing protection", "options": ["Disposable earplugs", "Ear Muffs"] },
-      { "name": "Protective eyewear", "options": ["Safety glasses", "Safety goggles", "Safety visors", "Welding"] },
-      { "name": "Respiratory protection", "options": ["Disposable respiratory", "Reusable respiratory"] }
-    ],
-    "Sectors": [
-      "Agriculture / Forestry / Fishing",
-      "Construction",
-      "Public works",
-      "Utilities - Energy",
-      "Industry",
-      "Automotive",
-      "Chemical Industry",
-      "Pharmaceutical industry / Laboratories",
-      "Food Industry",
-      "Transportation / Storage",
-      "Facilities Services"
-    ],
-    "Risks": [
-      "Heat",
-      "Shock",
-      "UV / IR",
-      "Biological",
-      "Chemical",
-      "Particules"
+    "products": [
+        {
+            "name": "AM002X5V2",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_AM002X5V2_EPS",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/AM002X5V2-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality am002x5v2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HA200",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_HA200_EPS",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/HA200-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality ha200 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "LO030 (1)",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_LO030_EPS__1_",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/LO030-eps (1).png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality lo030 (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "LO030",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_LO030_EPS",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/LO030-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality lo030 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "LO047100",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_LO047100_EPS",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/LO047100-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality lo047100 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "LV130",
+            "reference": "FALL_PROTECTION_ANCHORAGE___WORK_POSITIONING_LV130_EPS",
+            "subtitle": "Premium Anchorage - Work positioning for industrial safety.",
+            "image_url": "/photos/fall-protection/Anchorage - Work positioning/LV130-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Anchorage - Work positioning",
+            "description": "High-quality lv130 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EX120",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_EX120_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/EX120-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality ex120 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EX220",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_EX220_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/EX220-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality ex220 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HAR11",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_HAR11_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/HAR11-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality har11 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HAR12",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_HAR12_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/HAR12-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality har12 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HAR14",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_HAR14_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/HAR14-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality har14 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HAR25",
+            "reference": "FALL_PROTECTION_BODY_SUPPORT_HAR25_EPS",
+            "subtitle": "Premium Body support for industrial safety.",
+            "image_url": "/photos/fall-protection/body-support/HAR25-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Body support",
+            "description": "High-quality har25 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AM002X5V2",
+            "reference": "FALL_PROTECTION_CONNECTING_SYSTEM_AM002X5V2_EPS",
+            "subtitle": "Premium Connecting systems for industrial safety.",
+            "image_url": "/photos/fall-protection/connecting-system/AM002X5V2-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Connecting systems",
+            "description": "High-quality am002x5v2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN065 ASCORD",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN065_ASCORD_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN065-ASCORD-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an065 ascord designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN102 MINIBLOC",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN102_MINIBLOC_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN102-MINIBLOC-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an102 minibloc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN13006C2 MEDBLOC",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN13006C2_MEDBLOC_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN13006C2-MEDBLOC-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an13006c2 medbloc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN211200CDD",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN211200CDD_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN211200CDD-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an211200cdd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN213200CDD",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN213200CDD_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN213200CDD-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an213200cdd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AN213200ZDD",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_AN213200ZDD_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/AN213200ZDD-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality an213200zdd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ELARA140",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_ELARA140_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/ELARA140-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality elara140 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ELARA170 (1)",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_ELARA170_EPS__1_",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/ELARA170-eps (1).png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality elara170 (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ELARA170",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_ELARA170_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/ELARA170-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality elara170 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ELARA270",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_ELARA270_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/ELARA270-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality elara270 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ELARA280V2",
+            "reference": "FALL_PROTECTION_FALL_ARRESTER_SYSTEMS_ELARA280V2_EPS",
+            "subtitle": "Premium Fall arrester systems for industrial safety.",
+            "image_url": "/photos/fall-protection/Fall arrester systems/ELARA280V2-eps.png",
+            "category": "Fall protection",
+            "subCategory": "Fall arrester systems",
+            "description": "High-quality elara280v2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CONIC DISPLAY",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_CONIC_DISPLAY_EPS",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/CONIC-DISPLAY-eps.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality conic display designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CONIC010 CONIC200 CONIC500",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_CONIC010_CONIC200_CONIC500_EPS",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/CONIC010-CONIC200-CONIC500-eps.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality conic010 conic200 conic500 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "INTERLAGOS2 GR",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_INTERLAGOS2_GR",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/INTERLAGOS2-GR.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality interlagos2 gr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAGNY COURS2",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_MAGNY_COURS2_EPS",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/MAGNY-COURS2-eps.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality magny cours2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAGNYHELMET2",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_MAGNYHELMET2_EPS",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/MAGNYHELMET2-eps.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality magnyhelmet2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SPA3",
+            "reference": "HEAD_PROTECTION_HERARING_PROTECTION_SPA3_EPS",
+            "subtitle": "Premium Hearing protection for industrial safety.",
+            "image_url": "/photos/head-protection/heraring protection/SPA3-eps.png",
+            "category": "Head protection",
+            "subCategory": "Hearing protection",
+            "description": "High-quality spa3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1100V",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1100V_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1100V-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1100v designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1200V",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1200V_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1200V-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1200v designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1200VW",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1200VW_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1200VW-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1200vw designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1202BHBC",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1202BHBC_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1202BHBC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1202bhbc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1300V",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1300V_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1300V-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1300v designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M1300V2",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M1300V2_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M1300V2-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m1300v2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6000 A1",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6000_A1_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6000-A1-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6000 a1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6000 A1B1E1K1",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6000_A1B1E1K1_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6000-A1B1E1K1-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6000 a1b1e1k1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6000 A2",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6000_A2_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6000-A2-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6000 a2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6000 P3",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6000_P3_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6000-P3-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6000 p3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6000REFP2CLIP",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6000REFP2CLIP_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6000REFP2CLIP-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6000refp2clip designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6300",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6300_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6300-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6300 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6400E JUPITER (1)",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6400E_JUPITER_EPS__1_",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6400E-JUPITER-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6400e jupiter (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M6400E JUPITER",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M6400E_JUPITER_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M6400E-JUPITER-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m6400e jupiter designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M9000 P3",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M9000_P3_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M9000-P3-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m9000 p3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M9200 ROTOR GALAXY",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M9200_ROTOR_GALAXY_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M9200-ROTOR-GALAXY-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m9200 rotor galaxy designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M9300 STRAP GALAXY",
+            "reference": "HEAD_PROTECTION_RESPIRATORY_PROTECTION_M9300_STRAP_GALAXY_EPS",
+            "subtitle": "Premium Respiratory protection for industrial safety.",
+            "image_url": "/photos/head-protection/respiratory protection/M9300-STRAP-GALAXY-eps.png",
+            "category": "Head protection",
+            "subCategory": "Respiratory protection",
+            "description": "High-quality m9300 strap galaxy designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BARRIER2 PLATE",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_BARRIER2_PLATE_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/BARRIER2-PLATE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality barrier2 plate designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BRAVA2 CLEAR (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_BRAVA2_CLEAR_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/BRAVA2-CLEAR-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality brava2 clear (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BRAVA2 CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_BRAVA2_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/BRAVA2-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality brava2 clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BRAVA2 SMOKE",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_BRAVA2_SMOKE_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/BRAVA2-SMOKE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality brava2 smoke designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CASOUD2HE WITH HELMET",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_CASOUD2HE_WITH_HELMET_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/CASOUD2HE-with-helmet-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality casoud2he with helmet designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CASOUD3",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_CASOUD3_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/CASOUD3-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality casoud3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FILTERIN (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FILTERIN_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FILTERIN-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality filterin (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FILTERIN",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FILTERIN_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FILTERIN-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality filterin designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUEGO ADJUSTABLE ARM (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUEGO_ADJUSTABLE_ARM_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUEGO-adjustable-arm-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuego adjustable arm (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUEGO ADJUSTABLE ARM",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUEGO_ADJUSTABLE_ARM_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUEGO-adjustable-arm-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuego adjustable arm designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUJI2 CLEAR (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_CLEAR_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUJI2-CLEAR-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuji2 clear (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUJI2 CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUJI2-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuji2 clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUJI2 GRADIENT (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_GRADIENT_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUJI2-GRADIENT-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuji2 gradient (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FUJI2 GRADIENT",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_GRADIENT_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/FUJI2-GRADIENT-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality fuji2 gradient designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "GALERAS CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_GALERAS_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/GALERAS-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality galeras clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HELIUM2 BLUE BLOCKER 1 (1)",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_BLUE_BLOCKER_1_EPS__1_",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/HELIUM2-BLUE-BLOCKER-1-eps (1).png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality helium2 blue blocker 1 (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HELIUM2 BLUE BLOCKER 1",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_BLUE_BLOCKER_1_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/HELIUM2-BLUE-BLOCKER-1-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality helium2 blue blocker 1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HELIUM2 CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/HELIUM2-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality helium2 clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "HELIUM2 SMOKE",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_SMOKE_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/HELIUM2-SMOKE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality helium2 smoke designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "IRAYA CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/IRAYA-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality iraya clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "IRAYA SMOKE",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_SMOKE_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/IRAYA-SMOKE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality iraya smoke designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "IRAYA YELLOW",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_YELLOW_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/IRAYA-YELLOW-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality iraya yellow designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "IRAZU",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAZU",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/IRAZU.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality irazu designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "KILIMANDJARO CLEAR AB",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_KILIMANDJARO_CLEAR_AB_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/KILIMANDJARO-CLEAR-AB-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality kilimandjaro clear ab designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "KILIMANDJARO CLEAR",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_KILIMANDJARO_CLEAR_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/KILIMANDJARO-CLEAR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality kilimandjaro clear designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "LIPARI2 T5",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_LIPARI2_T5_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/LIPARI2-T5-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality lipari2 t5 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "RUIZ1",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_RUIZ1_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/RUIZ1-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality ruiz1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SCREEN PLATE",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_SCREEN_PLATE_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/SCREEN-PLATE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality screen plate designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SCREEN",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_SCREEN",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/SCREEN.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality screen designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TOBA3",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_TOBA3_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/TOBA3-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality toba3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR FLASH",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_FLASH_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-FLASH-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor flash designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR GUARD",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_GUARD_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-GUARD-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor guard designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR H",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_H_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-H-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor h designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR HOLDER",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_HOLDER_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-HOLDER-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor holder designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR TORIC",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_TORIC_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-TORIC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor toric designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISOR U",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISOR_U_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISOR-U-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visor u designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VISORPC",
+            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_VISORPC_EPS",
+            "subtitle": "Premium Protective eyewear for industrial safety.",
+            "image_url": "/photos/head-protection/safety eyewear/VISORPC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Protective eyewear",
+            "description": "High-quality visorpc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AIR COLTAN ",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_AIR_COLTAN_",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/AIR-COLTAN-.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality air coltan  designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BASEBALL DIAMOND GR",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_BASEBALL_DIAMOND_GR_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/BASEBALL-DIAMOND-GR-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality baseball diamond gr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DYNAMIC JUGBETA",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_DYNAMIC_JUGBETA_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/DYNAMIC-JUGBETA-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality dynamic jugbeta designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "GRANITE PEAK BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_GRANITE_PEAK_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/GRANITE-PEAK-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality granite peak bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "GRANITE WIND BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_GRANITE_WIND_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/GRANITE-WIND-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality granite wind bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUGALPHA",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_JUGALPHA",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/JUGALPHA.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality jugalpha designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MENTALPHA",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_MENTALPHA_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/MENTALPHA-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality mentalpha designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ONYX2 BJ",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_ONYX2_BJ_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/ONYX2-BJ-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality onyx2 bj designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "QUARTZ I BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_QUARTZ_I_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/QUARTZ-I-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality quartz i bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "QUARTZ UP III BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_QUARTZ_UP_III_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/QUARTZ-UP-III-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality quartz up iii bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "QUARTZ UP IV BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_QUARTZ_UP_IV_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/QUARTZ-UP-IV-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality quartz up iv bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SUPER QUARTZ BC",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_SUPER_QUARTZ_BC_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/SUPER-QUARTZ-BC-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality super quartz bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ZIRCON I VE",
+            "reference": "HEAD_PROTECTION_SKULL_PROTECTION_ZIRCON_I_VE_EPS",
+            "subtitle": "Premium Skull protection for industrial safety.",
+            "image_url": "/photos/head-protection/skull protection/ZIRCON-I-VE-eps.png",
+            "category": "Head protection",
+            "subCategory": "Skull protection",
+            "description": "High-quality zircon i ve designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT115",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT115_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT115-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt115 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT117",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT117_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT117-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt117 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT119",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT119_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT119-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt119 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT125",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT125_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT125-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt125 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT215 WITH V1300",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT215_WITH_V1300_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT215-with-V1300-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt215 with v1300 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DT300 WITH V1383",
+            "reference": "PROTECTIVE_CLOTHING_DISPOSAL_WEAR_DT300_WITH_V1383_EPS",
+            "subtitle": "Premium Disposable wear for industrial safety.",
+            "image_url": "/photos/protective clothing/disposal-wear/DT300-with-V1383-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Disposable wear",
+            "description": "High-quality dt300 with v1383 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EN304 JA SUIT",
+            "reference": "PROTECTIVE_CLOTHING_OUTDOOR_WEAR_EN304_JA_SUIT_EPS",
+            "subtitle": "Premium Outdoor wear for industrial safety.",
+            "image_url": "/photos/protective clothing/outdoor-wear/EN304-JA-suit-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Outdoor wear",
+            "description": "High-quality en304 ja suit designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EN400 BR SUIT",
+            "reference": "PROTECTIVE_CLOTHING_OUTDOOR_WEAR_EN400_BR_SUIT_EPS",
+            "subtitle": "Premium Outdoor wear for industrial safety.",
+            "image_url": "/photos/protective clothing/outdoor-wear/EN400-BR-suit-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Outdoor wear",
+            "description": "High-quality en400 br suit designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MA305 JA",
+            "reference": "PROTECTIVE_CLOTHING_OUTDOOR_WEAR_MA305_JA_EPS",
+            "subtitle": "Premium Outdoor wear for industrial safety.",
+            "image_url": "/photos/protective clothing/outdoor-wear/MA305-JA-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Outdoor wear",
+            "description": "High-quality ma305 ja designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SINGA",
+            "reference": "PROTECTIVE_CLOTHING_OUTDOOR_WEAR_SINGA_EPS",
+            "subtitle": "Premium Outdoor wear for industrial safety.",
+            "image_url": "/photos/protective clothing/outdoor-wear/SINGA-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Outdoor wear",
+            "description": "High-quality singa designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "COMET JA",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_COMET_JA_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/COMET-JA-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality comet ja designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "GILP4 JA",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_GILP4_JA_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/GILP4-JA-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality gilp4 ja designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAICA2",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_MAICA2_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/MAICA2-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality maica2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAICO2",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_MAICO2_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/MAICO2-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality maico2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAIMA2",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_MAIMA2_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/MAIMA2-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality maima2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAIPA2",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_MAIPA2_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/MAIPA2-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality maipa2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAIVE2",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_MAIVE2_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/MAIVE2-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality maive2 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SUMMAN",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_SUMMAN_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/SUMMAN-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality summan designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SUMTAB",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_SUMTAB_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/SUMTAB-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality sumtab designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SUMVES",
+            "reference": "PROTECTIVE_CLOTHING_TECHNICAL_WEAR_SUMVES_EPS",
+            "subtitle": "Premium Technical wear for industrial safety.",
+            "image_url": "/photos/protective clothing/technical-wear/SUMVES-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Technical wear",
+            "description": "High-quality sumves designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M2CO3 BM",
+            "reference": "PROTECTIVE_CLOTHING_WORKWEAR_M2CO3_BM_EPS",
+            "subtitle": "Premium Workwear for industrial safety.",
+            "image_url": "/photos/protective clothing/workwear/M2CO3-BM-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Workwear",
+            "description": "High-quality m2co3 bm designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M2PA3 GO M2PW3 GO",
+            "reference": "PROTECTIVE_CLOTHING_WORKWEAR_M2PA3_GO_M2PW3_GO_EPS",
+            "subtitle": "Premium Workwear for industrial safety.",
+            "image_url": "/photos/protective clothing/workwear/M2PA3-GO-M2PW3-GO-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Workwear",
+            "description": "High-quality m2pa3 go m2pw3 go designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "M2VE3 GO",
+            "reference": "PROTECTIVE_CLOTHING_WORKWEAR_M2VE3_GO_EPS",
+            "subtitle": "Premium Workwear for industrial safety.",
+            "image_url": "/photos/protective clothing/workwear/M2VE3-GO-eps.png",
+            "category": "Protective clothing",
+            "subCategory": "Workwear",
+            "description": "High-quality m2ve3 go designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "COBRA4",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_COBRA4_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/COBRA4-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality cobra4 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FENNEC4 S1 S1P (1)",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_FENNEC4_S1_S1P_EPS__1_",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/FENNEC4-S1-S1P-eps (1).png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality fennec4 s1 s1p (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FENNEC4 S1 S1P",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_FENNEC4_S1_S1P_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/FENNEC4-S1-S1P-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality fennec4 s1 s1p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MIAMI S1P ESD",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_MIAMI_S1P_ESD_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/MIAMI-S1P-ESD-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality miami s1p esd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MIAMI S1P NO",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_MIAMI_S1P_NO_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/MIAMI-S1P-NO-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality miami s1p no designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MIAMI S2 BC",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_MIAMI_S2_BC_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/MIAMI-S2-BC-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality miami s2 bc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MIWA S3",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_MIWA_S3_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/MIWA-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality miwa s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "RIMINI4 S1P BJ",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_RIMINI4_S1P_BJ_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/RIMINI4-S1P-BJ-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality rimini4 s1p bj designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SAULT2 S3 SRC ESD",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_SAULT2_S3_SRC_ESD_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/SAULT2-S3-SRC-ESD-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality sault2 s3 src esd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TANGARA2 S1P GJ",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_TANGARA2_S1P_GJ_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/TANGARA2-S1P-GJ-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality tangara2 s1p gj designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VIAGI S1P ESD NR",
+            "reference": "SAFETY_FOOTWEAR_INDOOR_VIAGI_S1P_ESD_NR_EPS",
+            "subtitle": "Premium Indoor for industrial safety.",
+            "image_url": "/photos/safety footwear/indoor/VIAGI-S1P-ESD-NR-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Indoor",
+            "description": "High-quality viagi s1p esd nr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "AURIBEAU3 S1P",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_AURIBEAU3_S1P_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/AURIBEAU3-S1P-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality auribeau3 s1p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CADEROUSSE S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_CADEROUSSE_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/CADEROUSSE-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality caderousse s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CINTO S1PS GR",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_CINTO_S1PS_GR_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/CINTO-S1PS-GR-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality cinto s1ps gr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DENALI S1PS GR",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_DENALI_S1PS_GR_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/DENALI-S1PS-GR-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality denali s1ps gr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "GOBI S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_GOBI_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/GOBI-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality gobi s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JET3 S1",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JET3_S1_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JET3-S1-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jet3 s1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JET3 S1P",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JET3_S1P_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JET3-S1P-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jet3 s1p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JET3 S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JET3_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JET3-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jet3 s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUMPER3 S1",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JUMPER3_S1_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JUMPER3-S1-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jumper3 s1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUMPER3 S1P",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JUMPER3_S1P_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JUMPER3-S1P-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jumper3 s1p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUMPER3 S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JUMPER3_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JUMPER3-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jumper3 s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUMPER3 S3 FE",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JUMPER3_S3_FE_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JUMPER3-S3-FE-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jumper3 s3 fe designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "JUMPER3 S3 HC",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_JUMPER3_S3_HC_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/JUMPER3-S3-HC-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality jumper3 s3 hc designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MAESTRO S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_MAESTRO_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/MAESTRO-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality maestro s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "MONTBRUN S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_MONTBRUN_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/MONTBRUN-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality montbrun s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PERTUIS3 S1P",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_PERTUIS3_S1P_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/PERTUIS3-S1P-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality pertuis3 s1p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PHOCEA S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_PHOCEA_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/PHOCEA-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality phocea s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PHOCEA2 S3S NO",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_PHOCEA2_S3S_NO_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/PHOCEA2-S3S-NO-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality phocea2 s3s no designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PHOENIX S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_PHOENIX_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/PHOENIX-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality phoenix s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PHOENIX2 S3S NO",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_PHOENIX2_S3S_NO_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/PHOENIX2-S3S-NO-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality phoenix2 s3s no designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SAGA S3 BE",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_SAGA_S3_BE_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/SAGA-S3-BE-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality saga s3 be designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SANTANA S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_SANTANA_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/SANTANA-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality santana s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SAULT2 S3 SRC",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_SAULT2_S3_SRC_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/SAULT2-S3-SRC-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality sault2 s3 src designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TAKU S3",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_TAKU_S3_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/TAKU-S3-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality taku s3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "WINJET3 S1",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_WINJET3_S1_EPS",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/WINJET3-S1-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality winjet3 s1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "WINJUMPER3 S3S",
+            "reference": "SAFETY_FOOTWEAR_OUTDOOR_WINJUMPER3_S3S",
+            "subtitle": "Premium Outdoor for industrial safety.",
+            "image_url": "/photos/safety footwear/outdoor/WINJUMPER3-S3S.png",
+            "category": "Safety footwear",
+            "subCategory": "Outdoor",
+            "description": "High-quality winjumper3 s3s designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "BROOKLYN S3 OR",
+            "reference": "SAFETY_FOOTWEAR_SPORT_BROOKLYN_S3_OR_EPS",
+            "subtitle": "Premium Sport for industrial safety.",
+            "image_url": "/photos/safety footwear/sport/BROOKLYN-S3-OR-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Sport",
+            "description": "High-quality brooklyn s3 or designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DELTASPORT S1P NR",
+            "reference": "SAFETY_FOOTWEAR_SPORT_DELTASPORT_S1P_NR_EPS",
+            "subtitle": "Premium Sport for industrial safety.",
+            "image_url": "/photos/safety footwear/sport/DELTASPORT-S1P-NR-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Sport",
+            "description": "High-quality deltasport s1p nr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "SAGA S3 BE",
+            "reference": "SAFETY_FOOTWEAR_SPORT_SAGA_S3_BE_EPS",
+            "subtitle": "Premium Sport for industrial safety.",
+            "image_url": "/photos/safety footwear/sport/SAGA-S3-BE-eps.png",
+            "category": "Safety footwear",
+            "subCategory": "Sport",
+            "description": "High-quality saga s3 be designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CHEMSAFE VV835",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_CHEMSAFE_VV835_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/CHEMSAFE-VV835-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality chemsafe vv835 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DUOCOLOR330 VE330BJ",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_DUOCOLOR330_VE330BJ_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/DUOCOLOR330-VE330BJ-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality duocolor330 ve330bj designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NITREX801 VE801",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_NITREX801_VE801_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/NITREX801-VE801-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality nitrex801 ve801 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NITREX802 VE802VE",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_NITREX802_VE802VE_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/NITREX802-VE802VE-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality nitrex802 ve802ve designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "PETRO VE766",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_PETRO_VE766_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/PETRO-VE766-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality petro ve766 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TOUTRAVO 509 VE509NO",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_TOUTRAVO_509_VE509NO_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/TOUTRAVO-509-VE509NO-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality toutravo 509 ve509no designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TOUTRAVO 510 VE510NO",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_TOUTRAVO_510_VE510NO_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/TOUTRAVO-510-VE510NO-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality toutravo 510 ve510no designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENIPLUS1383 V1383",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_VENIPLUS1383_V1383_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/VENIPLUS1383-V1383-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality veniplus1383 v1383 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENITACTYL 1310 V1310",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_VENITACTYL_1310_V1310_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/VENITACTYL-1310-V1310-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality venitactyl 1310 v1310 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENIZETTE920 VE920BL",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_VENIZETTE920_VE920BL_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/VENIZETTE920-VE920BL-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality venizette920 ve920bl designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ZEPHIR210 VE210RO",
+            "reference": "SAFETY_GLOVES_CHEMICAL_PROTECTION_ZEPHIR210_VE210RO_EPS",
+            "subtitle": "Premium Chemical protection for industrial safety.",
+            "image_url": "/photos/safety gloves/chemical protection/ZEPHIR210-VE210RO-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Chemical protection",
+            "description": "High-quality zephir210 ve210ro designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DPVE716",
+            "reference": "SAFETY_GLOVES_CRAFTMAN_S_PROTECTION_DPVE716_EPS",
+            "subtitle": "Premium Craftman's protection for industrial safety.",
+            "image_url": "/photos/safety gloves/craftman's protection/DPVE716-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Craftman's protection",
+            "description": "High-quality dpve716 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "ECONOCUTDM1",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_ECONOCUTDM1_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/ECONOCUTDM1-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality econocutdm1 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EOS FLEX CUT D VV922",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_EOS_FLEX_CUT_D_VV922_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/EOS-FLEX-CUT-D-VV922-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality eos flex cut d vv922 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "EOS NOCUT VV910",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_EOS_NOCUT_VV910_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/EOS-NOCUT-VV910-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality eos nocut vv910 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "KPG10",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_KPG10_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/KPG10-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality kpg10 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "THRYM VV736",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_THRYM_VV736_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/THRYM-VV736-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality thrym vv736 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUT34 VECUT34",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUT34_VECUT34_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUT34-VECUT34-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicut34 vecut34 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUT52",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUT52_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUT52-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicut52 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTB03 VECUTB03G3",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTB03_VECUTB03G3_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTB03-VECUTB03G3-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutb03 vecutb03g3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTB04 VECUTB04G3",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTB04_VECUTB04G3_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTB04-VECUTB04G3-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutb04 vecutb04g3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTD02 VECUTD02",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTD02_VECUTD02_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTD02-VECUTD02-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutd02 vecutd02 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTD03 VECUTD03",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTD03_VECUTD03_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTD03-VECUTD03-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutd03 vecutd03 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTD04 VECUTD04",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTD04_VECUTD04_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTD04-VECUTD04-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutd04 vecutd04 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTD07 VECUTD07G3",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTD07_VECUTD07G3_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTD07-VECUTD07G3-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutd07 vecutd07g3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTD08 VECUTD08G3",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTD08_VECUTD08G3_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTD08-VECUTD08G3-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutd08 vecutd08g3 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTDX0 VECUTDX0",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTDX0_VECUTDX0_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTDX0-VECUTDX0-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutdx0 vecutdx0 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VENICUTF01 VECUTF01 VENICUTF XTREM CUT",
+            "reference": "SAFETY_GLOVES_CUT_PROTECTION_VENICUTF01_VECUTF01_VENICUTF_XTREM_CUT_EPS",
+            "subtitle": "Premium Cut protection for industrial safety.",
+            "image_url": "/photos/safety gloves/cut protection/VENICUTF01-VECUTF01-VENICUTF-XTREM-CUT-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Cut protection",
+            "description": "High-quality venicutf01 vecutf01 venicutf xtrem cut designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DS202RP P",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_DS202RP_P_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/DS202RP-P-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality ds202rp p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NI150",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_NI150_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/NI150-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality ni150 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NI155",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_NI155_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/NI155-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality ni155 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NI170",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_NI170_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/NI170-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality ni170 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NI175",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_NI175_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/NI175-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality ni175 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "NYSOS VV904",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_HEAVY_TASK_WORK_NYSOS_VV904_EPS",
+            "subtitle": "Premium Mechanical protection for heavy works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for heavy task work/NYSOS-VV904-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for heavy works",
+            "description": "High-quality nysos vv904 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "APOLLON JA VV733",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_APOLLON_JA_VV733_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/APOLLON-JA-VV733-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality apollon ja vv733 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "DC103",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_DC103_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/DC103-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality dc103 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FBN49",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_FBN49_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/FBN49-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality fbn49 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "FCN29",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_FCN29_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/FCN29-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality fcn29 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE713",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_VE713_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/VE713-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality ve713 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE726",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_VE726_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/VE726-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality ve726 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE729",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_VE729_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/VE729-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality ve729 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE733",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_MULTI_PURPOSE_WORK_VE733_EPS",
+            "subtitle": "Premium Mechanical protection for multi purpose works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for multi-purpose work/VE733-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for multi purpose works",
+            "description": "High-quality ve733 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE702P",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE702P_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE702P-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve702p designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE702PESD",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE702PESD_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE702PESD-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve702pesd designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE702PG",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE702PG_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE702PG-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve702pg designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE702PN",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE702PN_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE702PN-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve702pn designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE712GR",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE712GR_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE712GR-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve712gr designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE715",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE715_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE715-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve715 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VE722",
+            "reference": "SAFETY_GLOVES_MECHNICAL_PROTECTION_FOR_PRECISION_WORK_VE722_EPS",
+            "subtitle": "Premium Mechanical protection for precision works for industrial safety.",
+            "image_url": "/photos/safety gloves/mechnical protection for precision work/VE722-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Mechanical protection for precision works",
+            "description": "High-quality ve722 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CA615K",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_CA615K_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/CA615K-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality ca615k designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "CRYOG",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_CRYOG_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/CRYOG-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality cryog designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "KPG10",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_KPG10_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/KPG10-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality kpg10 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TC716",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_TC716_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/TC716-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality tc716 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TER250",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_TER250_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/TER250-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality ter250 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TER300",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_TER300_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/TER300-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality ter300 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TERK400",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_TERK400_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/TERK400-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality terk400 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "TERK500",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_TERK500_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/TERK500-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality terk500 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "THRYM VV736 (1)",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_THRYM_VV736_EPS__1_",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/THRYM-VV736-eps (1).png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality thrym vv736 (1) designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        },
+        {
+            "name": "VV914",
+            "reference": "SAFETY_GLOVES_THERMAL_PROTECTION_VV914_EPS",
+            "subtitle": "Premium Thermal protection for industrial safety.",
+            "image_url": "/photos/safety gloves/thermal protection/VV914-eps.png",
+            "category": "Safety gloves",
+            "subCategory": "Thermal protection",
+            "description": "High-quality vv914 designed for maximum protection and comfort in hazardous environments.",
+            "price": 99.99
+        }
     ]
-  },
-  "products": [
-    {
-      "name": "AIR COLTAN",
-      "reference": "AIRCOLTAN",
-      "image_url": "https://media.deltaplus.eu/m/62565fb0e107730e/Liferay_Product_Card-AIR-COLTAN-GR-vis-7cm-eps.png",
-      "subtitle": "High-performance bump cap for impact protection."
-    },
-    {
-      "name": "BARRIER PLATE 2",
-      "reference": "BARRI2PP",
-      "image_url": "https://media.deltaplus.eu/m/5f92053c2d2b451f/Liferay_Product_Card-BARRIER2-PLATE-eps.png",
-      "subtitle": "Replacement plate for welding shields."
-    },
-    {
-      "name": "BRAVA2 CLEAR",
-      "reference": "BRAV2IN",
-      "image_url": "https://media.deltaplus.eu/m/528162f21d10d812/Liferay_Product_Card-BRAVA2-CLEAR-eps.png",
-      "subtitle": "Clear safety glasses with wrap-around design."
-    },
-    {
-      "name": "BRAVA2 CLEAR AB",
-      "reference": "BRAV2INAB",
-      "image_url": "https://media.deltaplus.eu/m/528162f21d10d812/Liferay_Product_Card-BRAVA2-CLEAR-eps.png",
-      "subtitle": "Anti-fog clear safety glasses."
-    },
-    {
-      "name": "BRAVA2 SMOKE",
-      "reference": "BRAV2FU",
-      "image_url": "https://media.deltaplus.eu/m/1833a90e09679f09/Liferay_Product_Card-BRAVA2-SMOKE-eps.png",
-      "subtitle": "Smoke-tinted glasses for outdoor protection."
-    },
-    {
-      "name": "CASOUD 3",
-      "reference": "CASOUD3_",
-      "image_url": "https://media.deltaplus.eu/m/2e987389b94592fe/Liferay_Product_Card-CASOUD3-eps.png",
-      "subtitle": "Flip-up welding helmet."
-    },
-    {
-      "name": "CASOUD2HE",
-      "reference": "CASOUD2HE",
-      "image_url": "https://media.deltaplus.eu/m/638b8bfcb8ede586/Liferay_Product_Card-CASOUD2HE-with-helmet-eps.png",
-      "subtitle": "Helmet-mounted welding protector."
-    },
-    {
-      "name": "CONIC DISPLAY",
-      "reference": "CONICDISPLAY",
-      "image_url": "https://media.deltaplus.eu/m/c5fb88cc29e9126/Liferay_Product_Card-CONIC-DISPLAY-eps.png",
-      "subtitle": "Dispenser Box for earplugs."
-    },
-    {
-      "name": "CONIC2 500",
-      "reference": "CONIC2V500",
-      "image_url": "https://media.deltaplus.eu/m/316bf71ba703c626/Liferay_Product_Card-CONIC010-CONIC200-CONIC500-eps.png",
-      "subtitle": "Disposable polyurethane earplugs."
-    },
-    {
-      "name": "DIAMOND V",
-      "reference": "DIAMOND5",
-      "image_url": "https://media.deltaplus.eu/m/74277b2f1c3bf3a9/Liferay_Product_Card-BASEBALL-DIAMOND-GR-eps.png",
-      "subtitle": "Baseball cap style safety helmet."
-    },
-    {
-      "name": "DYNAMIC JUGBETA",
-      "reference": "JUGBEDYN_",
-      "image_url": "https://media.deltaplus.eu/m/3fc3f3c101004cfa/Liferay_Product_Card-DYNAMIC-JUGBETA-eps.png",
-      "subtitle": "Adjustable chin strap for helmets."
-    },
-    {
-      "name": "FILTER 11",
-      "reference": "FILTER11_",
-      "image_url": "https://media.deltaplus.eu/m/22bea2a57c93e7a9/Liferay_Product_Card-FILTERIN-eps.png",
-      "subtitle": "Shade 11 welding filter."
-    },
-    {
-      "name": "FILTER-IN",
-      "reference": "FILTERIN_",
-      "image_url": "https://media.deltaplus.eu/m/22bea2a57c93e7a9/Liferay_Product_Card-FILTERIN-eps.png",
-      "subtitle": "Protective internal filter."
-    },
-    {
-      "name": "FUEGO",
-      "reference": "FUEGO",
-      "image_url": "https://media.deltaplus.eu/m/523679bb724f7c08/Liferay_Product_Card-FUEGO-adjustable-arm-eps.png",
-      "subtitle": "Compact safety glasses with adjustable arms."
-    },
-    {
-      "name": "FUJI2 CLEAR",
-      "reference": "FUJI2NOIN",
-      "image_url": "https://media.deltaplus.eu/m/3f335e7872a0f2f2/Liferay_Product_Card-FUJI2-CLEAR-eps.png",
-      "subtitle": "Ultra-light safety glasses."
-    }
-  ]
 }

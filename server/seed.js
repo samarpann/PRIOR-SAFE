@@ -11,11 +11,12 @@ const seedDB = async () => {
         await Product.deleteMany({});
         console.log('Old products deleted');
 
-        // Transform data if needed (the JSON has a different structure)
+        // Use data from JSON
         const productsToSeed = productsData.products.map(p => ({
             ...p,
-            category: 'Skull protection', // Default category since JSON doesn't specify per product
-            price: 50.0 // Default price
+            category: p.category,
+            subCategory: p.subCategory,
+            price: p.price || 99.99
         }));
 
         await Product.insertMany(productsToSeed);

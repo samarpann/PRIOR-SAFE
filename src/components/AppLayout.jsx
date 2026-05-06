@@ -209,7 +209,7 @@ const AppLayout = ({ children, isAdmin = false }) => {
       </AnimatePresence>
 
       {/* ── MAIN CONTENT ── */}
-      <div className="flex-1 min-w-0 flex flex-col" style={{ overflowX: 'hidden', minHeight: '100vh' }}>
+      <div className="flex-1 min-w-0 flex flex-col" style={{ minHeight: '100vh' }}>
         {/* Mobile Top Bar */}
         <header className="lg:hidden sticky top-0 z-50 flex items-center gap-3 px-4 py-3 bg-white border-b border-slate-100">
           <button

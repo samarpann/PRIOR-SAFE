@@ -3,29 +3,62 @@ import AppLayout from '../components/AppLayout';
 import ProductModal from '../components/ProductModal';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ShoppingBag, Search, Shield, Package, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import API_BASE from '../config/api';
+import { CATEGORY_STRUCTURE } from '../data/categories';
 
-const CATEGORY_STRUCTURE = {
-  'Head': ['Skull', 'Eyes', 'Ear', 'Respiratory']
-};
-
-const ALL_CATEGORIES = ['All Products', ...CATEGORY_STRUCTURE['Head']];
+import ProductSidebar from '../components/ProductSidebar';
 
 const ProductCategoryPage = () => {
   const { user } = useAuth();
   const { addToCart } = useCart();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [toast, setToast] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [category, setCategory] = useState('All Products');
+  
+  const category = searchParams.get('category') || 'All Products';
+  const subCategory = searchParams.get('subCategory') || '';
+  const selectedSectors = searchParams.getAll('sectors');
+  const selectedRisks = searchParams.getAll('risks');
+  
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
+  const handleFilterSelect = (cat, sub) => {
+    if (cat === 'All Products') {
+      setSearchParams({});
+    } else {
+      const newParams = new URLSearchParams(searchParams);
+      newParams.set('category', cat);
+      newParams.set('subCategory', sub);
+      setSearchParams(newParams);
+    }
+    setPage(1);
+  };
+
+  const handleFilterToggle = (type, value) => {
+    const newParams = new URLSearchParams(searchParams);
+    const currentValues = newParams.getAll(type);
+    
+    if (currentValues.includes(value)) {
+      // Remove value
+      const updated = currentValues.filter(v => v !== value);
+      newParams.delete(type);
+      updated.forEach(v => newParams.append(type, v));
+    } else {
+      // Add value
+      newParams.append(type, value);
+    }
+    setSearchParams(newParams);
+    setPage(1);
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -35,8 +68,14 @@ const ProductCategoryPage = () => {
           page,
           limit: 8,
           search: searchQuery,
-          ...(category !== 'All Products' && { subCategory: category }),
+          ...(category !== 'All Products' && { category }),
+          ...(subCategory && subCategory !== 'All products' && { subCategory }),
         });
+        
+        // Add multi-value filters
+        selectedSectors.forEach(s => params.append('sectors', s));
+        selectedRisks.forEach(r => params.append('risks', r));
+
         const res = await fetch(`${API_BASE}/api/products?${params}`);
         const data = await res.json();
         setProducts(data.products || []);
@@ -49,7 +88,7 @@ const ProductCategoryPage = () => {
     };
     const t = setTimeout(fetchProducts, 300);
     return () => clearTimeout(t);
-  }, [page, searchQuery, category]);
+  }, [page, searchQuery, category, subCategory, searchParams]);
 
   const handleAddToCart = (product, qty = 1) => {
     addToCart({
@@ -102,65 +141,38 @@ const ProductCategoryPage = () => {
         </div>
       </div>
 
-      {/* Secondary Category Bar (Karam Inspired) */}
-      <div className="bg-slate-900 px-4 md:px-8 py-3 overflow-x-auto scrollbar-hide">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-            <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.2em] whitespace-nowrap">Shop By Category:</span>
-            
-            <button
-                onClick={() => { setCategory('All Products'); setPage(1); }}
-                className={`text-[10px] font-black uppercase tracking-[0.15em] whitespace-nowrap transition-all hover:text-white ${
-                    category === 'All Products' ? 'text-white' : 'text-slate-500'
-                }`}
-            >
-                All Products
-            </button>
+      <div className="flex flex-col lg:flex-row p-4 md:p-8 gap-8">
+        {/* New Premium Sidebar */}
+        <ProductSidebar 
+          activeCategory={category} 
+          activeSubCategory={subCategory} 
+          activeFilters={{
+            sectors: selectedSectors,
+            risks: selectedRisks
+          }}
+          onSelect={handleFilterSelect} 
+          onFilterToggle={handleFilterToggle}
+        />
 
-            {Object.entries(CATEGORY_STRUCTURE).map(([parent, subs]) => (
-              <div key={parent} className="flex items-center gap-4 border-l border-slate-700 pl-4">
-                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.1em]">{parent}:</span>
-                {subs.map(sub => (
-                  <button
-                      key={sub}
-                      onClick={() => { setCategory(sub); setPage(1); }}
-                      className={`text-[10px] font-black uppercase tracking-[0.15em] whitespace-nowrap transition-all hover:text-white ${
-                          category === sub ? 'text-white' : 'text-slate-500'
-                      }`}
-                  >
-                      {sub}
-                  </button>
-                ))}
-              </div>
-            ))}
-        </div>
-      </div>
-
-      <div className="p-4 md:p-8">
-        {/* Hero Banner (Karam Style) */}
-        <div className="relative rounded-[2.5rem] overflow-hidden mb-12 h-[350px] bg-slate-900 group">
-          <img 
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80" 
-            alt="Safety Excellence"
-            className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-[10s]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
-          <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-2xl">
-            <span className="inline-flex items-center gap-2 text-blue-400 font-black text-[10px] uppercase tracking-[0.4em] mb-6">
-                <div className="w-8 h-px bg-blue-600" /> Professional Protection
-            </span>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 tracking-tighter">
-              Setting the Standard in <span className="text-blue-500">Industrial Safety.</span>
-            </h1>
-            <p className="text-slate-400 text-lg mb-10 leading-relaxed font-medium">
-              Explore our range of ISO certified safety equipment engineered for the world's most demanding environments.
-            </p>
-            <div className="flex gap-4">
-                <button className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-500 transition-all shadow-xl shadow-blue-900/40">
-                    Explore New Launches
-                </button>
+        {/* Main Content Area */}
+        <div className="flex-1 min-w-0">
+          {/* Hero Banner (Minimalized) */}
+          <div className="relative rounded-[2.5rem] overflow-hidden mb-12 h-[280px] bg-slate-900 group">
+            <img 
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80" 
+              alt="Safety Excellence"
+              className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-[10s]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
+            <div className="relative z-10 h-full flex flex-col justify-center px-12">
+              <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4 tracking-tighter max-w-lg">
+                Setting the Standard in <span className="text-blue-500">Industrial Safety.</span>
+              </h2>
+              <p className="text-slate-400 text-sm max-w-md leading-relaxed font-medium">
+                Explore our range of ISO certified safety equipment engineered for the world's most demanding environments.
+              </p>
             </div>
           </div>
-        </div>
 
         {/* Filters and Sorting (Placeholder for expansion) */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
@@ -285,6 +297,7 @@ const ProductCategoryPage = () => {
             </button>
           </div>
         )}
+        </div>
       </div>
 
       {/* Product Modal */}

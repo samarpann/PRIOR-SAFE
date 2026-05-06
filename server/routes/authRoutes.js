@@ -117,7 +117,36 @@ router.post('/login', async (req, res) => {
         // 3. If everything ok, send token to client
         sendToken(user, 200, res);
     } catch (err) {
-        console.error('Login Error:', err);
+        res.status(400).json({ status: 'fail', message: err.message });
+    }
+});
+
+// @route   POST /api/auth/signup
+// @desc    Email/Password Signup
+// @access  Public
+router.post('/signup', async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+
+        if (!name || !email || !password) {
+            return res.status(400).json({ status: 'fail', message: 'Please provide name, email and password' });
+        }
+
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ status: 'fail', message: 'User already exists with this email' });
+        }
+
+        const user = await User.create({
+            name,
+            email,
+            password,
+            role: 'USER'
+        });
+
+        sendToken(user, 201, res);
+    } catch (err) {
+        console.error('Signup Error:', err);
         res.status(400).json({ status: 'fail', message: err.message });
     }
 });

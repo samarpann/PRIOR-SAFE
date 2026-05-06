@@ -6,6 +6,8 @@ import AppLayout from '../components/AppLayout';
 import API_BASE from '../config/api';
 import '../admin.css';
 
+import { CATEGORY_STRUCTURE } from '../data/categories';
+
 const API_URL = `${API_BASE}/api/products`;
 
 function AdminDashboard() {
@@ -19,7 +21,8 @@ function AdminDashboard() {
     name: '',
     reference: '',
     subtitle: '',
-    category: 'Skull protection',
+    category: Object.keys(CATEGORY_STRUCTURE)[0],
+    subCategory: CATEGORY_STRUCTURE[Object.keys(CATEGORY_STRUCTURE)[0]].subCategories[0],
     description: '',
     price: 0
   });
@@ -57,17 +60,20 @@ function AdminDashboard() {
         name: product.name,
         reference: product.reference,
         subtitle: product.subtitle,
-        category: product.category,
+        category: product.category || Object.keys(CATEGORY_STRUCTURE)[0],
+        subCategory: product.subCategory || CATEGORY_STRUCTURE[product.category || Object.keys(CATEGORY_STRUCTURE)[0]].subCategories[0],
         description: product.description || '',
         price: product.price || 0
       });
     } else {
+      const defaultCat = Object.keys(CATEGORY_STRUCTURE)[0];
       setCurrentProduct(null);
       setFormData({
         name: '',
         reference: '',
         subtitle: '',
-        category: 'Skull protection',
+        category: defaultCat,
+        subCategory: CATEGORY_STRUCTURE[defaultCat].subCategories[0],
         description: '',
         price: 0
       });
@@ -77,7 +83,17 @@ function AdminDashboard() {
   };
 
   const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === 'category') {
+      // Reset subCategory when category changes
+      setFormData({ 
+        ...formData, 
+        category: value, 
+        subCategory: CATEGORY_STRUCTURE[value].subCategories[0] 
+      });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleFileChange = (e) => {
@@ -165,7 +181,7 @@ function AdminDashboard() {
                         {product.subtitle}
                       </p>
                       <div style={{ fontSize: '0.85rem', marginBottom: '1rem', color: '#475569' }}>
-                        <strong>Ref:</strong> {product.reference} | <strong>Cat:</strong> {product.category}
+                        <strong>Ref:</strong> {product.reference} | <strong>Cat:</strong> {product.category} / {product.subCategory}
                       </div>
                     </div>
                     <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
@@ -271,12 +287,19 @@ function AdminDashboard() {
                 <input name="subtitle" value={formData.subtitle} onChange={handleInputChange} required />
               </div>
               <div className="admin-form-group">
-                <label>Category</label>
+                <label>Main Category</label>
                 <select name="category" value={formData.category} onChange={handleInputChange}>
-                  <option>Skull protection</option>
-                  <option>Hearing protection</option>
-                  <option>Protective eyewear</option>
-                  <option>Respiratory protection</option>
+                  {Object.keys(CATEGORY_STRUCTURE).map(cat => (
+                    <option key={cat} value={cat}>{cat}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="admin-form-group">
+                <label>Sub Category</label>
+                <select name="subCategory" value={formData.subCategory} onChange={handleInputChange}>
+                  {CATEGORY_STRUCTURE[formData.category].subCategories.map(sub => (
+                    <option key={sub} value={sub}>{sub}</option>
+                  ))}
                 </select>
               </div>
               <div className="admin-form-group">
