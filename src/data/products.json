@@ -8,7 +8,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality am002x5v2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AM002X5V2"
         },
         {
             "name": "HA200",
@@ -18,7 +19,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality ha200 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HA200"
         },
         {
             "name": "LO030 (1)",
@@ -28,7 +30,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality lo030 (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "LO030"
         },
         {
             "name": "LO030",
@@ -38,7 +41,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality lo030 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "LO030"
         },
         {
             "name": "LO047100",
@@ -48,7 +52,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality lo047100 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "LO047100"
         },
         {
             "name": "LV130",
@@ -58,7 +63,8 @@
             "category": "Fall protection",
             "subCategory": "Anchorage - Work positioning",
             "description": "High-quality lv130 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "LV130"
         },
         {
             "name": "EX120",
@@ -68,7 +74,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality ex120 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EX120"
         },
         {
             "name": "EX220",
@@ -78,7 +85,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality ex220 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EX220"
         },
         {
             "name": "HAR11",
@@ -88,7 +96,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality har11 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HAR11"
         },
         {
             "name": "HAR12",
@@ -98,7 +107,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality har12 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HAR12"
         },
         {
             "name": "HAR14",
@@ -108,7 +118,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality har14 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HAR14"
         },
         {
             "name": "HAR25",
@@ -118,7 +129,8 @@
             "category": "Fall protection",
             "subCategory": "Body support",
             "description": "High-quality har25 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HAR25"
         },
         {
             "name": "AM002X5V2",
@@ -128,7 +140,8 @@
             "category": "Fall protection",
             "subCategory": "Connecting systems",
             "description": "High-quality am002x5v2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AM002X5V2"
         },
         {
             "name": "AN065 ASCORD",
@@ -138,7 +151,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an065 ascord designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN065"
         },
         {
             "name": "AN102 MINIBLOC",
@@ -148,7 +162,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an102 minibloc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN102"
         },
         {
             "name": "AN13006C2 MEDBLOC",
@@ -158,7 +173,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an13006c2 medbloc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN13006C2"
         },
         {
             "name": "AN211200CDD",
@@ -168,7 +184,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an211200cdd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN211200CDD"
         },
         {
             "name": "AN213200CDD",
@@ -178,7 +195,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an213200cdd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN213200CDD"
         },
         {
             "name": "AN213200ZDD",
@@ -188,7 +206,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality an213200zdd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AN213200ZDD"
         },
         {
             "name": "ELARA140",
@@ -198,7 +217,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality elara140 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ELARA140"
         },
         {
             "name": "ELARA170 (1)",
@@ -208,7 +228,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality elara170 (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ELARA170"
         },
         {
             "name": "ELARA170",
@@ -218,7 +239,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality elara170 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ELARA170"
         },
         {
             "name": "ELARA270",
@@ -228,7 +250,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality elara270 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ELARA270"
         },
         {
             "name": "ELARA280V2",
@@ -238,7 +261,8 @@
             "category": "Fall protection",
             "subCategory": "Fall arrester systems",
             "description": "High-quality elara280v2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ELARA280V2"
         },
         {
             "name": "CONIC DISPLAY",
@@ -248,7 +272,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality conic display designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CONIC"
         },
         {
             "name": "CONIC010 CONIC200 CONIC500",
@@ -258,7 +283,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality conic010 conic200 conic500 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CONIC010"
         },
         {
             "name": "INTERLAGOS2 GR",
@@ -268,7 +294,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality interlagos2 gr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "INTERLAGOS2"
         },
         {
             "name": "MAGNY COURS2",
@@ -278,7 +305,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality magny cours2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAGNY"
         },
         {
             "name": "MAGNYHELMET2",
@@ -288,7 +316,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality magnyhelmet2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAGNYHELMET2"
         },
         {
             "name": "SPA3",
@@ -298,7 +327,8 @@
             "category": "Head protection",
             "subCategory": "Hearing protection",
             "description": "High-quality spa3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SPA3"
         },
         {
             "name": "M1100V",
@@ -308,7 +338,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1100v designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1100V"
         },
         {
             "name": "M1200V",
@@ -318,7 +349,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1200v designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1200V"
         },
         {
             "name": "M1200VW",
@@ -328,7 +360,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1200vw designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1200VW"
         },
         {
             "name": "M1202BHBC",
@@ -338,7 +371,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1202bhbc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1202BHBC"
         },
         {
             "name": "M1300V",
@@ -348,7 +382,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1300v designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1300V"
         },
         {
             "name": "M1300V2",
@@ -358,7 +393,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m1300v2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M1300V2"
         },
         {
             "name": "M6000 A1",
@@ -368,7 +404,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6000 a1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6000"
         },
         {
             "name": "M6000 A1B1E1K1",
@@ -378,7 +415,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6000 a1b1e1k1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6000"
         },
         {
             "name": "M6000 A2",
@@ -388,7 +426,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6000 a2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6000"
         },
         {
             "name": "M6000 P3",
@@ -398,7 +437,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6000 p3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6000"
         },
         {
             "name": "M6000REFP2CLIP",
@@ -408,7 +448,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6000refp2clip designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6000REFP2CLIP"
         },
         {
             "name": "M6300",
@@ -418,7 +459,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6300 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6300"
         },
         {
             "name": "M6400E JUPITER (1)",
@@ -428,7 +470,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6400e jupiter (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6400E"
         },
         {
             "name": "M6400E JUPITER",
@@ -438,7 +481,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m6400e jupiter designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M6400E"
         },
         {
             "name": "M9000 P3",
@@ -448,7 +492,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m9000 p3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M9000"
         },
         {
             "name": "M9200 ROTOR GALAXY",
@@ -458,7 +503,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m9200 rotor galaxy designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M9200"
         },
         {
             "name": "M9300 STRAP GALAXY",
@@ -468,7 +514,8 @@
             "category": "Head protection",
             "subCategory": "Respiratory protection",
             "description": "High-quality m9300 strap galaxy designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M9300"
         },
         {
             "name": "BARRIER2 PLATE",
@@ -478,7 +525,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality barrier2 plate designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BARRIER2"
         },
         {
             "name": "BRAVA2 CLEAR (1)",
@@ -488,7 +536,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality brava2 clear (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BRAVA2"
         },
         {
             "name": "BRAVA2 CLEAR",
@@ -498,7 +547,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality brava2 clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BRAVA2"
         },
         {
             "name": "BRAVA2 SMOKE",
@@ -508,7 +558,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality brava2 smoke designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BRAVA2"
         },
         {
             "name": "CASOUD2HE WITH HELMET",
@@ -518,7 +569,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality casoud2he with helmet designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CASOUD2HE"
         },
         {
             "name": "CASOUD3",
@@ -528,7 +580,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality casoud3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CASOUD3"
         },
         {
             "name": "FILTERIN (1)",
@@ -538,7 +591,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality filterin (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FILTERIN"
         },
         {
             "name": "FILTERIN",
@@ -548,7 +602,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality filterin designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FILTERIN"
         },
         {
             "name": "FUEGO ADJUSTABLE ARM (1)",
@@ -558,7 +613,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality fuego adjustable arm (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FUEGO"
         },
         {
             "name": "FUEGO ADJUSTABLE ARM",
@@ -568,7 +624,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality fuego adjustable arm designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FUEGO"
         },
         {
             "name": "FUJI2 CLEAR (1)",
@@ -578,17 +635,19 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality fuji2 clear (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FUJI2"
         },
         {
             "name": "FUJI2 CLEAR",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_CLEAR_EPS",
+            "reference": "FUJI2NOIN",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/FUJI2-CLEAR-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality fuji2 clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Polycarbonate twin lens glasses. Twin material arms. Soft tips. Soft TPE nose piece.",
+            "price": 970,
+            "itemCode": "FUJI2"
         },
         {
             "name": "FUJI2 GRADIENT (1)",
@@ -598,17 +657,19 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality fuji2 gradient (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FUJI2"
         },
         {
             "name": "FUJI2 GRADIENT",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_FUJI2_GRADIENT_EPS",
+            "reference": "FUJI2NOOR",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/FUJI2-GRADIENT-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality fuji2 gradient designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Polycarbonate twin lens glasses. Twin material arms. Soft tips. Soft TPE nose piece.",
+            "price": 950,
+            "itemCode": "FUJI2"
         },
         {
             "name": "GALERAS CLEAR",
@@ -618,7 +679,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality galeras clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "GALERAS"
         },
         {
             "name": "HELIUM2 BLUE BLOCKER 1 (1)",
@@ -628,67 +690,74 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality helium2 blue blocker 1 (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "HELIUM2"
         },
         {
-            "name": "HELIUM2 BLUE BLOCKER 1",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_BLUE_BLOCKER_1_EPS",
+            "name": "HELIUM 2 BLUE BLOCKER",
+            "reference": "HELI2BB",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/HELIUM2-BLUE-BLOCKER-1-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality helium2 blue blocker 1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Ultra light polycarbonate single lens glasses. Integrated polycarbonate nose piece. Thin and flexible metal-free frame. Suitable for long duration wear.",
+            "price": 540,
+            "itemCode": "HELI2BB"
         },
         {
-            "name": "HELIUM2 CLEAR",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_CLEAR_EPS",
+            "name": "HELIUM 2 CLEAR",
+            "reference": "HELI2IN",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/HELIUM2-CLEAR-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality helium2 clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Ultra light polycarbonate single lens glasses. Integrated polycarbonate nose piece. Thin and flexible metal-free frame. Suitable for long duration wear.",
+            "price": 510,
+            "itemCode": "HELI2IN"
         },
         {
-            "name": "HELIUM2 SMOKE",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_HELIUM2_SMOKE_EPS",
+            "name": "HELIUM 2 SMOKE",
+            "reference": "HELI2FU",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/HELIUM2-SMOKE-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality helium2 smoke designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Ultra light polycarbonate single lens glasses. Integrated polycarbonate nose piece. Thin and flexible metal-free frame. Suitable for long duration wear.",
+            "price": 510,
+            "itemCode": "HELI2FU"
         },
         {
             "name": "IRAYA CLEAR",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_CLEAR_EPS",
+            "reference": "IRAYAIN",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/IRAYA-CLEAR-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality iraya clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Polycarbonate glasses. Sport design. Polycarbonate frame with matt finish for better comfort and durability.",
+            "price": 550,
+            "itemCode": "IRAYAIN"
         },
         {
             "name": "IRAYA SMOKE",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_SMOKE_EPS",
+            "reference": "IRAYAFU",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/IRAYA-SMOKE-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality iraya smoke designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Polycarbonate glasses. Sport design. Polycarbonate frame with matt finish for better comfort and durability.",
+            "price": 550,
+            "itemCode": "IRAYAFU"
         },
         {
             "name": "IRAYA YELLOW",
-            "reference": "HEAD_PROTECTION_SAFETY_EYEWEAR_IRAYA_YELLOW_EPS",
+            "reference": "IRAYAJA",
             "subtitle": "Premium Protective eyewear for industrial safety.",
             "image_url": "/photos/head-protection/safety eyewear/IRAYA-YELLOW-eps.png",
             "category": "Head protection",
             "subCategory": "Protective eyewear",
-            "description": "High-quality iraya yellow designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "description": "Polycarbonate glasses. Sport design. Polycarbonate frame with matt finish for better comfort and durability.",
+            "price": 550,
+            "itemCode": "IRAYAJA"
         },
         {
             "name": "IRAZU",
@@ -698,7 +767,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality irazu designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "IRAZU"
         },
         {
             "name": "KILIMANDJARO CLEAR AB",
@@ -708,7 +778,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality kilimandjaro clear ab designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "KILIMANDJARO"
         },
         {
             "name": "KILIMANDJARO CLEAR",
@@ -718,7 +789,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality kilimandjaro clear designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "KILIMANDJARO"
         },
         {
             "name": "LIPARI2 T5",
@@ -728,7 +800,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality lipari2 t5 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "LIPARI2"
         },
         {
             "name": "RUIZ1",
@@ -738,7 +811,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality ruiz1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "RUIZ1"
         },
         {
             "name": "SCREEN PLATE",
@@ -748,7 +822,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality screen plate designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SCREEN"
         },
         {
             "name": "SCREEN",
@@ -758,7 +833,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality screen designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SCREEN"
         },
         {
             "name": "TOBA3",
@@ -768,7 +844,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality toba3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TOBA3"
         },
         {
             "name": "VISOR FLASH",
@@ -778,7 +855,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor flash designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISOR GUARD",
@@ -788,7 +866,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor guard designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISOR H",
@@ -798,7 +877,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor h designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISOR HOLDER",
@@ -808,7 +888,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor holder designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISOR TORIC",
@@ -818,7 +899,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor toric designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISOR U",
@@ -828,7 +910,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visor u designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISOR"
         },
         {
             "name": "VISORPC",
@@ -838,7 +921,8 @@
             "category": "Head protection",
             "subCategory": "Protective eyewear",
             "description": "High-quality visorpc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VISORPC"
         },
         {
             "name": "AIR COLTAN ",
@@ -848,7 +932,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality air coltan  designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AIR"
         },
         {
             "name": "BASEBALL DIAMOND GR",
@@ -858,7 +943,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality baseball diamond gr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BASEBALL"
         },
         {
             "name": "DYNAMIC JUGBETA",
@@ -868,7 +954,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality dynamic jugbeta designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DYNAMIC"
         },
         {
             "name": "GRANITE PEAK BC",
@@ -878,7 +965,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality granite peak bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "GRANITE"
         },
         {
             "name": "GRANITE WIND BC",
@@ -888,7 +976,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality granite wind bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "GRANITE"
         },
         {
             "name": "JUGALPHA",
@@ -898,7 +987,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality jugalpha designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUGALPHA"
         },
         {
             "name": "MENTALPHA",
@@ -908,7 +998,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality mentalpha designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MENTALPHA"
         },
         {
             "name": "ONYX2 BJ",
@@ -918,7 +1009,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality onyx2 bj designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ONYX2"
         },
         {
             "name": "QUARTZ I BC",
@@ -928,7 +1020,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality quartz i bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "QUARTZ"
         },
         {
             "name": "QUARTZ UP III BC",
@@ -938,7 +1031,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality quartz up iii bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "QUARTZ"
         },
         {
             "name": "QUARTZ UP IV BC",
@@ -948,7 +1042,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality quartz up iv bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "QUARTZ"
         },
         {
             "name": "SUPER QUARTZ BC",
@@ -958,7 +1053,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality super quartz bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SUPER"
         },
         {
             "name": "ZIRCON I VE",
@@ -968,7 +1064,8 @@
             "category": "Head protection",
             "subCategory": "Skull protection",
             "description": "High-quality zircon i ve designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ZIRCON"
         },
         {
             "name": "DT115",
@@ -978,7 +1075,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt115 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT115"
         },
         {
             "name": "DT117",
@@ -988,7 +1086,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt117 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT117"
         },
         {
             "name": "DT119",
@@ -998,7 +1097,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt119 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT119"
         },
         {
             "name": "DT125",
@@ -1008,7 +1108,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt125 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT125"
         },
         {
             "name": "DT215 WITH V1300",
@@ -1018,7 +1119,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt215 with v1300 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT215"
         },
         {
             "name": "DT300 WITH V1383",
@@ -1028,7 +1130,8 @@
             "category": "Protective clothing",
             "subCategory": "Disposable wear",
             "description": "High-quality dt300 with v1383 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DT300"
         },
         {
             "name": "EN304 JA SUIT",
@@ -1038,7 +1141,8 @@
             "category": "Protective clothing",
             "subCategory": "Outdoor wear",
             "description": "High-quality en304 ja suit designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EN304"
         },
         {
             "name": "EN400 BR SUIT",
@@ -1048,7 +1152,8 @@
             "category": "Protective clothing",
             "subCategory": "Outdoor wear",
             "description": "High-quality en400 br suit designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EN400"
         },
         {
             "name": "MA305 JA",
@@ -1058,7 +1163,8 @@
             "category": "Protective clothing",
             "subCategory": "Outdoor wear",
             "description": "High-quality ma305 ja designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MA305"
         },
         {
             "name": "SINGA",
@@ -1068,7 +1174,8 @@
             "category": "Protective clothing",
             "subCategory": "Outdoor wear",
             "description": "High-quality singa designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SINGA"
         },
         {
             "name": "COMET JA",
@@ -1078,7 +1185,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality comet ja designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "COMET"
         },
         {
             "name": "GILP4 JA",
@@ -1088,7 +1196,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality gilp4 ja designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "GILP4"
         },
         {
             "name": "MAICA2",
@@ -1098,7 +1207,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality maica2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAICA2"
         },
         {
             "name": "MAICO2",
@@ -1108,7 +1218,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality maico2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAICO2"
         },
         {
             "name": "MAIMA2",
@@ -1118,7 +1229,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality maima2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAIMA2"
         },
         {
             "name": "MAIPA2",
@@ -1128,7 +1240,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality maipa2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAIPA2"
         },
         {
             "name": "MAIVE2",
@@ -1138,7 +1251,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality maive2 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAIVE2"
         },
         {
             "name": "SUMMAN",
@@ -1148,7 +1262,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality summan designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SUMMAN"
         },
         {
             "name": "SUMTAB",
@@ -1158,7 +1273,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality sumtab designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SUMTAB"
         },
         {
             "name": "SUMVES",
@@ -1168,7 +1284,8 @@
             "category": "Protective clothing",
             "subCategory": "Technical wear",
             "description": "High-quality sumves designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SUMVES"
         },
         {
             "name": "M2CO3 BM",
@@ -1178,7 +1295,8 @@
             "category": "Protective clothing",
             "subCategory": "Workwear",
             "description": "High-quality m2co3 bm designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M2CO3"
         },
         {
             "name": "M2PA3 GO M2PW3 GO",
@@ -1188,7 +1306,8 @@
             "category": "Protective clothing",
             "subCategory": "Workwear",
             "description": "High-quality m2pa3 go m2pw3 go designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M2PA3"
         },
         {
             "name": "M2VE3 GO",
@@ -1198,7 +1317,8 @@
             "category": "Protective clothing",
             "subCategory": "Workwear",
             "description": "High-quality m2ve3 go designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "M2VE3"
         },
         {
             "name": "COBRA4",
@@ -1208,7 +1328,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality cobra4 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "COBRA4"
         },
         {
             "name": "FENNEC4 S1 S1P (1)",
@@ -1218,7 +1339,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality fennec4 s1 s1p (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FENNEC4"
         },
         {
             "name": "FENNEC4 S1 S1P",
@@ -1228,7 +1350,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality fennec4 s1 s1p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FENNEC4"
         },
         {
             "name": "MIAMI S1P ESD",
@@ -1238,7 +1361,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality miami s1p esd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MIAMI"
         },
         {
             "name": "MIAMI S1P NO",
@@ -1248,7 +1372,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality miami s1p no designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MIAMI"
         },
         {
             "name": "MIAMI S2 BC",
@@ -1258,7 +1383,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality miami s2 bc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MIAMI"
         },
         {
             "name": "MIWA S3",
@@ -1268,7 +1394,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality miwa s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MIWA"
         },
         {
             "name": "RIMINI4 S1P BJ",
@@ -1278,7 +1405,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality rimini4 s1p bj designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "RIMINI4"
         },
         {
             "name": "SAULT2 S3 SRC ESD",
@@ -1288,7 +1416,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality sault2 s3 src esd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SAULT2"
         },
         {
             "name": "TANGARA2 S1P GJ",
@@ -1298,7 +1427,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality tangara2 s1p gj designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TANGARA2"
         },
         {
             "name": "VIAGI S1P ESD NR",
@@ -1308,7 +1438,8 @@
             "category": "Safety footwear",
             "subCategory": "Indoor",
             "description": "High-quality viagi s1p esd nr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VIAGI"
         },
         {
             "name": "AURIBEAU3 S1P",
@@ -1318,7 +1449,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality auribeau3 s1p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "AURIBEAU3"
         },
         {
             "name": "CADEROUSSE S3",
@@ -1328,7 +1460,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality caderousse s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CADEROUSSE"
         },
         {
             "name": "CINTO S1PS GR",
@@ -1338,7 +1471,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality cinto s1ps gr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CINTO"
         },
         {
             "name": "DENALI S1PS GR",
@@ -1348,7 +1482,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality denali s1ps gr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DENALI"
         },
         {
             "name": "GOBI S3",
@@ -1358,7 +1493,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality gobi s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "GOBI"
         },
         {
             "name": "JET3 S1",
@@ -1368,7 +1504,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jet3 s1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JET3"
         },
         {
             "name": "JET3 S1P",
@@ -1378,7 +1515,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jet3 s1p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JET3"
         },
         {
             "name": "JET3 S3",
@@ -1388,7 +1526,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jet3 s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JET3"
         },
         {
             "name": "JUMPER3 S1",
@@ -1398,7 +1537,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jumper3 s1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUMPER3"
         },
         {
             "name": "JUMPER3 S1P",
@@ -1408,7 +1548,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jumper3 s1p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUMPER3"
         },
         {
             "name": "JUMPER3 S3",
@@ -1418,7 +1559,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jumper3 s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUMPER3"
         },
         {
             "name": "JUMPER3 S3 FE",
@@ -1428,7 +1570,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jumper3 s3 fe designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUMPER3"
         },
         {
             "name": "JUMPER3 S3 HC",
@@ -1438,7 +1581,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality jumper3 s3 hc designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "JUMPER3"
         },
         {
             "name": "MAESTRO S3",
@@ -1448,7 +1592,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality maestro s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MAESTRO"
         },
         {
             "name": "MONTBRUN S3",
@@ -1458,7 +1603,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality montbrun s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "MONTBRUN"
         },
         {
             "name": "PERTUIS3 S1P",
@@ -1468,7 +1614,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality pertuis3 s1p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PERTUIS3"
         },
         {
             "name": "PHOCEA S3",
@@ -1478,7 +1625,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality phocea s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PHOCEA"
         },
         {
             "name": "PHOCEA2 S3S NO",
@@ -1488,7 +1636,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality phocea2 s3s no designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PHOCEA2"
         },
         {
             "name": "PHOENIX S3",
@@ -1498,7 +1647,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality phoenix s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PHOENIX"
         },
         {
             "name": "PHOENIX2 S3S NO",
@@ -1508,7 +1658,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality phoenix2 s3s no designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PHOENIX2"
         },
         {
             "name": "SAGA S3 BE",
@@ -1518,7 +1669,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality saga s3 be designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SAGA"
         },
         {
             "name": "SANTANA S3",
@@ -1528,7 +1680,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality santana s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SANTANA"
         },
         {
             "name": "SAULT2 S3 SRC",
@@ -1538,7 +1691,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality sault2 s3 src designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SAULT2"
         },
         {
             "name": "TAKU S3",
@@ -1548,7 +1702,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality taku s3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TAKU"
         },
         {
             "name": "WINJET3 S1",
@@ -1558,7 +1713,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality winjet3 s1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "WINJET3"
         },
         {
             "name": "WINJUMPER3 S3S",
@@ -1568,7 +1724,8 @@
             "category": "Safety footwear",
             "subCategory": "Outdoor",
             "description": "High-quality winjumper3 s3s designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "WINJUMPER3"
         },
         {
             "name": "BROOKLYN S3 OR",
@@ -1578,7 +1735,8 @@
             "category": "Safety footwear",
             "subCategory": "Sport",
             "description": "High-quality brooklyn s3 or designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "BROOKLYN"
         },
         {
             "name": "DELTASPORT S1P NR",
@@ -1588,7 +1746,8 @@
             "category": "Safety footwear",
             "subCategory": "Sport",
             "description": "High-quality deltasport s1p nr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DELTASPORT"
         },
         {
             "name": "SAGA S3 BE",
@@ -1598,7 +1757,8 @@
             "category": "Safety footwear",
             "subCategory": "Sport",
             "description": "High-quality saga s3 be designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "SAGA"
         },
         {
             "name": "CHEMSAFE VV835",
@@ -1608,7 +1768,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality chemsafe vv835 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CHEMSAFE"
         },
         {
             "name": "DUOCOLOR330 VE330BJ",
@@ -1618,7 +1779,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality duocolor330 ve330bj designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DUOCOLOR330"
         },
         {
             "name": "NITREX801 VE801",
@@ -1628,7 +1790,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality nitrex801 ve801 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NITREX801"
         },
         {
             "name": "NITREX802 VE802VE",
@@ -1638,7 +1801,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality nitrex802 ve802ve designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NITREX802"
         },
         {
             "name": "PETRO VE766",
@@ -1648,7 +1812,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality petro ve766 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "PETRO"
         },
         {
             "name": "TOUTRAVO 509 VE509NO",
@@ -1658,7 +1823,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality toutravo 509 ve509no designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TOUTRAVO"
         },
         {
             "name": "TOUTRAVO 510 VE510NO",
@@ -1668,7 +1834,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality toutravo 510 ve510no designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TOUTRAVO"
         },
         {
             "name": "VENIPLUS1383 V1383",
@@ -1678,7 +1845,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality veniplus1383 v1383 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENIPLUS1383"
         },
         {
             "name": "VENITACTYL 1310 V1310",
@@ -1688,7 +1856,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality venitactyl 1310 v1310 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENITACTYL"
         },
         {
             "name": "VENIZETTE920 VE920BL",
@@ -1698,7 +1867,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality venizette920 ve920bl designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENIZETTE920"
         },
         {
             "name": "ZEPHIR210 VE210RO",
@@ -1708,7 +1878,8 @@
             "category": "Safety gloves",
             "subCategory": "Chemical protection",
             "description": "High-quality zephir210 ve210ro designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ZEPHIR210"
         },
         {
             "name": "DPVE716",
@@ -1718,7 +1889,8 @@
             "category": "Safety gloves",
             "subCategory": "Craftman's protection",
             "description": "High-quality dpve716 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DPVE716"
         },
         {
             "name": "ECONOCUTDM1",
@@ -1728,7 +1900,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality econocutdm1 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "ECONOCUTDM1"
         },
         {
             "name": "EOS FLEX CUT D VV922",
@@ -1738,7 +1911,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality eos flex cut d vv922 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EOS"
         },
         {
             "name": "EOS NOCUT VV910",
@@ -1748,7 +1922,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality eos nocut vv910 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "EOS"
         },
         {
             "name": "KPG10",
@@ -1758,7 +1933,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality kpg10 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "KPG10"
         },
         {
             "name": "THRYM VV736",
@@ -1768,7 +1944,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality thrym vv736 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "THRYM"
         },
         {
             "name": "VENICUT34 VECUT34",
@@ -1778,7 +1955,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicut34 vecut34 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUT34"
         },
         {
             "name": "VENICUT52",
@@ -1788,7 +1966,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicut52 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUT52"
         },
         {
             "name": "VENICUTB03 VECUTB03G3",
@@ -1798,7 +1977,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutb03 vecutb03g3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTB03"
         },
         {
             "name": "VENICUTB04 VECUTB04G3",
@@ -1808,7 +1988,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutb04 vecutb04g3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTB04"
         },
         {
             "name": "VENICUTD02 VECUTD02",
@@ -1818,7 +1999,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutd02 vecutd02 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTD02"
         },
         {
             "name": "VENICUTD03 VECUTD03",
@@ -1828,7 +2010,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutd03 vecutd03 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTD03"
         },
         {
             "name": "VENICUTD04 VECUTD04",
@@ -1838,7 +2021,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutd04 vecutd04 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTD04"
         },
         {
             "name": "VENICUTD07 VECUTD07G3",
@@ -1848,7 +2032,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutd07 vecutd07g3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTD07"
         },
         {
             "name": "VENICUTD08 VECUTD08G3",
@@ -1858,7 +2043,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutd08 vecutd08g3 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTD08"
         },
         {
             "name": "VENICUTDX0 VECUTDX0",
@@ -1868,7 +2054,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutdx0 vecutdx0 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTDX0"
         },
         {
             "name": "VENICUTF01 VECUTF01 VENICUTF XTREM CUT",
@@ -1878,7 +2065,8 @@
             "category": "Safety gloves",
             "subCategory": "Cut protection",
             "description": "High-quality venicutf01 vecutf01 venicutf xtrem cut designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VENICUTF01"
         },
         {
             "name": "DS202RP P",
@@ -1888,7 +2076,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality ds202rp p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DS202RP"
         },
         {
             "name": "NI150",
@@ -1898,7 +2087,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality ni150 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NI150"
         },
         {
             "name": "NI155",
@@ -1908,7 +2098,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality ni155 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NI155"
         },
         {
             "name": "NI170",
@@ -1918,7 +2109,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality ni170 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NI170"
         },
         {
             "name": "NI175",
@@ -1928,7 +2120,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality ni175 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NI175"
         },
         {
             "name": "NYSOS VV904",
@@ -1938,7 +2131,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for heavy works",
             "description": "High-quality nysos vv904 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "NYSOS"
         },
         {
             "name": "APOLLON JA VV733",
@@ -1948,7 +2142,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality apollon ja vv733 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "APOLLON"
         },
         {
             "name": "DC103",
@@ -1958,7 +2153,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality dc103 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "DC103"
         },
         {
             "name": "FBN49",
@@ -1968,7 +2164,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality fbn49 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FBN49"
         },
         {
             "name": "FCN29",
@@ -1978,7 +2175,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality fcn29 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "FCN29"
         },
         {
             "name": "VE713",
@@ -1988,7 +2186,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality ve713 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE713"
         },
         {
             "name": "VE726",
@@ -1998,7 +2197,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality ve726 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE726"
         },
         {
             "name": "VE729",
@@ -2008,7 +2208,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality ve729 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE729"
         },
         {
             "name": "VE733",
@@ -2018,7 +2219,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for multi purpose works",
             "description": "High-quality ve733 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE733"
         },
         {
             "name": "VE702P",
@@ -2028,7 +2230,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve702p designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE702P"
         },
         {
             "name": "VE702PESD",
@@ -2038,7 +2241,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve702pesd designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE702PESD"
         },
         {
             "name": "VE702PG",
@@ -2048,7 +2252,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve702pg designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE702PG"
         },
         {
             "name": "VE702PN",
@@ -2058,7 +2263,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve702pn designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE702PN"
         },
         {
             "name": "VE712GR",
@@ -2068,7 +2274,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve712gr designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE712GR"
         },
         {
             "name": "VE715",
@@ -2078,7 +2285,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve715 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE715"
         },
         {
             "name": "VE722",
@@ -2088,7 +2296,8 @@
             "category": "Safety gloves",
             "subCategory": "Mechanical protection for precision works",
             "description": "High-quality ve722 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VE722"
         },
         {
             "name": "CA615K",
@@ -2098,7 +2307,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality ca615k designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CA615K"
         },
         {
             "name": "CRYOG",
@@ -2108,7 +2318,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality cryog designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "CRYOG"
         },
         {
             "name": "KPG10",
@@ -2118,7 +2329,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality kpg10 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "KPG10"
         },
         {
             "name": "TC716",
@@ -2128,7 +2340,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality tc716 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TC716"
         },
         {
             "name": "TER250",
@@ -2138,7 +2351,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality ter250 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TER250"
         },
         {
             "name": "TER300",
@@ -2148,7 +2362,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality ter300 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TER300"
         },
         {
             "name": "TERK400",
@@ -2158,7 +2373,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality terk400 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TERK400"
         },
         {
             "name": "TERK500",
@@ -2168,7 +2384,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality terk500 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "TERK500"
         },
         {
             "name": "THRYM VV736 (1)",
@@ -2178,7 +2395,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality thrym vv736 (1) designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "THRYM"
         },
         {
             "name": "VV914",
@@ -2188,7 +2406,8 @@
             "category": "Safety gloves",
             "subCategory": "Thermal protection",
             "description": "High-quality vv914 designed for maximum protection and comfort in hazardous environments.",
-            "price": 99.99
+            "price": 99.99,
+            "itemCode": "VV914"
         }
     ]
 }

@@ -19,7 +19,8 @@ router.get('/', async (req, res) => {
             query.$or = [
                 { name: { $regex: search, $options: 'i' } },
                 { description: { $regex: search, $options: 'i' } },
-                { reference: { $regex: search, $options: 'i' } }
+                { reference: { $regex: search, $options: 'i' } },
+                { itemCode: { $regex: search, $options: 'i' } }
             ];
         }
         if (category && category !== 'All Products') {
@@ -66,7 +67,14 @@ router.post('/', protect, restrictTo('ADMIN'), handleUpload, async (req, res) =>
         subCategory: req.body.subCategory,
         image_url: req.file ? req.file.path : req.body.image_url,
         description: req.body.description,
-        price: req.body.price
+        price: req.body.price,
+        itemCode: req.body.itemCode,
+        color: req.body.color,
+        hsnCode: req.body.hsnCode,
+        gstPercentage: req.body.gstPercentage,
+        dealerPrice: req.body.dealerPrice,
+        mrp: req.body.mrp,
+        stock: req.body.stock
     });
 
     try {
@@ -91,6 +99,13 @@ router.put('/:id', protect, restrictTo('ADMIN'), handleUpload, async (req, res) 
         if (req.body.subCategory) product.subCategory = req.body.subCategory;
         if (req.body.description) product.description = req.body.description;
         if (req.body.price) product.price = req.body.price;
+        if (req.body.itemCode) product.itemCode = req.body.itemCode;
+        if (req.body.color) product.color = req.body.color;
+        if (req.body.hsnCode) product.hsnCode = req.body.hsnCode;
+        if (req.body.gstPercentage) product.gstPercentage = req.body.gstPercentage;
+        if (req.body.dealerPrice) product.dealerPrice = req.body.dealerPrice;
+        if (req.body.mrp) product.mrp = req.body.mrp;
+        if (req.body.stock) product.stock = req.body.stock;
         
         if (req.file) {
             product.image_url = req.file.path;

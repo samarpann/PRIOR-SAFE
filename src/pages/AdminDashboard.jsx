@@ -24,23 +24,49 @@ function AdminDashboard() {
     category: Object.keys(CATEGORY_STRUCTURE)[0],
     subCategory: CATEGORY_STRUCTURE[Object.keys(CATEGORY_STRUCTURE)[0]].subCategories[0],
     description: '',
-    price: 0
+    price: 0,
+    itemCode: '',
+    color: '',
+    hsnCode: '',
+    gstPercentage: 18,
+    dealerPrice: 0,
+    mrp: 0,
+    stock: 0
   });
   const [imageFile, setImageFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  
+  // Pagination and Search State
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Products');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalProducts, setTotalProducts] = useState(0);
+  const itemsPerPage = 12;
 
   useEffect(() => {
-    fetchProducts();
+    const delayDebounceFn = setTimeout(() => {
+      fetchProducts();
+    }, 500); // Debounce search
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchQuery, selectedCategory, currentPage]);
+
+  useEffect(() => {
     fetchOrders();
   }, []);
 
   const fetchProducts = async () => {
     try {
-      // In admin dashboard, we might want all products or a high limit
-      const res = await axios.get(`${API_URL}?limit=1000`);
-      setProducts(res.data.products || res.data);
+      setLoading(true);
+      const res = await axios.get(`${API_URL}?limit=${itemsPerPage}&page=${currentPage}&search=${searchQuery}&category=${selectedCategory === 'All Products' ? '' : selectedCategory}`);
+      setProducts(res.data.products || []);
+      setTotalPages(res.data.totalPages || 1);
+      setTotalProducts(res.data.totalProducts || 0);
     } catch (err) {
       console.error("Error fetching products", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -63,7 +89,14 @@ function AdminDashboard() {
         category: product.category || Object.keys(CATEGORY_STRUCTURE)[0],
         subCategory: product.subCategory || CATEGORY_STRUCTURE[product.category || Object.keys(CATEGORY_STRUCTURE)[0]].subCategories[0],
         description: product.description || '',
-        price: product.price || 0
+        price: product.price || 0,
+        itemCode: product.itemCode || '',
+        color: product.color || '',
+        hsnCode: product.hsnCode || '',
+        gstPercentage: product.gstPercentage || 18,
+        dealerPrice: product.dealerPrice || 0,
+        mrp: product.mrp || 0,
+        stock: product.stock || 0
       });
     } else {
       const defaultCat = Object.keys(CATEGORY_STRUCTURE)[0];
@@ -75,7 +108,14 @@ function AdminDashboard() {
         category: defaultCat,
         subCategory: CATEGORY_STRUCTURE[defaultCat].subCategories[0],
         description: '',
-        price: 0
+        price: 0,
+        itemCode: '',
+        color: '',
+        hsnCode: '',
+        gstPercentage: 18,
+        dealerPrice: 0,
+        mrp: 0,
+        stock: 0
       });
     }
     setImageFile(null);
@@ -162,46 +202,230 @@ function AdminDashboard() {
                 >
                   <ShoppingBag size={20} /> Orders
                 </button>
-                {activeTab === 'inventory' && (
-                  <button className="admin-btn admin-btn-primary" onClick={() => handleOpenModal()}>
-                    <Plus size={20} /> Add Product
-                  </button>
-                )}
+                <button 
+                  className={`admin-btn ${activeTab === 'audit' ? 'admin-btn-primary' : ''}`} 
+                  onClick={() => setActiveTab('audit')}
+                  style={{ background: activeTab === 'audit' ? '' : '#f1f5f9' }}
+                >
+                  <Package size={20} /> Price List Audit
+                </button>
               </div>
             </header>
 
+            {activeTab === 'inventory' && (
+              <div style={{ 
+                marginBottom: '2rem', 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                gap: '1.5rem',
+                flexWrap: 'wrap',
+                background: 'white',
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
+              }}>
+                <div style={{ position: 'relative', flex: 1, minWidth: '300px' }}>
+                  <input 
+                    type="text" 
+                    placeholder="Search by name, ref, or description..." 
+                    value={searchQuery}
+                    onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.85rem 1rem 0.85rem 3rem', 
+                      borderRadius: '0.75rem', 
+                      border: '1px solid #e2e8f0',
+                      outline: 'none',
+                      fontSize: '0.95rem'
+                    }}
+                  />
+                  <div style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }}>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                  </div>
+                </div>
+
+                <div style={{ minWidth: '200px' }}>
+                  <select 
+                    value={selectedCategory}
+                    onChange={(e) => { setSelectedCategory(e.target.value); setCurrentPage(1); }}
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.85rem 1rem', 
+                      borderRadius: '0.75rem', 
+                      border: '1px solid #e2e8f0',
+                      outline: 'none',
+                      fontSize: '0.95rem',
+                      background: 'white',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <option value="All Products">All Categories</option>
+                    {Object.keys(CATEGORY_STRUCTURE).map(cat => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: '600' }}>
+                    {totalProducts} Products Found
+                  </span>
+                  <button className="admin-btn admin-btn-primary" onClick={() => handleOpenModal()}>
+                    <Plus size={20} /> Add Product
+                  </button>
+                </div>
+              </div>
+            )}
+
             {activeTab === 'inventory' ? (
-              <div className="admin-product-grid">
-                {products.map(product => (
-                  <div key={product._id} className="admin-card admin-product-card">
-                    <img src={product.image_url} alt={product.name} className="admin-product-img" />
-                    <div style={{ flex: 1 }}>
-                      <h3 style={{ margin: '0 0 0.5rem 0', color: '#1e293b' }}>{product.name}</h3>
-                      <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1rem' }}>
-                        {product.subtitle}
-                      </p>
-                      <div style={{ fontSize: '0.85rem', marginBottom: '1rem', color: '#475569' }}>
-                        <strong>Ref:</strong> {product.reference} | <strong>Cat:</strong> {product.category} / {product.subCategory}
+              <>
+                <div className="admin-product-grid">
+                  {products.map(product => (
+                    <div key={product._id} className="admin-card admin-product-card">
+                      <img src={product.image_url} alt={product.name} className="admin-product-img" />
+                      <div style={{ flex: 1 }}>
+                        <h3 style={{ margin: '0 0 0.5rem 0', color: '#1e293b' }}>{product.name}</h3>
+                        <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
+                          {product.subtitle}
+                        </p>
+                        <div style={{ fontSize: '0.85rem', marginBottom: '0.5rem', color: '#475569', wordBreak: 'break-all' }}>
+                          <strong>Ref:</strong> {product.reference} | <strong>Code:</strong> <span style={{ color: '#b23a86', fontWeight: '700' }}>{product.itemCode || 'N/A'}</span>
+                        </div>
+                        <div style={{ fontSize: '0.8rem', color: '#64748b', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.4rem', marginBottom: '1rem' }}>
+                          <div><strong>HSN:</strong> {product.hsnCode || '-'}</div>
+                          <div><strong>GST:</strong> {product.gstPercentage}%</div>
+                          <div><strong>Dealer:</strong> ₹{product.dealerPrice || 0}</div>
+                          <div><strong>MRP:</strong> ₹{product.mrp || 0}</div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
+                        <button 
+                          className="admin-btn" 
+                          style={{ background: '#f1f5f9', color: '#1e293b', width: '100%', justifyContent: 'center' }}
+                          onClick={() => handleOpenModal(product)}
+                        >
+                          <Edit size={16} /> Edit
+                        </button>
+                        <button 
+                          className="admin-btn admin-btn-danger" 
+                          style={{ width: '40px', padding: '0.5rem', justifyContent: 'center' }}
+                          onClick={() => handleDelete(product._id)}
+                        >
+                          <Trash2 size={16} />
+                        </button>
                       </div>
                     </div>
-                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
-                      <button 
-                        className="admin-btn" 
-                        style={{ background: '#f1f5f9', color: '#1e293b', width: '100%', justifyContent: 'center' }}
-                        onClick={() => handleOpenModal(product)}
-                      >
-                        <Edit size={16} /> Edit
-                      </button>
-                      <button 
-                        className="admin-btn admin-btn-danger" 
-                        style={{ width: '40px', padding: '0.5rem', justifyContent: 'center' }}
-                        onClick={() => handleDelete(product._id)}
-                      >
-                        <Trash2 size={16} />
-                      </button>
+                  ))}
+                </div>
+                
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                  <div style={{ 
+                    marginTop: '3rem', 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    gap: '1.5rem',
+                    padding: '1.5rem',
+                    background: 'white',
+                    borderRadius: '1rem',
+                    boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)'
+                  }}>
+                    <button 
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                      className="admin-btn"
+                      style={{ background: currentPage === 1 ? '#f1f5f9' : '#fff', border: '1px solid #e2e8f0', cursor: currentPage === 1 ? 'not-allowed' : 'pointer' }}
+                    >
+                      Previous
+                    </button>
+                    
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+                      {[...Array(totalPages)].map((_, i) => (
+                        <button 
+                          key={i}
+                          onClick={() => setCurrentPage(i + 1)}
+                          style={{ 
+                            width: '40px', 
+                            height: '40px', 
+                            borderRadius: '0.5rem', 
+                            border: 'none',
+                            fontWeight: '700',
+                            cursor: 'pointer',
+                            background: currentPage === i + 1 ? '#b23a86' : '#f1f5f9',
+                            color: currentPage === i + 1 ? '#fff' : '#475569',
+                            transition: 'all 0.2s'
+                          }}
+                        >
+                          {i + 1}
+                        </button>
+                      ))}
                     </div>
+
+                    <button 
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                      className="admin-btn"
+                      style={{ background: currentPage === totalPages ? '#f1f5f9' : '#fff', border: '1px solid #e2e8f0', cursor: currentPage === totalPages ? 'not-allowed' : 'pointer' }}
+                    >
+                      Next
+                    </button>
                   </div>
-                ))}
+                )}
+              </>
+            ) : activeTab === 'audit' ? (
+              <div className="admin-audit-section">
+                <div className="admin-card" style={{ marginBottom: '2rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+                        <div>
+                            <h2 style={{ margin: 0 }}>Delta Plus Price List Audit (2026)</h2>
+                            <p style={{ color: '#64748b', fontSize: '0.9rem' }}>Tracking products across database vs. official catalog.</p>
+                        </div>
+                        <button 
+                            className="admin-btn admin-btn-primary"
+                            onClick={() => {
+                                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify({
+                                    missing: ["RIMFIPO", "RIMFIMI", "PACAYLVFU", "PACAYLVIN", "PACAYBLIN", "PACAYNOFU", "PACAYSTIN", "PACAYSTFU", "PACAYLVSTIN", "HELI2DE", "FUJI2NDIN", "FUJI2NDOR", "MEIAIN", "MEIAFU", "MILOIN", "MILOFU", "BRAV2IN", "BRAV2FU", "BRAV2INAB", "KILIMGRIN", "KILIMNOFU100", "KILIMGRINAB", "LIPA2BLIN", "LIPA2T5", "PITO2IN", "LUCERNEIN100", "ASO2IN", "ASO2FU", "IRAZUIN", "GALERVI", "RUIZ1VI", "EGONGRIN", "EGONGRFU", "FILMG", "HARUNIN", "HEKL2IN", "COLTAAINOMI", "COLTAAIGRMI", "COLTAAINOSH", "COLTAAIBMSH", "COLTAAIBM", "COLTAAIJAFL", "FUEGOARIN", "HARNE4"],
+                                    timestamp: new Date().toISOString()
+                                }, null, 4));
+                                const downloadAnchorNode = document.createElement('a');
+                                downloadAnchorNode.setAttribute("href", dataStr);
+                                downloadAnchorNode.setAttribute("download", "missing_products_report.json");
+                                document.body.appendChild(downloadAnchorNode);
+                                downloadAnchorNode.click();
+                                downloadAnchorNode.remove();
+                            }}
+                        >
+                            Export Missing List
+                        </button>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem', marginBottom: '2rem' }}>
+                        <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '1rem', textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem', fontWeight: '900', color: '#1e293b' }}>50</div>
+                            <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>Total in Price List</div>
+                        </div>
+                        <div style={{ background: '#f0fdf4', padding: '1.5rem', borderRadius: '1rem', textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem', fontWeight: '900', color: '#16a34a' }}>6</div>
+                            <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>Found in Database</div>
+                        </div>
+                        <div style={{ background: '#fef2f2', padding: '1.5rem', borderRadius: '1rem', textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem', fontWeight: '900', color: '#dc2626' }}>44</div>
+                            <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>Missing / Pending</div>
+                        </div>
+                    </div>
+
+                    <h3 style={{ marginBottom: '1rem' }}>Missing Items (Eye & Head Protection)</h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
+                        {["RIMFIPO", "RIMFIMI", "PACAYLVFU", "PACAYLVIN", "PACAYBLIN", "PACAYNOFU", "PACAYSTIN", "PACAYSTFU", "PACAYLVSTIN", "HELI2DE", "FUJI2NDIN", "FUJI2NDOR", "MEIAIN", "MEIAFU", "MILOIN", "MILOFU", "BRAV2IN", "BRAV2FU", "BRAV2INAB", "KILIMGRIN", "KILIMNOFU100", "KILIMGRINAB", "LIPA2BLIN", "LIPA2T5", "PITO2IN", "LUCERNEIN100", "ASO2IN", "ASO2FU", "IRAZUIN", "GALERVI", "RUIZ1VI", "EGONGRIN", "EGONGRFU", "FILMG", "HARUNIN", "HEKL2IN", "COLTAAINOMI", "COLTAAIGRMI", "COLTAAINOSH", "COLTAAIBMSH", "COLTAAIBM", "COLTAAIJAFL", "FUEGOARIN", "HARNE4"].map(code => (
+                            <div key={code} style={{ background: '#fff', border: '1px solid #f1f5f9', padding: '1rem', borderRadius: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#b23a86' }}>{code}</span>
+                                <span style={{ fontSize: '0.7rem', background: '#f1f5f9', padding: '0.2rem 0.5rem', borderRadius: '0.4rem', fontWeight: '600' }}>PENDING</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
               </div>
             ) : (
               <div className="admin-order-list">
@@ -293,6 +517,43 @@ function AdminDashboard() {
                     <option key={cat} value={cat}>{cat}</option>
                   ))}
                 </select>
+              </div>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="admin-form-group">
+                  <label>Item Code (Price List Code)</label>
+                  <input name="itemCode" value={formData.itemCode} onChange={handleInputChange} placeholder="e.g. RIMFIPO" />
+                </div>
+                <div className="admin-form-group">
+                  <label>Color</label>
+                  <input name="color" value={formData.color} onChange={handleInputChange} />
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="admin-form-group">
+                  <label>HSN Code</label>
+                  <input name="hsnCode" value={formData.hsnCode} onChange={handleInputChange} />
+                </div>
+                <div className="admin-form-group">
+                  <label>GST %</label>
+                  <input type="number" name="gstPercentage" value={formData.gstPercentage} onChange={handleInputChange} />
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
+                <div className="admin-form-group">
+                  <label>Dealer Price</label>
+                  <input type="number" name="dealerPrice" value={formData.dealerPrice} onChange={handleInputChange} />
+                </div>
+                <div className="admin-form-group">
+                  <label>MRP</label>
+                  <input type="number" name="mrp" value={formData.mrp} onChange={handleInputChange} />
+                </div>
+                <div className="admin-form-group">
+                  <label>Stock Qty</label>
+                  <input type="number" name="stock" value={formData.stock} onChange={handleInputChange} />
+                </div>
               </div>
               <div className="admin-form-group">
                 <label>Sub Category</label>

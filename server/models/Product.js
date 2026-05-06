@@ -34,6 +34,35 @@ const productSchema = new mongoose.Schema({
         type: Number,
         default: 0.0
     },
+    // Business & Inventory Fields
+    itemCode: {
+        type: String,
+        trim: true
+    },
+    color: {
+        type: String,
+        trim: true
+    },
+    hsnCode: {
+        type: String,
+        trim: true
+    },
+    gstPercentage: {
+        type: Number,
+        default: 18
+    },
+    dealerPrice: {
+        type: Number,
+        default: 0.0
+    },
+    mrp: {
+        type: Number,
+        default: 0.0
+    },
+    stock: {
+        type: Number,
+        default: 0
+    },
     createdAt: {
         type: Date,
         default: Date.now
